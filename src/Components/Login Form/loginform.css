@@ -1,0 +1,47 @@
+.school3{
+	font-size: 23px;
+    font-family: Helvetica;
+    font-weight: 700;
+    color: white;
+}
+.school4{
+	margin-left: 115px;
+	    background-color: white;
+}
+.school5{
+	font-size: 17px;
+    font-weight: 600;
+}
+.school6{
+	margin-top: 12%;
+}
+.school7{
+	margin-top: 10%;
+}
+.school8{
+	font-weight: 500;
+}
+@media screen and (min-width: 360px) and (max-width: 660px){
+	.school1{
+	background-color: #29abe2;
+	height: 610px;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 1020px){
+	.school1{
+	background-color: #29abe2;
+	height: 400px;
+	}
+}
+@media screen and (min-width: 1024px) and (max-width: 1366px){
+	.school1{
+	background-color: #29abe2;
+	height: 400px;
+	}
+}
+@media screen and (min-width: 1366px) and (max-width: 1600px){
+	.school1{
+	background-color: #29abe2;
+	height: 470px;
+	}
+}
