@@ -170,7 +170,7 @@ class Singpanel1 extends Component {
                 					<i className="fa fa-cloud" style={{fontSize:'23px'}}></i>
                 				</div>
                 				<div className="col-md-10 col-8">
-                					<p>selmore.com</p>
+                					<p>www.selmore.com</p>
                 				</div>
                 			</div>
 	        			</div>

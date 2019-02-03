@@ -3,6 +3,7 @@ import Header from '../header';
 import Footer from '../footer';
 import Militarypanel1 from './militarypanel1';
 import Militarypanel2 from './militarypanel2';
+import Militarypanel3 from './militarypanel3';
 import Militarybanner from './militarybanner';
 import './billmilitary.css';
 
@@ -12,7 +13,9 @@ class Billboardmilitary extends Component {
         <div>
         	<Header />
         	<Militarybanner />
+        	<Militarypanel1 />
         	<Militarypanel2 />
+        	<Militarypanel3 />
   		</div> 
     );
   }

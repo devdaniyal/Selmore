@@ -110,10 +110,86 @@ class Militarypanel1 extends Component {
            					<div className="col-md-1 col-2"></div>
            				</div>		
      				</div>
-     				<div className="col-md-4">	
-     				</div>
+     				<div className="col-md-4">
+        				<div className="row honda5" style={{margin:'0px'}}>
+               				<span className="honda7">Posted By</span>
+            			</div>
+            			<div className="row honda6">
+            				<div className="col-md-7 text-centre">
+            					<div className="gree2">
+					    			<h4><span className="gree1">Photo</span></h4>
+					    		</div>
+            				</div>
+            				<div className="col-md-5 gree5">
+        						<h4>Syed Ali</h4>
+        						<div className="row">
+								   	<div className="col-md-2 col-4"></div>
+								   	<div className="col-md-6 col-4 gree3"></div>
+								   	<div className="col-md-4 col-4"></div>
+							   	</div>
+							   	<div>
+							   		<p><span className="gree4">5 Listing</span></p>
+							   	</div>
+               				</div>
+            			</div>               			
+            			<div className="row gree6" style={{margin:'0px'}}>
+            				<div className="col-md-2 col-4 gree7 text-right">
+            					<i className="fa fa-mobile-phone" style={{fontSize:'43px'}}></i>
+            				</div>
+            				<div className="col-md-10 col-8 gree7 ">
+            					<p>0315000000000</p>
+            				</div>
+            			</div>
+            			<div className="row gree6">
+            				<div className="col-md-2 col-4 text-right gree7">
+            					<i className="fa fa-envelope" style={{fontSize:'22px'}}></i>
+            				</div>
+            				<div className="col-md-10 col-8 gree7">
+            					<p>xyz@yahoo.com</p>
+            				</div>
+            			</div>
+            			<div className="row gree6">
+            				<div className="col-md-2 col-4 gree7 text-right">
+            					<i className="fa fa-cloud" style={{fontSize:'23px'}}></i>
+            				</div>
+            				<div className="col-md-10 col-8 gree7">
+            					<p>www.selmore.com</p>
+            				</div>
+            			</div><br/>
+            			<div className="row soldier7" style={{margin:'0px'}}>
+        				    <div><h3>Map</h3></div>
+            			</div><br/>
+            			<div className="row honda5" style={{margin:'0px'}}>
+               				<span className="honda7">Advance Search</span>
+            			</div>
+	            		<div className="row gree10">
+		            		<div className="col-md-12">    		
+		            			<div className="row" style={{margin:'0px'}}>
+		            				<div className="col-md-1"></div>
+		            				<div className="col-md-10 gree9">
+		            					<input type="text" className="form-control" id="usr" placeholder="Category"/>
+		            				</div>
+		            				<div className="col-md-1"></div>
+		            			</div>
+		            			<div className="row" style={{margin:'0px'}}>
+		            				<div className="col-md-1"></div>
+		            				<div className="col-md-10 gree9">
+		            					<input type="text" className="form-control" id="usr" placeholder="Location"/>
+		            				</div>
+		            				<div className="col-md-1"></div>
+		            			</div>
+		            			<div className="row" style={{margin:'0px'}}>
+		            				<div className="col-md-4 col-3"></div>
+		            				<div className="col-md-4 col-4 gree9">
+		            					<button className="btn btn-primary">Submit</button>
+		            				</div>
+		            				<div className="col-md-4 col-4"></div>
+		            			</div>
+		            		</div>	
+	            		</div>	
+        			</div>
      			</div>
-     		</div>
+     		</div><br/>
 	 	</div>
     );
   }
