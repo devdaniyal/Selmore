@@ -21,7 +21,7 @@ class Banner extends Component {
 	      					<img src="../images/bodr-on.png" style={{width : "100%"}}/>
 	      				</div>
 	      			</div>	
-      			</div>
+      			</div><br />
 
 
       </div>

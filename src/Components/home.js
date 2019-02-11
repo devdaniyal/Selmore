@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './header';
 import Banner from './banner';
+import Panel0 from './panel0';
 import Panel1 from './panel1';
 import Panel2 from './panel2';
 import Panel3 from './panel3';
@@ -17,6 +18,7 @@ class Home extends Component {
       <div>
         <Header />
         <Banner />
+        <Panel0 />
         <Panel1 />
         <Panel2 />
         <Panel3 />

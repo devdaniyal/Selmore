@@ -6,10 +6,10 @@ class Panel7 extends Component {
     return (
         <div>
 
-    		<div className="container trade1">
+    		<div className="container">
           			<div className="row">
           				<div className="col-md-4"></div>       
-      					<div className="col-md-4 line2"><h3>FEATURED ADS</h3></div>
+      					<div className="col-md-4 line2"><h2>FEATURED ADS</h2></div>
           				<div className="col-md-4"></div>
     			   	</div>
   			      	<div className="row">

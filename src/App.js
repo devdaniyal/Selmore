@@ -13,13 +13,17 @@ import Billboardmardan from './Components/Billboard Mardan/billmardan';
 import Billboardmilitary from './Components/Billboard Military/billmilitary';
 import Billboards from './Components/Billboards/billboards';
 import Singposted from './Components/Singposted Listings/singposted';
+import Bidding from './Components/Bidding/bidding';
+import Billbidding from './Components/Billbidding/billbidding';
+import Billofbidding1 from './Components/Billboard of bidding1/billofbidding';
+import Popform from './Components/Popform/popform';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
     	<div>
-    		<Billboardmilitary/>
+    		<Billofbidding1 />
 	    </div>  	
     );
   }

@@ -205,8 +205,8 @@ class Panel3 extends Component {
 
   				<div className="row moon2">
   					<div className="container moon5">
-						<button type="button" class="btn btn-light yup"><span className="moon">SEE MORE</span></button>
-					</div>	
+						  <button type="button" class="btn btn-light yup"><span className="moon">SEE MORE</span></button>
+			      </div>	
   				</div>
 
 
