@@ -8,13 +8,13 @@ class Panel3 extends Component {
 
       		<div className="container"  style={{"backgroundImage":"url('../images/dropdown2.png')"}}>
       			<div className="row">
-      				<div className="col-md-12 line2"><h3>Top Cities In Pakistan</h3></div>
+      				<div className="col-md-12 line2"><h3 className="pakola1">Top Cities In Pakistan for Bidding</h3></div>
       			</div>
       			<div className="row">
-      					<div className="col-md-4"></div>
-      					<div className="col-md-4 hrline3"></div>
-      					<div className="col-md-4"></div>
-  				  </div>
+      					<div className="col-md-5 col-4"></div>
+      					<div className="col-md-2 col-4 hrline3"></div>
+      					<div className="col-md-5 col-4"></div>
+  				  </div><br/>
   				
   				{/*first row*/}
   				<div className="row">

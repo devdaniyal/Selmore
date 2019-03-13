@@ -9,26 +9,26 @@ class Panel2 extends Component {
       		<div className="container">
           			<div className="row clock">
           				<div className="col-md-4"></div>
-          				<div className="col-md-4 line2"><h3>Our Clients</h3></div>
+          				<div className="col-md-4 line2" style={{marginTop:'15px'}}><h3 className="pakola1">OUR BRANDS</h3></div>
           				<div className="col-md-4"></div>
         			   </div>
       			      <div className="row clock">
-          					<div className="col-md-4"></div>
-          					<div className="col-md-4 hrline"></div>
-          					<div className="col-md-4"></div>
+          					<div className="col-md-5 col-4"></div>
+          					<div className="col-md-2 col-4 hrline"></div>
+          					<div className="col-md-5 col-4"></div>
     				      </div>
     				  <div className="row clock">
       					<div className="col-md-3">
-      						<img src="../images/peekfreans.png" style={{ marginTop : '13px'}} className="drn3"/>
+      						<img src="../images/jazz.png" className="drn3"/>
       					</div>
       					<div className="col-md-3">
-      						<img src="../images/jazz.png" className="drn4"/>
+      						<img src="../images/candy.png" className="drn4"/>
       					</div>
       					<div className="col-md-3">
-      						<img src="../images/candy.png" className="drnn"/>
+      						<img src="../images/hbl.png" className="drnn"/>
       					</div>
       					<div className="col-md-3">
-      						<img src="../images/hbl.png" className="drn5"/>
+      						<img src="../images/peekfreans.png" className="drn5"/>
       					</div>
     				  </div>
     		  </div><br/>

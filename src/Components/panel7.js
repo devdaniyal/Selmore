@@ -9,25 +9,32 @@ class Panel7 extends Component {
     		<div className="container">
           			<div className="row">
           				<div className="col-md-4"></div>       
-      					<div className="col-md-4 line2"><h2>FEATURED ADS</h2></div>
+      					<div className="col-md-4 line2"><h2 className="pakola1">FEATURED ADS</h2></div>
           				<div className="col-md-4"></div>
     			   	</div>
   			      	<div className="row">
-      					<div className="col-md-4 col-xs-4"></div>
-  						<div className="col-md-4 col-xs-4 hrline"></div>
-      					<div className="col-md-4 col-xs-4"></div>
+      					<div className="col-md-5 col-4"></div>
+  						<div className="col-md-2 col-4 hrline"></div>
+      					<div className="col-md-5 col-4"></div>
 			      	</div><br/>
 			      	<div className="row">
 			      		<div className="col-md-4 pencil1">
 			      			<div className="key1">
 			      				<img src="./images/bill1.png" className="imgsize"/>
-			      			</div>
-			      			<div className="key2">
+			      				<div className="key2">
 			      				<div style={{color: 'white'}}>
-					      			<p className="key3"> This is the faltu text<span className="fa fa-heart key5"></span><span style={{color:"black"}}></span></p>
-					      			<p className="key4">This is the dummy text </p>
+			      					<div className="row">
+			      						<div className="col-md-10">
+			      							<p className="key3"> This is the faltu text</p>
+			      							<p className="key4">This is the dummy text </p>
+			      						</div>
+			      						<div className="col-md-2">
+			      							<div className="key5"><i class="fa fa-heart heart fa-2x" aria-hidden="true"></i></div>
+			      						</div>
+			      					</div>					      								      			
 				      			</div>
 		      				</div>
+			      			</div>			      			
 	      						<div className="smoke1">
 	      							<i className="material-icons star">star</i>
 	      							<i className="material-icons star">star</i>
@@ -54,7 +61,7 @@ class Panel7 extends Component {
 	      							<i className="material-icons star">star</i>
 	      						</div>
 			      		</div>
-			      		<div className="col-md-4 pencil2">
+			      		<div className="col-md-4">
 			      			<div className="key1">
 			      				<img src="./images/bill3.png" className="imgsize"/>
 			      			</div>
@@ -110,7 +117,7 @@ class Panel7 extends Component {
 	      							<i className="material-icons star">star</i>
 	      					</div>
 			      		</div>
-			      		<div className="col-md-4 pencil2">
+			      		<div className="col-md-4">
 			      			<div className="key1">
 			      				<img src="./images/bill6.png" className="imgsize"/>
 			      			</div>

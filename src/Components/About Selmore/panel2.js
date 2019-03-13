@@ -19,13 +19,12 @@ class Panel2 extends Component {
 									<button type="button" className="btn tissue5btn"><span className="tissue4btn">GET STARTED</span></button>
 								</div>
         				 	</div>
-	        				<div className="col-md-4 col-sm-4 text-center">
+	        				<div className="col-md-4 col-sm-4">
 	        					<img src="./images/about-panel2.png" style={{height:"160px"}}/>
 	        				</div>
     				</div>
     			</div>
     		</div>
-    		<Footer />
   		</div> 
     );
   }

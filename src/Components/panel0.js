@@ -9,20 +9,20 @@ class Panel0 extends Component {
       		<div className="container">
   				<div className="row">
       				<div className="col-md-4"></div>       
-  					<div className="col-md-4 line2"><h2>BIDDING</h2></div>
+  					<div className="col-md-4 line2"><h2 className="pakola1">BIDDING</h2></div>
       				<div className="col-md-4"></div>
 			   	</div>
 			    <div className="row">
-  					<div className="col-md-4 col-xs-4"></div>
-					<div className="col-md-4 col-xs-4 hrline"></div>
-  					<div className="col-md-4 col-xs-4"></div>
+  					<div className="col-md-5 col-4"></div>
+					<div className="col-md-2 col-4 hrline"></div>
+  					<div className="col-md-5 col-4"></div>
 		      	</div><br/>
 		      	<div className="row">
-		      		<div className="col-md-4 pencil1">
+		      		<div className="col-md-4 seth1">
 		      			<div className="key1">
-		      				<img src="./images/bill1.png" className="imgsize"/>
+		      				<img src="./images/bill1.png" className="imgsizee"/>
 		      			</div>
-		      			<div className="key2">
+		      			<div className="init2">
 		      				<div style={{color: 'white'}}>
 				      			<p className="fanta1">Lahore</p>
 				      			<p className="fanta2"><button type="button" className="btn btn-primary fanta3">BIDDING</button></p>
@@ -31,20 +31,20 @@ class Panel0 extends Component {
 		      		</div>
 		      		<div className="col-md-4 text-center">
 		      			<div className="key1">
-		      				<img src="./images/bill2.png" className="imgsize"/>
+		      				<img src="./images/bill2.png" className="imgsizee"/>
 		      			</div>	
-		      			<div className="key6">
+		      			<div className="init6">
 		      				<div style={{color: 'white'}}>
 				      			<p className="fanta1">Shabbi</p>
-				      			<p className="fanta2"><button type="button" className="btn btn-primary fanta3">BIDDING</button></p>
+				      			<p className="fantaa2"><button type="button" className="btn btn-primary fanta3">BIDDING</button></p>
 			      			</div>
 	      				</div>
 		      		</div>
-		      		<div className="col-md-4 pencil2">
+		      		<div className="col-md-4 seth2" style={{marginLeft:'-4%'}}>
 		      			<div className="key1">
-		      				<img src="./images/bill3.png" className="imgsize"/>
+		      				<img src="./images/bill3.png" className="imgsizee"/>
 		      			</div>
-		      			<div className="key7">
+		      			<div className="init7">
 		      				<div style={{color: 'white'}}>
 				      			<p className="fanta1">Karachi</p>
 				      			<p className="fanta2"><button type="button" className="btn btn-primary fanta3">BIDDING</button></p>

@@ -11,66 +11,115 @@ class Panel1 extends Component {
       			<div className="container">
       				<div className="row">
       					<div className="col-md-4"></div>
-      					<div className="col-md-4 head3"><h1><span className="head2">SEARCH BY CATEGORY</span></h1></div>
+      					<div className="col-md-4 head3"><h1 className="pakola1"><span className="head2">SEARCH BY CATEGORY</span></h1></div>
       					<div className="col-md-4"></div>
       				</div>
       				<div className="row">
-      					<div className="col-md-4"></div>
-      					<div className="col-md-4 hrline"></div>
-      					<div className="col-md-4"></div>
-      				</div>
-      				<div className="row">
-      					<div className="col-md-4"></div>
-      					<div className="col-md-4 head3"><p>Here You Can Search by Category</p></div>
-      					<div className="col-md-4"></div>
+      					<div className="col-md-4 col-4"></div>
+      					<div className="col-md-4 col-4 hrline"></div>
+      					<div className="col-md-4 col-4"></div>
       				</div>
       			</div>
-      		</div>
+      		</div><br/>
           <div className="row">
             <div className="container space">
                   <div className="col-md-4 divborder">
-                    <img src="../images/bilbord.png" style={{ height : '91px'}}/>
-                    <h5>Bus Ads</h5>
+                    <div className="row">
+                        <div className="col-md-3 col-3 col-sm-3">
+                            <img src="../images/bilbord.png" className="lane1"/>
+                        </div>
+                        <div className="col-md-9 col-9 col-sm-9">                                                
+                            <h5 className="lane3">Bus Ads (0)</h5>
+                        </div>
+                    </div>
                   </div>
                   <div className="col-md-4 divborder">
-                    <img src="../images/bilbord.png" style={{ height : '91px'}}/>
-                    <h5>Taxi Ads</h5>
+                    <div className="row">
+                        <div className="col-md-3 col-3 col-sm-3">
+                            <img src="../images/bilbord.png" className="lane1"/>
+                        </div>
+                        <div className="col-md-9 col-9 col-sm-9">                                                
+                            <h5 className="lane3">Taxi Ads (3)</h5>
+                        </div>
+                    </div>
                   </div>
                   <div className="col-md-4 divborder">
-                    <img src="../images/bilbord.png" style={{ height : '91px'}}/>
-                    <h5>Billboards (125)</h5>
+                    <div className="row">
+                        <div className="col-md-3 col-3 col-sm-3">
+                            <img src="../images/bilbord.png" className="lane1"/>
+                        </div>
+                        <div className="col-md-9 col-9 col-sm-9">                                                
+                            <h5 className="lane3">Billboard (125)</h5>
+                        </div>
+                    </div>
                   </div>
             </div>
           </div>
           <div className="row">
             <div className="container space">      
                   <div className="col-md-4 divborder">
-                    <img src="../images/bilbord.png" style={{ height : '91px'}}/>
-                    <h5>Shopping Mall (0)</h5>
+                    <div className="row">
+                        <div className="col-md-3 col-3 col-sm-3">
+                            <img src="../images/bilbord.png" className="lane1"/>
+                        </div>
+                        <div className="col-md-9 col-9 col-sm-9">                                                
+                            <h5 className="lane2">Shopping <br/>Mall (0)</h5>
+                        </div>
+                    </div>
                   </div>
                   <div className="col-md-4 divborder">
-                    <img src="../images/bilbord.png" style={{ height : '91px'}}/>
-                    <h5>Airport Ads (0)</h5>
+                    <div className="row">
+                        <div className="col-md-3 col-3 col-sm-3">
+                            <img src="../images/bilbord.png" className="lane1"/>
+                        </div>
+                        <div className="col-md-9 col-9 col-sm-9">                                                
+                            <h5 className="lane3">Airport Ads (0)</h5>
+                        </div>
+                    </div>
                   </div>
                   <div className="col-md-4 divborder">
-                    <img src="../images/bilbord.png" style={{ height : '91px'}}/>
-                    <h5>Bus Shelter Ads (0)</h5>
+                    <div className="row">
+                        <div className="col-md-3 col-3 col-sm-3">
+                            <img src="../images/bilbord.png" className="lane1"/>
+                        </div>
+                        <div className="col-md-9 col-9 col-sm-9">                                                
+                            <h5 className="lane2">Bus Shelter <br/>Ads (0)</h5>
+                        </div>
+                    </div>
                   </div>
             </div>
           </div>
           <div className="row">
             <div className="container space">   
                   <div className="col-md-4 divborder">
-                    <img src="../images/bilbord.png" style={{ height : '91px'}}/>
-                    <h5>Other (0)</h5>
+                    <div className="row">
+                        <div className="col-md-3 col-3 col-sm-3">
+                            <img src="../images/bilbord.png" className="lane1"/>
+                        </div>
+                        <div className="col-md-9 col-9 col-sm-9">                                                
+                            <h5 className="lane3">Other (0)</h5>
+                        </div>
+                    </div>
                   </div>
                   <div className="col-md-4 divborder">
-                    <img src="../images/bilbord.png" style={{ height : '91px'}}/>
-                    <h5>Radio Ads (0)</h5>
+                    <div className="row">
+                        <div className="col-md-3 col-3 col-sm-3">
+                            <img src="../images/bilbord.png" className="lane1"/>
+                        </div>
+                        <div className="col-md-9 col-9 col-sm-9">                                                
+                            <h5 className="lane3">Radio Ads (0)</h5>
+                        </div>
+                    </div>
                   </div>
                   <div className="col-md-4 divborder">
-                    <img src="../images/bilbord.png" style={{ height : '91px'}}/>
-                    <h5>Total Cinima Ads (0)</h5>
+                    <div className="row">
+                        <div className="col-md-3 col-3 col-sm-3">
+                            <img src="../images/bilbord.png" className="lane1"/>
+                        </div>
+                        <div className="col-md-9 col-9 col-sm-9">                                                
+                            <h5 className="lane2">Total Cinima <br/>Ads (0)</h5>
+                        </div>
+                    </div>
                   </div>  
             </div>
           </div>

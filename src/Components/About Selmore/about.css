@@ -192,24 +192,38 @@
 	.tissue6{
 		margin-left: 10px;
 	}
+	.floote1{
+		margin-left: -10%;
+		text-align: center;
+	}
 }
 @media screen and (min-width: 768px) and (max-width: 1020px){
 	.tissue6{
 		margin-left: -61px;
+	}
+	.floote1{
+		margin-left: -10%;
+		text-align: center;
 	}
 }
 @media screen and (min-width: 1020px) and (max-width: 1366px){
 	.tissue6{
 		margin-left: -79px;
 	}
+	.floote1{
+		margin-left: -10%;
+		text-align: center;
+	}
 }
 @media screen and (min-width: 1366px) and (max-width: 1600px){
 	.tissue6{
-		margin-left: -97px;
+		margin-left: 21px;
+	}
+	.floote1{
+	margin-left: -10%;
+	text-align: center;
 	}
 }
-
-
 
 
 

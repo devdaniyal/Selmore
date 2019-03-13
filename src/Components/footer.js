@@ -14,8 +14,8 @@ class Footer extends Component {
 		      					<div className="col-md-4 col-4 hrline3"></div>
 		      					<div className="col-md-4 col-4"></div>
   							</div>
-      					<p  className="footertext2"><span>Selmore Advertising.com is leading a Portal in Pakistan.
-      					 Selmore for Home outdoor Advertising space.</span></p>
+      					<p  className="footertext2"><span>selmore advertising is leading <br/> outdoor advertising portal<br/> in pakistan. selmore is home <br/>for outdoor advertising <br/>space.
+      					 We connect ads buyer<br/> to ads seller</span></p>
       				</div>
       				<div className="col-md-4">
       					<h3  className="footertext1"><span>QUICK LINKS</span></h3>
