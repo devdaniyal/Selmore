@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {Link, withRouter} from 'react-router-dom';
+
 import './home.css';
 
 class Panel6 extends Component {
@@ -23,7 +25,7 @@ class Panel6 extends Component {
 		  						<div className="divcenter" style={{marginLeft:'29%'}}>
 		  							<h4 className="mouse5"><span className="mouse4">ARE YOU A <span className="mouse7">SELLER?</span></span></h4>
 	  								<p className="mouse6"><span className="mouse3">Earn Money From Your Potential Space</span></p>
-	  								<button type="button" className="btn mouse1"><span className="mouse2">READ MORE</span></button>
+	  								<button type="button" className="btn mouse1"><Link  rel="noopener noreferrer" to={`/seller`}><span className="mouse2">READ MORE</span></Link></button>
 	  							</div>
 		  					</div>
 		  					<div className="col-md-6 sim2" style={{marginLeft:'-4%'}}>
@@ -31,13 +33,13 @@ class Panel6 extends Component {
 		  						<div className="divcenter">
 		  							<h4 className="mouse5"><span className="mouse4">ARE YOU A <span className="mouse7">BUYER?</span></span></h4>
 	  								<p className="mouse6"><span className="mouse3">Advertise Your Brand Quickly And Easily</span></p>
-	  								<button type="button" className="btn mouse1"><span className="mouse2">READ MORE</span></button>
+	  								<button type="button" className="btn mouse1"><Link  rel="noopener noreferrer" to={`/buyer`}><span className="mouse2">READ MORE</span></Link></button>
 	  							</div>
 		  					</div>
 		  				</div>
-			    </div>	
+			    </div>
 
-        </div> 
+        </div>
     );
   }
 }

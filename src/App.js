@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
+
+
+//Components//
 import Home from './Components/home';
+import About from './Components/About Selmore/about';
 import Header from './Components/header';
 import Footer from './Components/footer';
-import About from './Components/About Selmore/about';
 import Advertising from './Components/Advertising Agency/advertising';
 import Faq from './Components/Faq/faq';
 import Seller from './Components/Seller/seller';
@@ -25,12 +30,24 @@ class App extends Component {
   render() {
     return (
     	<div>
-    		<Home/>
-	    </div>  	
+      <BrowserRouter>
+        <div>
+        <Route exact path="/" component={Home}></Route>
+        <Route path="/about" component={About}></Route>
+        <Route path="/advertising_agency" component={Advertising}></Route>
+        <Route path="/faq" component={Faq}></Route>
+        <Route path="/contact" component={Contactpage}></Route>
+        <Route path="/bidding" component={Bidding}></Route>
+        <Route path="/bidding_karachi" component={Billofbidding1}></Route>
+        <Route path="/signin" component={Login}></Route>
+        <Route path="/seller" component={Seller}></Route>
+        <Route path="/buyer" component={Buyer}></Route>
+
+        </div>
+      </BrowserRouter>
+	    </div>
     );
   }
 }
 
 export default App;
-
-
