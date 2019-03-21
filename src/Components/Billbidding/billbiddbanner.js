@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
 import './billbidding.css';
+import AbBanner from '../About Selmore/abBanner';
 
 class Billbiddbanner extends Component {
   render() {
     return (
         <div>
-			<div className="row" style={{margin:'0px'}}> 	
+			<AbBanner advertise={'ABOUT SELMORE'} bred={'About'} />
+  		</div> 
+    );
+  }
+}
+export default Billbiddbanner;
+
+/*<div className="row" style={{margin:'0px'}}> 	
 				<img src="./images/about-banner.png" className="unit1"/>
 			</div> 
 			<div>
@@ -21,9 +29,4 @@ class Billbiddbanner extends Component {
 						<ul className="unit5"><a href="#"><span className="unit6">> BIDDING BILLBOARDS</span></a></ul>
 					</ol>
         		</div>
-        	</div><br/>	
-  		</div> 
-    );
-  }
-}
-export default Billbiddbanner;
+        	</div><br/>	*/

@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
 import './billmardan.css';
+import AbBanner from '../About Selmore/abBanner';
 
 class Mardanbanner extends Component {
   render() {
     return (
         <div>
-        	<div className="row" style={{margin:'0px'}}> 	
+        	
+    	</div> 
+    );
+  }
+}
+export default Mardanbanner;
+
+/*<div className="row" style={{margin:'0px'}}> 	
 				<img src="./images/about-banner.png" className="art1"/>
 			</div> 
 			<div>
@@ -21,9 +29,4 @@ class Mardanbanner extends Component {
 						<ul className="art5"><a href="#"><span className="art6">> MARDAN</span></a></ul>
 					</ol>
 	    		</div>
-        	</div>
-    	</div> 
-    );
-  }
-}
-export default Mardanbanner;
+        	</div>*/

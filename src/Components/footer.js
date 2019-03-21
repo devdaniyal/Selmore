@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './home.css';
+import './headerfooter.css';
 
 class Footer extends Component {
   render() {
@@ -7,22 +7,28 @@ class Footer extends Component {
         <div>
       		<div className="container true3">
       			<div className="row">
-      				<div className="col-md-4">      				
+      				<div className="col-4 col-md-4 col-lg-4 col-xl-4">      				
   						<h3  className="footertext1"><span>ABOUT</span></h3>
   							<div className="row">
-	  							<div className="col-md-4 col-4"></div>
-		      					<div className="col-md-4 col-4 hrline3"></div>
-		      					<div className="col-md-4 col-4"></div>
+	  							<div className="col-4 col-md-4 col-lg-4 col-xl-4"></div>
+		      					<div className="col-4 col-md-4 col-lg-4 col-xl-4 hrline3"></div>
+		      					<div className="col-4 col-md-4 col-lg-4 col-xl-4"></div>
   							</div>
-      					<p  className="footertext2"><span>selmore advertising is leading <br/> outdoor advertising portal<br/> in pakistan. selmore is home <br/>for outdoor advertising <br/>space.
-      					 We connect ads buyer<br/> to ads seller</span></p>
+  							<div className="d-none d-sm-block">
+	      						<p className="footertext2"><span>selmore advertising is leading <br/> outdoor advertising portal<br/> in pakistan. selmore is home <br/>for outdoor advertising <br/>space.
+	      					 We connect ads buyer<br/> to ads seller</span></p>
+      						</div>
+      						<div className="d-block d-sm-none">
+	      						<p className="footertext2"><span>selmore advertising is leading outdoor advertising portal in pakistan. selmore is home for outdoor advertising space.
+	      					 We connect ads buyer to ads seller</span></p>
+      						</div>
       				</div>
-      				<div className="col-md-4">
+      				<div className="col-4 col-md-4 col-lg-4 col-xl-4">
       					<h3  className="footertext1"><span>QUICK LINKS</span></h3>
 						<div className="row">
-							<div className="col-md-4 col-4"></div>
-	      					<div className="col-md-4 col-4 hrline3"></div>
-	      					<div className="col-md-4 col-4"></div>
+							<div className="col-4 col-md-3 col-lg-3 col-xl-3"></div>
+	      					<div className="col-4 col-md-6 col-lg-6 col-xl-6 hrline3"></div>
+	      					<div className="col-4 col-md-3 col-lg-3 col-xl-3"></div>
 						</div>
 						<div>
 							<ul className="true2">
@@ -34,15 +40,15 @@ class Footer extends Component {
 							</ul>  							
 						</div>	
       				</div>
-      				<div className="col-md-4">
+      				<div className="col-4 col-md-4 col-lg-4 col-xl-4">
       					<h3  className="footertext1"><span>CONNECT</span></h3>
 						<div className="row">
-							<div className="col-md-4 col-4"></div>
-	      					<div className="col-md-4 col-4 hrline3"></div>
-	      					<div className="col-md-4 col-4"></div>
+							<div className="col-4 col-md-4 col-lg-4 col-xl-4"></div>
+	      					<div className="col-4 col-md-4 col-lg-4 col-xl-4 hrline3"></div>
+	      					<div className="col-4 col-md-4 col-lg-4 col-xl-4"></div>
 						</div>
 						<div>
-							<ul className="true2">
+							<ul className="true22">
 							  <li><a href="#">Blog</a></li>
 							  <li><a href="#">Forum</a></li>
 							  <li><a href="#">List your Ads</a></li>
@@ -51,14 +57,13 @@ class Footer extends Component {
       				</div>
       			</div>
       		</div>
-      			<div className="container">
-      				<div className="row rowbackground true7">
-                <div className="col-md-1"></div>
-      					<div className="col-md-6 col-9 true6"><span className="true5">Copyrights 2019 By Selmore. All Rights Reservered</span></div>
+      				<div className="row rowbackground true7" style={{margin:'0px'}}>
+                <div className="col-1 col-md-1 col-lg-1 col-xl-1"></div>
+      					<div className="col-9 col-md-6 col-lg-6 col-xl-6 true6"><span className="true5">Copyrights 2019 By Selmore. All Rights Reservered</span></div>
 
-      					<div className="col-md-5 col-3"></div>
+      					<div className="col-2 col-md-5 col-lg-5 col-xl-5"></div>
       				</div>			
-      			</div>
+
       		
        </div>
     );

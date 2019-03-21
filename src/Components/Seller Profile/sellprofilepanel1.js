@@ -27,30 +27,30 @@ class Sellprofilepanel1 extends Component {
 				  		    </div>
 						</div>
 					</div>
-					<div className="col-md-7">
+					<div className="col-md-7 farzi_mar1">
 						<div className="row" style={{margin:'0px'}}>
 							<div className="col-md-12 dear7">
 								<h4><span className="dear3">CONTACT:</span></h4>
 							</div>
 						</div>
-						<div className="row  text-left" style={{margin:'0px'}}>
+						<div className="row  text-left">
 							<div className="col-md-8 col-5">	
 							</div>
 							<div className="col-md-3 col-6">
-								<p>0315000000000</p>	
+								<p className="dear8">0315000000000</p>	
 							</div>
-							<div className="col-md-1 col-1 dear8">
+							<div className="col-md-1 col-1 bikekey">
 								<i className="fa fa-mobile-phone" style={{fontSize:'24px'}}></i>	
 							</div>
 						</div>
-						<div className="row text-left" style={{margin:'0px'}}>
+						<div className="row text-left">
 							<div className="col-md-8 col-5">	
 							</div>
-							<div className="col-md-3 col-6">
-								<p>0315000000000</p>	
+							<div className="col-md-3 col-6 dear_window">
+								<p className="bikekey2">xyz@yahoo.com</p>	
 							</div>
-							<div className="col-md-1 col-1 dear8">
-								<i className="fa fa-envelope" style={{fontSize:'20px'}}></i>	
+							<div className="col-md-1 col-1 bikekey">
+								<i className="fa fa-envelope" style={{fontSize:'14px'}}></i>	
 							</div>
 						</div>
 						<div className="row" style={{margin:'0px'}}>
@@ -58,8 +58,8 @@ class Sellprofilepanel1 extends Component {
 								<h4><span className="dear3">LISTINGS:</span></h4>
 							</div>
 						</div>
-						<div className="row" style={{margin:'0px'}}>
-							<div className="col-md-12 text-right" style={{marginLeft:'-35px'}}>
+						<div className="row">
+							<div className="col-md-12 text-right bikekey3">
 								<p><span>Billboards Other</span></p>
 							</div>
 						</div>

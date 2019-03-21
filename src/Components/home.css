@@ -1,17 +1,4 @@
-.selmorelogo{
-	    height: 101px;
-    	margin-left: 30px;
-}
-.navmargin{
-	        margin-top: 30px;
-}
-.navmargin12{
-		margin-top: 33px;
-}
-.navbtnmargin{
-		    margin-left: 10px;
-		    margin-top: 33px;
-}
+
 .rowcolor{
 		background-color: #29abe2;
 		
@@ -72,9 +59,6 @@
 		    font-family: Helvetica;  
 
 	}
-	.navsm{
-		margin-left: -10%;
-	}
 	.tikimage{
 		width: 115%;
 		height: 400px;
@@ -93,9 +77,6 @@
 		    font-family: Helvetica;  
 
 	}
-	.navsm{
-		margin-left: -10%;
-	}
 	.tikimage{
 		width: 113%;
 		height: 440px;
@@ -113,9 +94,6 @@
 		       font-size: 45px;
 		    font-family: Helvetica;  
 
-	}
-	.navsm{
-		margin-left: 0%;
 	}
 	.tikimage{
 		width: 106%;
@@ -146,7 +124,7 @@
 		
 		float: right;
 		text-align: center;
-		background-color: #e6e6e6;
+		background-color: #29abe2;
 		width: 25%;
 		margin-left: 40px;
 		margin-bottom: 19px;
@@ -312,18 +290,12 @@
 		    margin-left: -30px;
 		    width: 100%;
 	}
-	.material-icons{
-			margin-left: -99px !important;
-	}
 }
 @media screen and (min-width: 1024px) and (max-width: 1600px){
 	.funday{
 	 margin-bottom: 13px;
     margin-left: -58px;
 	
-	}
-	.material-icons{
-			margin-left: -13px !important;
 	}
 
 }
@@ -396,7 +368,7 @@
 	}
 }
 .moon5{
-	margin-bottom: 10px;
+	margin-bottom: 30px;
 }
 .cell7{
 	font-size: 12px;
@@ -447,59 +419,15 @@
 .mouse7{
 	    color: #29abe2;
 }
-.footertext1{
-		text-align: center;
-		 font-family: Helvetica; 
-		 font-weight: 600;
-		     font-size: 23px;
-}
-.footertext2{
-	    width: 60%;
-    margin-left: 82px;
-     font-family: Helvetica; 
-     font-size: 13px;
-     font-weight: 600;
-         margin-top: 12px;
-    margin-bottom: 30px;
-}
+
 .divline1{
 		border-bottom: 2px solid #29abe2;
 }
-.true2{
-	    list-style-type: none;
-	    margin-left: 70px;
-	    font-family: Helvetica;
-	    font-weight: 600;
-	    font-size: 13px;
-	        margin-top: 12px;
-    margin-bottom: 30px;
-}
-.true2 a{
-	color: black;
-}
-.true2 a:hover{
-	color: #29abe2;
-}
-.nav a:hover {
-	color: black;
-}
-.true3{
-	margin-top: 50px;
-}
+
 .rowbackground{
 	background-color: #29abe2;
 }
-.true5{
-	font-size: 15px;
-	color: white;
 
-}
-.true6{
-	margin: 5px;
-}
-.true7{
-	    margin-top: 13px;
-}
 .drn9{
 	background-color: #e6e6e6;
 }
@@ -1152,13 +1080,192 @@
     margin-left: 62%;
 	}
 }
+.luxpure1{
+	width: 85%;
+    height: 160px;
+    position: absolute;
+}
 
 
-
-
-
-
-
+.luxpure7{
+	background-color: white;
+    BORDER-RADIUS: 10PX;
+    PADDING: 2PX;
+}
+@media screen and (min-width: 360px) and (max-width: 660px){
+	.luxpure2{
+	    background: rgba(30, 22, 22, 0.58);
+	    position: relative;
+	    color: white;
+        margin-top: 38%;
+    	width: 93%;
+	}
+	.luxpure5{
+		font-size: 35px;
+        margin-left: -83%;
+	}
+	.luxpure6{
+		background-color: rgb(240, 232, 232);
+	    WIDTH: 93%;
+	    MARGIN-LEFT: 0PX;
+	    PADDING: 15PX;
+	}
+	.starcircus{
+		font-size: 23px;
+		color: orange;
+	}
+	.luxpure3{
+ 		 font-size: 11px;
+	    margin-top: -21px;
+	    margin-bottom: 2px;
+	    font-family: Helvetica;
+	    margin-left: 2%;
+	}
+	.luxpure4{
+		font-size: 16px;
+	    font-weight: 600;
+	    font-family: Helvetica;
+	    margin-left: 2%;
+	}
+	.luxpure8{
+		margin-left: 3%;
+	}
+	.luxpure9{
+		padding: 8px;
+	    margin-top: -4%;
+	    margin-bottom: -4%;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 1020px){
+	.luxpure2{
+	       background: rgba(30, 22, 22, 0.58);
+		    position: relative;
+		    color: white;
+		    margin-top: 62%;
+		    width: 97%;
+	}
+	.luxpure5{
+		    font-size: 28px;
+		    margin-left: -10%;
+	}
+	.luxpure6{
+		background-color: rgb(240, 232, 232);
+	    WIDTH: 97%;
+	    MARGIN-LEFT: 0PX;
+	    PADDING: 15PX;
+	}
+	.starcircus{
+		font-size: 15px;
+		color: orange;
+	}
+	.luxpure3{
+ 		     font-size: 10px;
+		    margin-top: -21px;
+		    margin-bottom: 2px;
+		    font-family: Helvetica;
+		    margin-left: 2%;
+	}
+	.luxpure4{
+		font-size: 12px;
+	    font-weight: 600;
+	    font-family: Helvetica;
+	    margin-left: 2%;
+	}
+	.luxpure8{
+		
+	}
+	.luxpure9{
+		padding: 3px;
+	    margin-top: -4%;
+	    margin-bottom: -6%;
+	}
+}
+@media screen and (min-width: 1024px) and (max-width: 1366px){
+	.luxpure2{
+	    background: rgba(30, 22, 22, 0.58);
+	    position: relative;
+	    color: white;
+	    margin-top: 43%;
+	    width: 271px;
+	}
+	.luxpure5{
+		font-size: 35px;
+    	margin-left: -100%;
+	}
+	.luxpure6{
+		background-color: rgb(240, 232, 232);
+	    WIDTH: 93%;
+	    MARGIN-LEFT: 0PX;
+	    PADDING: 15PX;
+	}
+	.starcircus{
+		font-size: 22px;
+		color: orange;
+	}
+	.luxpure3{
+ 		font-size: 10px;
+	    margin-top: -19px;
+	    margin-bottom: 2px;
+	    font-family: Helvetica;
+	    margin-left: 2%;
+	}
+	.luxpure4{
+		font-size: 15px;
+	    font-weight: 600;
+	    font-family: Helvetica;
+	    margin-left: 2%;
+	}
+	.luxpure8{
+		
+	}
+	.luxpure9{
+		padding: 2px;
+    	margin-top: 1%;
+	}
+}
+@media screen and (min-width: 1366px) and (max-width: 1600px){
+	.luxpure2{
+	    background: rgba(30, 22, 22, 0.58);
+	    position: relative;
+	    color: white;
+	    margin-top: 34%;
+	    width: 92%;
+	}	
+	.luxpure5{
+		font-size: 37px;
+	    margin-left: 31%;
+	}
+	.luxpure6{
+		background-color: rgb(240, 232, 232);
+	    WIDTH: 92%;
+	    MARGIN-LEFT: 0PX;
+	    PADDING: 15PX;
+	}
+	.starcircus{
+		font-size: 25px;
+		color: orange;
+	}
+	.luxpure3{
+ 		 font-size: 11px;
+	    margin-top: -21px;
+	    margin-bottom: 2px;
+	    font-family: Helvetica;
+	    margin-left: 2%;
+	}
+	.luxpure4{
+		font-size: 18px;
+	    font-weight: 600;
+	    font-family: Helvetica;
+	    margin-left: 2%;
+	}
+	.luxpure8{
+		
+	}
+	.luxpure9{
+		    padding: 7px;
+    		margin-bottom: -4%;
+	}
+}
 
 
 

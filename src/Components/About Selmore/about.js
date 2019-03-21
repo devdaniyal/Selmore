@@ -11,7 +11,7 @@ class About extends Component {
     return (
         <div>
         	<Header />
-        	<AbBanner />
+        	<AbBanner advertise={'ABOUT SELMORE'} bred={'About'} />
         	<Panel1 />
         	<Panel2 />
           <Footer />

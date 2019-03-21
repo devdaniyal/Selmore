@@ -5,7 +5,7 @@ class Panel4 extends Component {
   render() {
     return (
       <div>
-
+      	<div className="row exi2" style={{margin:'0px'}}>
       		<div className="container exi2">
   				<div className="row">
 					<div className="col-md-1"></div>
@@ -20,13 +20,13 @@ class Panel4 extends Component {
   				<div className="row">
   					<div className="col-md-1"></div>
 					<div className="col-md-8"></div>
-					<div className="col-md-2 cell5 moon5" style={{marginLeft:'-2%'}}>
+					<div className="col-md-2 cell5 moon5" style={{marginLeft:'-2%',marginTop:'-2%'}}>
 						<button type="button" className="btn cell3"><span className="cell4">GET STARTED</span></button>
 					</div>
 					<div className="col-md-1"></div>
   				</div>
-  			</div>	<br/>
-
+  			</div>	
+  		</div>	<br/>
 
 
       </div>

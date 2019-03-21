@@ -5,7 +5,7 @@ class Formpanel extends Component {
   render() {
     return (
     	<div>
-    			<div className="container">		
+    			<div className="container proroute2">		
 	    			<div className="row ball5">
     					<div className="col-md-8">
     						<form>
@@ -18,7 +18,7 @@ class Formpanel extends Component {
     					<div className="col-md-4"></div>		
 	    			</div>
 	    			<div className="row ball4">
-	    				<div className="col-md-4">
+	    				<div className="col-md-4 col-6">
 	    					<form>
 							    <div className="form-group">
 							      <label for="usr"></label>
@@ -26,7 +26,7 @@ class Formpanel extends Component {
 							    </div>
 							</form> 
 	    				</div>
-	    				<div className="col-md-4">
+	    				<div className="col-md-4 col-6">
 	    					<form>
 							    <div className="form-group">
 							      <label for="usr"></label>
@@ -37,7 +37,7 @@ class Formpanel extends Component {
 	    				<div className="col-md-4"></div>
 	    			</div>
 	    			<div className="row ball4">
-    					<div className="col-md-8">
+    					<div className="col-md-8 col-12">
     						<form>
 							    <div className="form-group">
 							      <label for="usr"></label>
@@ -48,7 +48,7 @@ class Formpanel extends Component {
     					<div className="col-md-4"></div>		
 	    			</div>
 	    			<div className="row ball4">
-    					<div className="col-md-6">
+    					<div className="col-md-6 col-8">
     						<form>
 							    <div className="form-group">
 							      <label for="usr"></label>
@@ -56,13 +56,13 @@ class Formpanel extends Component {
 							    </div>
 							</form>    
     					</div>
-    					<div className="col-md-2">
+    					<div className="col-md-2 col-4">
     						<button type="button" className="btn btn-primary btnapple">Register</button>
     					</div>
     					<div className="col-md-4"></div>		
 	    			</div>
 	    			<div className="row" style={{margin:'0px'}}>
-	    				<div className="col-md-8 ball1"></div>
+	    				<div className="col-md-8 ball1" style={{marginLeft:'1%'}}></div>
 	    				<div className="col-md-4"></div>
 	    			</div><br/>
 	    		</div>	

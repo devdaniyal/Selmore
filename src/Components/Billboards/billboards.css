@@ -16,10 +16,7 @@
 	    color: white;
 	    font-family: Helvetica;
 }
-.envato4{
-	display: inline;
-	margin-left: -55px;
-}
+
 .envato5{
 	display: inline;
 	margin-left: -31px;
@@ -35,12 +32,18 @@
 	margin-top: 227px;
 
 	}
+	.envato4{
+		
+	}
 }
 @media screen and (min-width: 768px) and (max-width: 1020px){
 .envato8{
 	margin-top: 187px;
 	padding: 0px;
 
+	}
+	.envato4{
+	
 	}
 }
 @media screen and (min-width: 1024px) and (max-width: 1366px){
@@ -49,11 +52,17 @@
 	padding: 0px;
 
 	}
+	.envato4{
+		margin-left: 7%;
+	}
 }
 @media screen and (min-width: 1366px) and (max-width: 1600px){
 .envato8{
 		margin-top: 126px;
 		padding: 0px;
+	}
+	.envato4{
+		margin-left: 7%;
 	}	
 }
 

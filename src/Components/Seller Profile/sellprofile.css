@@ -62,11 +62,13 @@
 .dear2{
 	background-color: #29abe2; 
 }
-.dear3{
-	color: white;
-}
+
 .dear4{
-	background-color: #E7E4E4;
+	    background-color: #E7E4E4;
+    margin-top: -4%;
+    margin-left: 25%;
+    border-radius: 0px;
+    width: 60%;
 }
 .dear5{
 	background-color: white;
@@ -83,9 +85,6 @@
 	text-align: right;
 	margin-top: 10px;
 }
-.dear8{
-	margin-left: -29px;
-}
 .dear9{
 	border-bottom: 2px solid #29abe2;
 }
@@ -93,6 +92,131 @@
 	margin-top: 10px;
 }
 
+@media screen and (min-width: 360px) and (max-width: 660px){
+	.dear4{
+	   background-color: #E7E4E4;
+	    margin-top: -2%;
+	    margin-left: 8%;
+	    border-radius: 0px;
+	    width: 84%;
+	}
+	.farzi_mar1{
+		    margin-left: -6px;
+    		margin-top: 7%;
+	}
+	.dear3{
+		color: white;
+		font-size: 14px;
+	}
+	.dear_window{
+		margin-left: 0%;
+	}
+	.dear8{
+		margin-left: 10%;
+	}
+	.bikekey{
+		    margin-left: -9%;
+	}
+	.bikekey2{
+		margin-left: 6%;	
+	}
+	.bikekey3{
+	    margin-left: -15px;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 1024px){
+	.dear4{
+	        background-color: #E7E4E4;
+		    margin-top: -6%;
+		    margin-left: 8%;
+		    border-radius: 0px;
+		    width: 97%;
+	}
+	.farzi_mar1{
+		margin-left: -18px;
+	}
+	.dear3{
+		color: white;
+		font-size: 14px;
+	}
+	.dear_window{
+		margin-left: 0%;
+	}
+	.dear8{
+		    margin-left: -59%;
+	}
+	.bikekey{
+		    margin-left: -5%;
+	}
+	.bikekey2{
+		margin-left: -65%;	
+	}
+	.bikekey3{
+	    margin-left: -14px;
+	}
+}
+@media screen and (min-width: 1024px) and (max-width: 1366px){
+	.dear4{
+	    background-color: #E7E4E4;
+	    margin-top: -4%;
+	    margin-left: 25%;
+	    border-radius: 0px;
+	    width: 70%;
+	}
+	.farzi_mar1{
+		margin-left: -49px;
+	}
+	.dear3{
+		color: white;
+		font-size: 15px;
+	}
+	.dear_window{
+		margin-left: 0%;
+	}
+	.dear8{
+		margin-left: 4%;
+	}
+	.bikekey{
+		margin-left: -2%;
+	}
+	.bikekey2{
+		margin-left: -2%;	
+	}
+	.bikekey3{
+	    margin-left: -15px;
+	}
+}
+@media screen and (min-width: 1366px) and (max-width: 1600px){
+	.dear4{
+	    background-color: #E7E4E4;
+	    margin-top: -4%;
+	    margin-left: 25%;
+	    border-radius: 0px;
+	    width: 60%;
+	}
+	.farzi_mar1{
+		margin-left: -95px;
+	}
+	.dear3{
+		color: white;
+		font-size: 17px;
+	}
+	.dear_window{
+		margin-left: 0%;
+	}
+	.dear8{
+		margin-left: 22%;
+	}
+	.bikekey{
+		margin-left: -3px;
+	}
+	.bikekey2{
+		margin-left: 21%;	
+	}
+	.bikekey3{
+	        margin-left: -13px;
+	}
+}
 
 
 

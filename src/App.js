@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Home from './Components/home';
+import Header from './Components/header';
 import Footer from './Components/footer';
 import About from './Components/About Selmore/about';
 import Advertising from './Components/Advertising Agency/advertising';
@@ -18,12 +19,13 @@ import Billbidding from './Components/Billbidding/billbidding';
 import Billofbidding1 from './Components/Billboard of bidding1/billofbidding';
 import Popform from './Components/Popform/popform';
 import './App.css';
+import HomePanel7 from './Components/panel7';
 
 class App extends Component {
   render() {
     return (
     	<div>
-    		<About />
+    		<Home/>
 	    </div>  	
     );
   }

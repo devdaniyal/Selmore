@@ -5,7 +5,7 @@ class Panel2 extends Component {
   render() {
     return (
       <div>
-
+        <div className="row clock" style={{margin:'0px'}}>
       		<div className="container">
           			<div className="row clock">
           				<div className="col-md-4"></div>
@@ -31,8 +31,8 @@ class Panel2 extends Component {
       						<img src="../images/peekfreans.png" className="drn5"/>
       					</div>
     				  </div>
-    		  </div><br/>
-
+    		  </div>
+        </div><br/>  
 
       </div>
     );

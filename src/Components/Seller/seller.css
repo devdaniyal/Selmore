@@ -36,12 +36,18 @@
 	padding: 0px;
 
 	}
+	.gone1{
+
+	}
 }
 @media screen and (min-width: 768px) and (max-width: 1020px){
 		.lemon5{
 	margin-top: 180px;
 	padding: 0px;
 
+	}
+	.gone1{
+		
 	}
 }
 @media screen and (min-width: 1024px) and (max-width: 1366px){
@@ -50,12 +56,18 @@
 		padding: 0px;
 
 	}
+	.gone1{
+		margin-left: 75px;
+	}
 }
 @media screen and (min-width: 1366px) and (max-width: 1600px){
 	.lemon5{
 		margin-top: 120px;
 		padding: 0px;
 
+	}
+	.gone1{
+		margin-left: 97px;
 	}
 }
 

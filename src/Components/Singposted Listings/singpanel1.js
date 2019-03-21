@@ -5,9 +5,10 @@ class Singpanel1 extends Component {
   render() {
     return (
         <div>
-	        	<div className="container">
+	        	
 	        		<div className="row" style={{margin:'0px'}}>
-	        			<div className="col-md-8">
+	        			
+	        			<div className="col-md-9">
 	        				<div className="row lootlo1" style={{margin:'0px'}}>
                    				<span className="lootlo2">Search Result(5)</span>
                 			</div>
@@ -127,17 +128,17 @@ class Singpanel1 extends Component {
                           		</div>             
                           	</div>
                         </div>
-	        			<div className="col-md-4">
+	        			<div className="col-md-3">
 	        				<div className="row lootlo1" style={{margin:'0px'}}>
                    				<span className="lootlo8">Posted By</span>
                 			</div>
                 			<div className="row lootlo3">
-                				<div className="col-md-7 text-centre">
+                				<div className="col-md-7 col-lg-6 col-xl-6 text-centre">
                 					<div className="kross2">
 						    			<h4><span className="kross1">Photo</span></h4>
 						    		</div>
                 				</div>
-                				<div className="col-md-5 kross5">
+                				<div className="col-md-5 col-lg-6 col-xl-6 kross5">
             						<h4>Syed Ali</h4>
             						<div className="row">
 									   	<div className="col-md-2 col-4"></div>
@@ -175,7 +176,7 @@ class Singpanel1 extends Component {
                 			</div>
 	        			</div>
 	        		</div>
-	        	</div>
+	        	
     	</div> 
     );
   }

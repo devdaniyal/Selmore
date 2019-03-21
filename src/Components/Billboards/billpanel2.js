@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import './billboards.css';
+import Billmardanpanel2 from '../Billboard Mardan/mardanpanel2';
 
 class billpanel2 extends Component {
   render() {
     return (
         <div>
-        		<div className="container">
+        		<Billmardanpanel2 />
+    	</div>
+    );
+  }
+}
+export default billpanel2;
+/*<div className="container">
                 <div className="row" style={{margin:'0px'}}>
                     <div className="col-md-8">
                         <div className="row aux1" style={{margin:'0px'}}>
@@ -129,9 +136,4 @@ class billpanel2 extends Component {
                     </div>
                     <div className="col-md-4"></div>
                 </div>
-            </div>
-    	</div>
-    );
-  }
-}
-export default billpanel2;
+            </div>*/

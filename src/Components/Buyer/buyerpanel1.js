@@ -7,7 +7,7 @@ class Buyerpanel1 extends Component {
     return (
       <div>
 			<br/>
-      			<div className="container">
+      			<div className="container gone4">
         				<div>
           					<span className="apple9">SO YOU ARE MR.BUYER ? WELCOME TO SELMOER</span>
         				</div>
@@ -26,7 +26,7 @@ class Buyerpanel1 extends Component {
 	        			<div className="col-md-10 col-7"></div>
           			</div><br/>
           			<div>
-        				<ul>
+        				<ul style={{marginLeft:'-3%'}}>
           					<li>Make money from new / unique advertising opportunities</li> 					
           					<li>Selmore makes all your advertising space profitable</li>
           					<li>Meet Local, National and Global advertising buyers</li>

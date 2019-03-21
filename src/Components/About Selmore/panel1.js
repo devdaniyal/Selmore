@@ -7,7 +7,7 @@ class Panel1 extends Component {
         <div>	
         		<div className="container" style={{marginTop:"45px"}}>
 	        		<div className="row">
-	        			<div className="col-md-8">
+	        			<div className="col-md-8 olpad2">
 	        				<h4 style={{marginBottom:"20px"}}><span className="tissue1">ABOUT SELMORE</span></h4>
 	        				<p className="tissue2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
 	        					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,

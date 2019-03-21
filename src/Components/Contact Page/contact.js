@@ -6,14 +6,14 @@ import Cpbannerfoot from './cpbannerfoot';
 import Formpanel from './formpanel';
 import Contpanel1 from './contpanel1';
 import './contact.css';
+import AbBanner from '../About Selmore/abBanner';
 
 class Contact extends Component {
   render() {
     return (
     	<div>
     		<Header />
-    		<Cpbanner />
-    		<Cpbannerfoot />
+            <AbBanner advertise={'CONTACT'} bred={'CONTACT'} />
     		<Formpanel />
             <Contpanel1 />
             <Footer />

@@ -6,13 +6,14 @@ import Militarypanel2 from './militarypanel2';
 import Militarypanel3 from './militarypanel3';
 import Militarybanner from './militarybanner';
 import './billmilitary.css';
+import AbBanner from '../About Selmore/abBanner';
 
 class Billboardmilitary extends Component {
   render() {
     return (
         <div>
         	<Header />
-        	<Militarybanner />
+        	<AbBanner advertise={'BILLBOARD'} bred={'CATEGORY'}  bred2={'> BILLBOARD'} bred3={'> MILITARY ROAD CITY POINT'} />
         	<Militarypanel1 />
         	<Militarypanel2 />
         	<Militarypanel3 />

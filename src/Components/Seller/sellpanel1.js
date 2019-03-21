@@ -6,7 +6,7 @@ class Sellpanel1 extends Component {
   render() {
     return (
       <div><br/>
-      			<div className="container">
+      			<div className="container gone1">
         				<div>
           				<span className="pak1">WELCOME MR.SELLER TO SELMORE</span>
           			</div>

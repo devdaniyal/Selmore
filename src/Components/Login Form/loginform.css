@@ -5,8 +5,9 @@
     color: white;
 }
 .school4{
-	margin-left: 115px;
-	    background-color: white;
+	margin-left: 102px;
+    background-color: white;
+    width: 110px;
 }
 .school5{
 	font-size: 17px;
@@ -16,10 +17,11 @@
 	margin-top: 12%;
 }
 .school7{
-	margin-top: 10%;
+	margin-top: 9%;
 }
 .school8{
 	font-weight: 500;
+	color: white;
 }
 @media screen and (min-width: 360px) and (max-width: 660px){
 	.school1{

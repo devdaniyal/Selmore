@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './home.css';
+import './headerfooter.css';
 
 
 class Header extends Component {
@@ -8,44 +8,40 @@ class Header extends Component {
       <div>
             
                 <div className="container">
-                  <div className="row">
-                    <div className="col-md-4 col-sm-3">
-                      <img src="../images/selmore-logo.png" className="selmorelogo"/>
-                    </div>
-                      <div className="col-md-8 col-sm-9 d-none d-sm-block">
-                        <ul className="nav navsm">
-                          <li className="nav-item navmargin" >
-                            <a className="nav-link" href="#">Home</a>
-                          </li>
-                          <li className="nav-item navmargin">
-                            <a className="nav-link" href="#">About</a>
-                          </li>
-                          <li className="nav-item navmargin">
-                            <a className="nav-link" href="#">Agencies</a>
-                          </li>
-                          <li className="nav-item navmargin">
-                            <a className="nav-link" href="#">FAQ</a>
-                          </li>
-                          <li className="nav-item navmargin">
-                            <a className="nav-link" href="#">Blog</a>
-                          </li>
-                          <li className="nav-item navmargin12">
-                            <button type="button" class="btn btn-primary btn-sm"><i className="fa fa-plus"></i> LIST AD</button>
-                          </li>
-                          <li className="nav-item navbtnmargin">
-                            <button type="button" className="btn btn-primary btn-sm">Login/Signup</button>
-                          </li>
-                          <li className="nav-item navbtnmargin">
-                            <button type="button" className="btn btn-primary btn-sm">BIDDING</button>
-                          </li>
-                        </ul>
-                      </div>
-                      
-                  </div>      
+                    <div className="row">
+                        <div className="col-4 col-md-4 col-lg-4 col-xl-4">
+                          <img src="../images/selmore-logo.png" className="selmorelogo"/>
+                        </div>
+                        <div className="col-md-8 col-lg-8 col-xl-8 d-none d-sm-block">
+                            <ul className="nav navsm">
+                                <li className="nav-item navmargin" >
+                                  <a className="nav-link" href="#">HOME</a>
+                                </li>
+                                <li className="nav-item navmargin">
+                                  <a className="nav-link" href="#">ABOUT</a>
+                                </li>
+                                <li className="nav-item navmargin">
+                                  <a className="nav-link" href="#">AGENCIES</a>
+                                </li>
+                                <li className="nav-item navmargin">
+                                  <a className="nav-link" href="#">FAQ</a>
+                                </li>
+                                <li className="nav-item navmargin">
+                                  <a className="nav-link" href="#">BLOG</a>
+                                </li>
+                                <li className="nav-item navmargin12">
+                                  <button type="button" class="btn btn-primary btn-sm"><span> LIST AD</span></button>
+                                </li>
+                                <li className="nav-item navbtnmargin">
+                                  <button type="button" className="btn btn-primary btn-sm"><span>Login/Signup</span></button>
+                                </li>
+                                <li className="nav-item navbiddbtn">
+                                  <button type="button" className="btn btn-primary btn-sm"><span>BIDDING</span></button>
+                                </li>
+                            </ul>
+                        </div>                      
+                    </div>      
                 </div>
-
-
-
       </div>
     );
   }

@@ -37,6 +37,12 @@
 	    margin-left: 10%;
     	position: relative;
 	}
+	.proroute{
+
+	}
+	.proroute2{
+		
+	}
 }
 @media screen and (min-width: 768px) and (max-width: 1020px){
 	.grape8{
@@ -55,6 +61,12 @@
 	    font-family: Helvetica;
 	    margin-left: 10%;
     	position: relative;
+	}
+	.proroute{
+		
+	}
+	.proroute2{
+		
 	}
 }
 @media screen and (min-width: 1024px) and (max-width: 1366px){
@@ -75,6 +87,12 @@
 	    margin-left: 10%;
     	position: relative;
 	}
+	.proroute{
+		margin-left: 7%;
+	}
+	.proroute2{
+		margin-left: 6%;
+	}
 }
 @media screen and (min-width: 1366px) and (max-width: 1600px){
 	.grape8{
@@ -93,6 +111,12 @@
 	    font-family: Helvetica;
 	    margin-left: 10%;
     	position: relative;
+	}
+	.proroute{
+		margin-left: 7%;
+	}
+	.proroute2{
+		margin-left: 6%;
 	}
 }
 
@@ -123,4 +147,11 @@
 .ball5{
 		margin: 0px;
 	margin-top: -6px;
+}
+
+.ghupshap1{
+	color: black;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: Helvetica;
 }

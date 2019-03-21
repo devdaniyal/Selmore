@@ -41,6 +41,9 @@
 		margin-top: 5px;
 		position: absolute;
 }
+	.gone4{
+
+	}
 }
 @media screen and (min-width: 768px) and (max-width: 1020px){
 	.apple8{
@@ -54,6 +57,9 @@
 		margin-top: 5px;
 		position: absolute;
 }
+	.gone4{
+		
+	}
 }
 @media screen and (min-width: 1024px) and (max-width: 1366px){
 	.apple8{
@@ -67,6 +73,9 @@
 		margin-top: 5px;
 		position: absolute;
 	}	
+	.gone4{
+		margin-left: 71px
+	}
 }
 @media screen and (min-width: 1366px) and (max-width: 1600px){
 	.apple8{
@@ -79,6 +88,9 @@
 		height: 300px;
 		margin-top: 5px;
 		position: absolute;
+	}
+	.gone4{
+		margin-left: 94px;
 	}
 }
 .apple9{

@@ -5,7 +5,7 @@ class Faqbannerfoot extends Component {
   render() {
     return (
         <div><br/>  
-        	<div className="container">
+        	<div className="container superp1">
         		<div>
         		<span className="water4">FREQUENTLY ASKED QUESTIONS</span>
         		</div> 		

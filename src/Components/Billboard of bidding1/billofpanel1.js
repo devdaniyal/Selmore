@@ -8,13 +8,13 @@ class Billofpanel1 extends Component {
         <div>
         	<div className="container">
 	        	<div className="row" style={{margin:'0px'}}>	
-	        		<div className="col-md-2"></div>
-	        		<div className="col-md-8">
+	        		<div className="col-md-1"></div>
+	        		<div className="col-md-10">
 	        			<div className="kurta1">
 	        				<h3 className="kurta2">SLIDER</h3>
 	        			</div>
 	        		</div>
-	        		<div className="col-md-2"></div>
+	        		<div className="col-md-1"></div>
 	        	</div>
 	        	<div className="row" style={{margin:'0px'}}>
 	        		<div className="col-md-6 text-right">

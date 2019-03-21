@@ -5,7 +5,7 @@ class Mardanpanel1 extends Component {
   render() {
     return (
         <div>
-        		<div className="container">
+        		<div className="container slip9">
      			 	<h4><span className="slip1">MARDAN LISTING</span></h4>
      			 	<div className="row">
 	        			<div className="col-md-1 col-4 farzan"></div>
