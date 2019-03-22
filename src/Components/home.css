@@ -256,23 +256,7 @@
 .clock {
 	 background-color: #e6e6e6;
 }
-.panel3div{
-			float: right;
-			background-color: #29abe2;
-		    width: 20%;
-    		margin-left: 27px;
-    		padding: 3px;
-}
-.innerdiv{
-	 float: right;
-	 text-align: center;
-	 color: white;
 
-}
-.hani2{
-	   font-size: 11px;
-    margin-top: -10px;
-}
 .clock2{
 	background-color: #9A9191;
 }
@@ -283,6 +267,29 @@
 		    margin-left: -30px;
 		    width: 100%;
 	}
+	.innerdiv{
+		 float: right;
+		 text-align: center;
+		 color: white;
+	}
+	.hani2{
+		   font-size: 11px;
+	    	margin-top: -10px;
+	}
+	.panel3div{
+		    float: right;
+		    background-color: #29abe2;
+		    margin-left: 27px;
+		    padding: 3px;
+		    width: 80%;
+		    margin-bottom: 5px;
+	}
+	.locationbar{
+		font-size: 33px;
+	}
+	.cityname{
+		font-size: 20px;
+	}
 }
 @media screen and (min-width: 768px) and (max-width: 1024px){
 	.funday{
@@ -290,14 +297,84 @@
 		    margin-left: -30px;
 		    width: 100%;
 	}
-}
-@media screen and (min-width: 1024px) and (max-width: 1600px){
-	.funday{
-	 margin-bottom: 13px;
-    margin-left: -58px;
-	
+	.innerdiv{
+		 float: right;
+		 text-align: center;
+		 color: white;
 	}
-
+	.hani2{
+		   font-size: 11px;
+	    	margin-top: -10px;
+	}
+	.panel3div{
+			float: right;
+			background-color: #29abe2;
+		        width: 22%;
+    			margin-left: 14px;
+    			padding: 3px;
+	}
+	.locationbar{
+		font-size: 33px;
+	}
+	.cityname{
+		font-size: 20px;
+	}
+}
+@media screen and (min-width: 1024px) and (max-width: 1366px){
+	.funday{
+	     margin-bottom: 13px;
+    	margin-left: -42px;
+	}
+	.innerdiv{
+		 float: right;
+		 text-align: center;
+		 color: white;
+	}
+	.hani2{
+		   font-size: 11px;
+	    	margin-top: -10px;
+	}
+	.panel3div{
+			float: right;
+			background-color: #29abe2;
+		        width: 22%;
+    			margin-left: 14px;
+    			padding: 3px;
+	}
+	.locationbar{
+		font-size: 33px;
+	}
+	.cityname{
+		font-size: 20px;
+	}
+}
+@media screen and (min-width: 1366px) and (max-width: 1600px){
+	.funday{
+	     margin-bottom: 13px;
+    	margin-left: -42px;
+	}
+	.innerdiv{
+		 float: right;
+		 text-align: center;
+		 color: white;
+	}
+	.hani2{
+		   font-size: 11px;
+	    	margin-top: -10px;
+	}
+	.panel3div{
+			float: right;
+			background-color: #29abe2;
+		        width: 22%;
+    			margin-left: 14px;
+    			padding: 3px;
+	}
+	.locationbar{
+		font-size: 33px;
+	}
+	.cityname{
+		font-size: 20px;
+	}
 }
 .hrline3{
 	margin-bottom: 9px;
@@ -318,18 +395,7 @@
 .moon2{
 	text-align: right;
 }
-@media screen and (min-width: 360px) and (max-width: 660px){
 
-		.panel3div{
-					    float: right;
-					    background-color: #29abe2;
-  					    margin-left: 27px;
-					    padding: 3px;
-					    width: 80%;
-					    margin-bottom: 5px;
-		}
-
-}
 .exi2{
 	background-color: #29abe2;
 }
@@ -432,179 +498,39 @@
 	background-color: #e6e6e6;
 }
 
-.key1{
-		position: absolute;
-}
-.key3{
-		margin-top: -15px;
-		text-align: left;
-		margin-left: 13px;
-}
-.key4{
-		margin-top: -23px;
-		text-align: left;
-		margin-left: 13px;
-}
-.key5{
-		color: white;
-		margin-left: 79px;
-}
 
 
 @media screen and (min-width: 360px) and (max-width: 660px){
 
-	.pencil1{
-				text-align: center;
-	}
-	.pencil2{
-				text-align: center;
-	}
-	.key7{
-				    position: relative;
-				    margin-top: 128px;
-				    margin-left: 43px;
-				    background: rgba(30, 22, 22, 0.58);
-					margin-right: 29px;
-	}
-	.key2{
-					position: relative;
-					margin-top: 127px;
-					margin-left: 43px;
-					background: rgba(30, 22, 22, 0.58);
-					margin-right: 28px;
-	}
-	.imgsize{
-			    height: 154px;
-		   		width: 75%;
-	}
-	.key6{
-		    position: relative;
-		    margin-top: 128px;
-		    margin-left: 46px;
-		    background: rgba(30, 22, 22, 0.58);
-		    margin-right: 31px;
-	}
 	.fanta2{
-	margin-top: -42px;
-    text-align: left;
-    margin-left: 57%;
+		margin-top: -42px;
+	    text-align: left;
+	    margin-left: 57%;
 	}
 }
 @media screen and (min-width: 768px) and (max-width: 1024px){
-	
-	.pencil1{
-				text-align: right;
-	}
-	.pencil2{
-				text-align: center;
-	}
-	.key7{
-		        position: relative;
-			    margin-top: 104px;
-			    margin-left: 11px;
-			    background: rgba(30, 22, 22, 0.58);
-			    margin-right: -4px;
-	}
-	.key2{
-		position: relative;
-	    margin-top: 104px;
-	    margin-left: 22px;
-	    background: rgba(30, 22, 22, 0.58);
-	    margin-right: -14px;
-	}
-	.imgsize {
-			    height: 154px;
-				width: 90%;
-	}
-	.key6{
-		position: relative;
-	    margin-top: 104px;
-	    margin-left: 11px;
-	    background: rgba(30, 22, 22, 0.58);
-	    margin-right: -4px;
-	}	
+
 	.fanta2{
-	margin-top: -42px;
-    text-align: left;
-    margin-left: 52%;
+		margin-top: -42px;
+	    text-align: left;
+	    margin-left: 52%;
 	}
 }
 @media screen and (min-width: 1024px) and (max-width: 1366px){
-	
-	.pencil1{
-				text-align: right;
-	}
-	.pencil2{
-				text-align: center;
-	}
-	.key7{
-		        position: relative;
-			    margin-top: 104px;
-			    margin-left: 39px;
-			    background: rgba(30, 22, 22, 0.58);
-			    margin-right: 25px;
-	}
-	.key2{
-		position: relative;
-	    margin-top: 104px;
-	    margin-left: 77px;
-	    background: rgba(30, 22, 22, 0.58);
-	    margin-right: -14px;
-	}
-	.imgsize{
-			    height: 154px;
-		   		width: 75%;
-	}
-	.key6{
-		position: relative;
-	    margin-top: 104px;
-	    margin-left: 39px;
-	    background: rgba(30, 22, 22, 0.58);
-	    margin-right: 24px;
-	}
+
 	.fanta2{
-	margin-top: -42px;
-    text-align: left;
-    margin-left: 57%;
+		margin-top: -42px;
+	    text-align: left;
+	    margin-left: 57%;
 	}
 
 }
 @media screen and (min-width: 1366px) and (max-width: 1600px){
-	.pencil1{
-				text-align: right;
-	}
-	.pencil2{
-				text-align: center;
-	}
-	.key7{
-		    position: relative;
-		    margin-top: 128px;
-		    margin-left: 45px;
-		    background: rgba(30, 22, 22, 0.58);
-		    margin-right: 31px;
-	}
-	.key2{
-		position: relative;
-		margin-top: 127px;
-		margin-left: 92px;
-		background: rgba(30, 22, 22, 0.58);
-    	margin-right: -14px;
-	}
-	.imgsize{
-			    height: 154px;
-		   		width: 75%;
-	}
-	.key6{
-		    position: relative;
-		    margin-top: 128px;
-		    margin-left: 46px;
-		    background: rgba(30, 22, 22, 0.58);
-		    margin-right: 31px;
-	}
+
 	.fanta2{
-	margin-top: -42px;
-    text-align: left;
-    margin-left: 62%;
+		margin-top: -42px;
+	    text-align: left;
+	    margin-left: 62%;
 	}
 }
 
@@ -615,193 +541,6 @@
 .stars{
 		color: orange;
 		font-size: 22px;
-}
-
-@media screen and (min-width: 360px) and (max-width: 660px){
-	.smoke1{
-			padding-top: 4px;
-		    padding-bottom: 5px;
-		    width: 79%;
-		    background: #fff;
-		    box-shadow: 3px 3px 3px #dcd7d7;
-		    line-height: 13px;
-		    text-align: left;
-		    margin-left: 42px;
-		    margin-top: -15px;
-		}
-	.smoke2{
-			padding-top: 4px;
-		    padding-bottom: 5px;
-		    width: 78%;
-		    background: #fff;
-		    box-shadow: 3px 3px 3px #dcd7d7;
-		    line-height: 13px;
-		    text-align: left;
-		    margin-left: 45px;
-		    margin-top: -15px;
-	    }
-	.smoke3{
-			padding-top: 4px;
-		    padding-bottom: 5px;
-		    width: 72%;
-		    background: #fff;
-		    box-shadow: 3px 3px 3px #dcd7d7;
-		    line-height: 13px;
-		    margin-left: 58px;
-		    margin-top: -17px;
-		}  
-	.smoke4{
-			padding-top: 4px;
-		    padding-bottom: 5px;
-		    width: 79%;
-		    background: #fff;
-		    box-shadow: 3px 3px 3px #dcd7d7;
-		    text-align: left;
-		    line-height: 13px;
-		    margin-left: 43px;
-		    margin-top: -15px;
-		}	  	
-}
-@media screen and (min-width: 768px) and (max-width: 1020px){
-	.smoke1{
-			padding-top: 4px;
-		    padding-bottom: 5px;
-		    width: 97%;
-		    background: #fff;
-		    box-shadow: 3px 3px 3px #dcd7d7;
-		    line-height: 13px;
-		    margin-left: 20px;
-		    margin-top: -15px;
-		    text-align: left;
-		}
-	.smoke2{
-			padding-top: 4px;
-		    padding-bottom: 5px;
-		    width: 98%;
-		    background: #fff;
-		    box-shadow: 3px 3px 3px #dcd7d7;
-		    line-height: 13px;
-		    text-align: left;
-		    margin-left: 9px;
-		    margin-top: -15px;
-		}
-	.smoke3{
-			padding-top: 4px;
-		    padding-bottom: 5px;
-		    width: 29%;
-		    background: #fff;
-		    box-shadow: 3px 3px 3px #dcd7d7;
-		    line-height: 13px;
-		    margin-left: 503px;
-    		margin-top: -34px;
-		}  
-	.smoke4{
-			padding-top: 4px;
-		    padding-bottom: 5px;
-		    width: 96%;
-		    background: #fff;
-		    box-shadow: 3px 3px 3px #dcd7d7;
-		    text-align: left;
-		    line-height: 13px;
-		    margin-left: 13px;
-		    margin-top: -15px;
-		}
-		.star{
-			margin-left: 0px !important;
-		}
-}
-@media screen and (min-width: 1024px) and (max-width: 1366px){
-		.smoke1{
-			padding-top: 4px;
-		    padding-bottom: 5px;
-		    width: 79%;
-		    background: #fff;
-		    box-shadow: 3px 3px 3px #dcd7d7;
-		    line-height: 13px;
-		    margin-left: 74px;
-		    margin-top: -16px;
-		    text-align: left;
-		}
-	.smoke2{
-			padding-top: 4px;
-		    padding-bottom: 5px;
-		    width: 79%;
-		    background: #fff;
-		    box-shadow: 3px 3px 3px #dcd7d7;
-		    line-height: 13px;
-		    text-align: left;
-		    margin-left: 39px;
-		    margin-top: -15px;
-		}
-	.smoke3{
-			padding-top: 4px;
-		    padding-bottom: 5px;
-		    width: 24%;
-		    background: #fff;
-		    box-shadow: 3px 3px 3px #dcd7d7;
-		    line-height: 13px;
-		    margin-left: 690px;
-		    margin-top: -35px;
-		}  
-	.smoke4{
-			padding-top: 4px;
-		    padding-bottom: 5px;
-		    width: 80%;
-		    background: #fff;
-		    box-shadow: 3px 3px 3px #dcd7d7;
-		    text-align: left;
-		    line-height: 13px;
-		    margin-left: 34px;
-		    margin-top: -15px;
-		}
-		.star{
-			margin-left: 0px;
-		}
-}
-@media screen and (min-width: 1366px) and (max-width: 1600px){
-	.smoke1{
-			padding-top: 4px;
-		    padding-bottom: 5px;
-		    width: 79%;
-		    background: #fff;
-		    box-shadow: 3px 3px 3px #dcd7d7;
-		    line-height: 13px;
-		    text-align: left;
-		    margin-left: 87px;
-		    margin-top: -15px;
-		}
-	.smoke2{
-			padding-top: 4px;
-		    padding-bottom: 5px;
-		    width: 78%;
-		    background: #fff;
-		    box-shadow: 3px 3px 3px #dcd7d7;
-		    line-height: 13px;
-		    text-align: left;
-		    margin-left: 45px;
-		    margin-top: -15px;
-	    }
-	.smoke3{
-			padding-top: 4px;
-		    padding-bottom: 5px;     	 
-		    width: 24%;
-		    background: #fff;
-		    box-shadow: 3px 3px 3px #dcd7d7;
-		    line-height: 13px;
-		    margin-left: 821px;
-		    margin-top: -32px;
-		}  
-	.smoke4{
-			padding-top: 4px;
-		    padding-bottom: 5px;
-		    width: 79%;
-		    background: #fff;
-		    box-shadow: 3px 3px 3px #dcd7d7;
-		    text-align: left;
-		    line-height: 13px;
-		    margin-left: 43px;
-		    margin-top: -15px;
-		}	
 }
 
 .fanta1{
@@ -859,12 +598,12 @@
 	.exi4{
 		font-size: 9px;
 		color: white;
-}
+	}
 }
 @media screen and (min-width: 1024px) and (max-width: 1366px){
 	.lane1{
 	       height: 86px;
-		    margin-left: -161%;
+	       margin-left: -135%;
 		    margin-bottom: -8px;
 		    margin-top: -5px;
 	}
@@ -905,17 +644,17 @@
 		    margin-right: -16px;
 	}
 	.pakola3{
-	margin-left: 4%;
+		margin-left: 4%;
 	}
 	.exi4{
 		font-size: 11px;
 		color: white;
-}
+	}
 }
 .pakola1{
-	    font-family: Helvetica;
-    font-size: 27px;
-    font-weight: 600;
+	     font-family: Helvetica;
+   		 font-size: 27px;
+   		 font-weight: 600;
 }
 .pakol{
 	   font-family: Helvetica;

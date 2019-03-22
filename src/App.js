@@ -25,7 +25,8 @@ class App extends Component {
   render() {
     return (
     	<div>
-    		<Home/>
+    		<Billboardmardan/>
+
 	    </div>  	
     );
   }

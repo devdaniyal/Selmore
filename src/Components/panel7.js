@@ -5,7 +5,7 @@ class Panel7 extends Component {
   render() {
     return (
         <div>
-    		<div className="container">
+    		<div className="container" style={{"backgroundImage":"url('../images/dropdown2.png')"}}>
       			<div className="row">
       				<div className="col-2 col-md-4 col-lg-4 col-xl-4"></div>       
   					<div className="col-8 col-md-4 col-lg-4 col-xl-4 line2"><h2 className="pakola1">FEATURED ADS</h2></div>
@@ -44,7 +44,7 @@ class Panel7 extends Component {
 						</div>		    		
 			    	</div><br/>
 			    	<div className="col-12 col-md-4 col-lg-4 col-xl-4 luxpure8">
-		    			<img src="../images/bill1.png" className="luxpure1"/>
+		    			<img src="../images/bill2.png" className="luxpure1"/>
 						<div className="luxpure2">
 							<div className="row">
 								<div className="col-10 col-md-9 col-lg-10 col-xl-9">
@@ -70,7 +70,7 @@ class Panel7 extends Component {
 						</div>		    		
 			    	</div><br/>
 			    	<div className="col-12 col-md-4 col-lg-4 col-xl-4 luxpure8">
-		    			<img src="../images/bill1.png" className="luxpure1"/>
+		    			<img src="../images/bill3.png" className="luxpure1"/>
 						<div className="luxpure2">
 							<div className="row">
 								<div className="col-10 col-md-9 col-lg-10 col-xl-9">
@@ -98,7 +98,7 @@ class Panel7 extends Component {
 			    </div><br/>
 			    <div className="row">
 			    	<div className="col-12 col-md-4 col-lg-4 col-xl-4 luxpure8">
-		    			<img src="../images/bill1.png" className="luxpure1"/>
+		    			<img src="../images/bill4.png" className="luxpure1"/>
 						<div className="luxpure2">
 							<div className="row">
 								<div className="col-10 col-md-9 col-lg-10 col-xl-9">
@@ -124,7 +124,7 @@ class Panel7 extends Component {
 						</div>		    		
 			    	</div><br/>
 			    	<div className="col-12 col-md-4 col-lg-4 col-xl-4 luxpure8">
-		    			<img src="../images/bill1.png" className="luxpure1"/>
+		    			<img src="../images/bill5.png" className="luxpure1"/>
 						<div className="luxpure2">
 							<div className="row">
 								<div className="col-10 col-md-9 col-lg-10 col-xl-9">
@@ -150,7 +150,7 @@ class Panel7 extends Component {
 						</div>		    		
 			    	</div><br/>
 			    	<div className="col-12 col-md-4 col-lg-4 col-xl-4 luxpure8">
-		    			<img src="../images/bill1.png" className="luxpure1"/>
+		    			<img src="../images/bill6.png" className="luxpure1"/>
 						<div className="luxpure2">
 							<div className="row">
 								<div className="col-10 col-md-9 col-lg-10 col-xl-9">
@@ -176,7 +176,7 @@ class Panel7 extends Component {
 						</div>		    		
 			    	</div>
 			    </div>  	
-    		</div>
+    		</div><br/>
   		</div> 
     );
   }
