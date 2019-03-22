@@ -42,6 +42,8 @@ class App extends Component {
         <Route path="/signin" component={Login}></Route>
         <Route path="/seller" component={Seller}></Route>
         <Route path="/buyer" component={Buyer}></Route>
+        <Route path="/city_bidding" component={Billbidding}></Route>
+        <Route path="/billboard" component={Billboardmardan}></Route>
 
         </div>
       </BrowserRouter>

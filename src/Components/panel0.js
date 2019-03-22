@@ -26,7 +26,7 @@ class Panel0 extends Component {
 		      			<div className="init2">
 		      				<div style={{color: 'white'}}>
 				      			<p className="fanta1">Lahore</p>
-				      			<p className="fanta2"><button type="button" className="btn btn-primary fanta3"><Link  rel="noopener noreferrer" to={`/bidding_karachi`} style={{color:"white"}}>BIDDING</Link></button></p>
+				      			<p className="fanta2"><button type="button" className="btn btn-primary fanta3"><Link  rel="noopener noreferrer" to={`/city_bidding`} style={{color:"white"}}>BIDDING</Link></button></p>
 			      			</div>
       					</div>
 		      		</div>
@@ -37,7 +37,7 @@ class Panel0 extends Component {
 		      			<div className="init6">
 		      				<div style={{color: 'white'}}>
 				      			<p className="fanta1">Shabbi</p>
-				      			<p className="fantaa2"><button type="button" className="btn btn-primary fanta3">BIDDING</button></p>
+				      			<p className="fantaa2"><button type="button" className="btn btn-primary fanta3"><Link  rel="noopener noreferrer" to={`/city_bidding`} style={{color:"white"}}>BIDDING</Link></button></p>
 			      			</div>
 	      				</div>
 		      		</div>
@@ -48,7 +48,7 @@ class Panel0 extends Component {
 		      			<div className="init7">
 		      				<div style={{color: 'white'}}>
 				      			<p className="fanta1">Karachi</p>
-				      			<p className="fanta2"><button type="button" className="btn btn-primary fanta3">BIDDING</button></p>
+				      			<p className="fanta2"><button type="button" className="btn btn-primary fanta3"><Link  rel="noopener noreferrer" to={`/city_bidding`} style={{color:"white"}}>BIDDING</Link></button></p>
 			      			</div>
 	      				</div>
 		      		</div>
