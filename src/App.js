@@ -26,12 +26,9 @@ class App extends Component {
     return (
     	<div>
     		<Billboardmardan/>
-
-	    </div>  	
+	    </div>
     );
   }
 }
 
 export default App;
-
-
