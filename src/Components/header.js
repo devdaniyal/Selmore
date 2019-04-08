@@ -31,7 +31,7 @@ class Header extends Component {
                                   <a className="nav-link" href="#">BLOG</a>
                                 </li>
                                 <li className="nav-item navmargin12">
-                                  <button type="button" class="btn btn-primary btn-sm"><span> LIST AD</span></button>
+                                  <Link to={`/contact`}><button type="button" class="btn btn-primary btn-sm"><span> LIST AD</span></button></Link>
                                 </li>
                                 <li className="nav-item navbtnmargin">
                                   <button type="button" className="btn btn-primary btn-sm"><Link  rel="noopener noreferrer" to={`/signin`} style={{color:"white"}}>Login/Signup</Link></button>
