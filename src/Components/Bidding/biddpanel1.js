@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './bidding.css';
+import {Link, withRouter} from 'react-router-dom';
 
 class Biddpanel1 extends Component {
   render() {
@@ -22,8 +23,8 @@ class Biddpanel1 extends Component {
 	      			<div className="note3" style={{color:'white'}}>
 	      				<div>
 			      			<p className="secure1">Lahore</p>
-			      			<p className="secure2"><button type="button" className="btn btn-primary secure3">BIDDING</button></p>
-			      		</div>	
+			      			<p className="secure2"><button type="button" className="btn btn-primary secure3"><Link  rel="noopener noreferrer" to={`/bidding_karachi`} style={{color:"white"}}>BIDDING</Link></button></p>
+			      		</div>
   					</div>
 	      		</div>
 	      		<div className="col-md-4 text-center">
@@ -38,7 +39,7 @@ class Biddpanel1 extends Component {
 				      			</p>
 		  					</div>
   						</div>
-	      			</div>	
+	      			</div>
 	      			<div className="note4">
 	      				<div style={{color: 'white'}}>
 			      			<p className="secure1">Shabbi</p>
@@ -64,7 +65,7 @@ class Biddpanel1 extends Component {
 		      				<p className="secure1">Karachi</p>
 			      			<p className="secure2"><button type="button" className="btn btn-primary secure3">BIDDING</button></p>
 		      			</div>
-      				</div>	
+      				</div>
 	      		</div>
 	      	</div>
 	      	<div className="row" style={{margin:'0px'}}>
@@ -100,7 +101,7 @@ class Biddpanel1 extends Component {
 				      			</p>
 		  					</div>
   						</div>
-	      			</div>	
+	      			</div>
 	      			<div className="note4">
 	      				<div style={{color: 'white'}}>
 			      			<p className="secure1">Shabbi</p>
@@ -126,7 +127,7 @@ class Biddpanel1 extends Component {
 		      				<p className="secure1">Karachi</p>
 			      			<p className="secure2"><button type="button" className="btn btn-primary secure3">BIDDING</button></p>
 		      			</div>
-      				</div>	
+      				</div>
 	      		</div>
 	      	</div>
       </div>

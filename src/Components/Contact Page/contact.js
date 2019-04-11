@@ -12,12 +12,12 @@ class Contact extends Component {
   render() {
     return (
     	<div>
-    		<Header />
-            <AbBanner advertise={'CONTACT'} bred={'CONTACT'} />
-    		<Formpanel />
-            <Contpanel1 />
-            <Footer />
-		</div> 
+		    <Header/>
+        <AbBanner advertise={'CONTACT'} bred={'CONTACT'} />
+		    <Formpanel />
+        <Contpanel1 />
+        <Footer />
+		  </div>
     );
   }
 }

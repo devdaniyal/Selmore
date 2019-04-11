@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link, withRouter} from 'react-router-dom';
 import './home.css';
 
 class Panel4 extends Component {
@@ -21,11 +22,11 @@ class Panel4 extends Component {
   					<div className="col-md-1"></div>
 					<div className="col-md-8"></div>
 					<div className="col-md-2 cell5 moon5" style={{marginLeft:'-2%',marginTop:'-2%'}}>
-						<button type="button" className="btn cell3"><span className="cell4">GET STARTED</span></button>
+						<button type="button" className="btn cell3"> <Link  rel="noopener noreferrer" to={`/contact`}><span className="cell4">GET STARTED</span></Link></button>
 					</div>
 					<div className="col-md-1"></div>
   				</div>
-  			</div>	
+  			</div>
   		</div>	<br/>
 
 
