@@ -8,7 +8,7 @@ class Login extends Component {
   render() {
     return (
       <div>
-          <Form />
+          <Form/>
       </div>
     );
   }

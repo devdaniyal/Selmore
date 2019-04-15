@@ -5,7 +5,7 @@ class Billbiddpanel2 extends Component {
   render() {
     return (
         <div>
-			<div className="container">
+			<div className="container containerMargin">
 	      		<div className="row" style={{margin:'0px'}}>
         			<div className="col-md-11">
 	        			<div className="row billion1" style={{margin:'0px'}}>

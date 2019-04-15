@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter, Route} from 'react-router-dom';
 
-
 //Components//
 import Home from './Components/home';
 import About from './Components/About Selmore/about';

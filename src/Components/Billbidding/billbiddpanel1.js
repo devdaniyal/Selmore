@@ -5,7 +5,7 @@ class Billbiddpanel1 extends Component {6
   render() {
     return (
         <div>
-        	<div className="container">
+        	<div className="container containerAlign">
      			 	<h4><span className="unit9">BIDDING BILLBOARD</span></h4>
      			 	<div className="row">
 	        			<div className="col-md-1 col-4 billion0"></div>

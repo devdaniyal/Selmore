@@ -35,12 +35,24 @@
 	padding: 0px;
 
 	}
+	.containerAlign{
+		margin-left: 2px;
+	}
+	.containerMargin{
+		margin-left: -3%;
+	}
 }
 @media screen and (min-width: 768px) and (max-width: 1020px){
 	.unit8{
 	margin-top: 187px;
 	padding: 0px;
 
+	}
+	.containerAlign{
+		margin-left: 26px;
+	}
+	.containerMargin{
+		margin-left: 12px;
 	}
 }
 @media screen and (min-width: 1024px) and (max-width: 1366px){
@@ -49,12 +61,24 @@
 	padding: 0px;
 
 	}
+	.containerAlign{
+		margin-left: 73px;
+	}
+	.containerMargin{
+		margin-left: 59px;
+	}
 }
 @media screen and (min-width: 1366px) and (max-width: 1600px){
 	.unit8{
 		margin-top: 126px;
 		padding: 0px;
 
+	}
+	.containerAlign{
+		margin-left: 96px;
+	}
+	.containerMargin{
+		margin-left: 6%;
 	}	
 }	
 

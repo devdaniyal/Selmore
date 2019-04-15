@@ -29,7 +29,7 @@ class Panel3 extends Component {
      								<h6 className="hani2">30 Ads available</h6>
    							</div>
    							<div className="col-md-2 innerdiv">
-   								 <i class="material-icons" style={{ fontSize : '33px'}}>place</i>
+   								 <i class="material-icons locate_icon">place</i>
   							</div>
  						</div>
             </Link>
@@ -41,7 +41,7 @@ class Panel3 extends Component {
    								<h6 className="hani2">30 Ads available</h6>
  							</div>
  							<div className="col-md-2 innerdiv">
- 								 <i class="material-icons" style={{ fontSize : '33px'}}>place</i>
+ 								 <i class="material-icons locate_icon">place</i>
  							</div>
   						</div>
             </Link>
@@ -53,7 +53,7 @@ class Panel3 extends Component {
    								<h6 className="hani2">30 Ads available</h6>
  							</div>
  							<div className="col-md-2 innerdiv">
- 								 <i class="material-icons" style={{ fontSize : '33px'}}>place</i>
+ 								 <i class="material-icons locate_icon">place</i>
  							</div>
   						</div>
             </Link>
@@ -65,7 +65,7 @@ class Panel3 extends Component {
    								<h6 className="hani2">30 Ads available</h6>
  							</div>
  							<div className="col-md-2 innerdiv">
- 								 <i class="material-icons" style={{ fontSize : '33px'}}>place</i>
+ 								 <i class="material-icons locate_icon">place</i>
  							</div>
   						</div>
             </Link>
@@ -84,7 +84,7 @@ class Panel3 extends Component {
  								<h6 className="hani2">30 Ads available</h6>
  							</div>
  							<div className="col-md-2 innerdiv">
- 								<i class="material-icons" style={{ fontSize : '33px'}}>place</i>
+ 								<i class="material-icons locate_icon">place</i>
 							</div>
  						</div>
             </Link>
@@ -96,7 +96,7 @@ class Panel3 extends Component {
  								<h6 className="hani2">30 Ads available</h6>
  							</div>
  							<div className="col-md-2 innerdiv">
- 								<i class="material-icons" style={{ fontSize : '33px'}}>place</i>
+ 								<i class="material-icons locate_icon">place</i>
  							</div>
   						</div>
             </Link>
@@ -108,7 +108,7 @@ class Panel3 extends Component {
  								<h6 className="hani2">30 Ads available</h6>
  							</div>
  							<div className="col-md-2 innerdiv">
- 								<i class="material-icons" style={{ fontSize : '33px'}}>place</i>
+ 								<i class="material-icons locate_icon">place</i>
  							</div>
   						</div>
             </Link>
@@ -120,7 +120,7 @@ class Panel3 extends Component {
  								<h6 className="hani2">30 Ads available</h6>
  							</div>
  							<div className="col-md-2 innerdiv">
- 								<i class="material-icons" style={{ fontSize : '33px'}}>place</i>
+ 								<i class="material-icons locate_icon">place</i>
  							</div>
   						</div>
             </Link>
@@ -139,7 +139,7 @@ class Panel3 extends Component {
  								<h6 className="hani2">30 Ads available</h6>
  							</div>
  							<div className="col-md-2 innerdiv">
- 								<i class="material-icons" style={{ fontSize : '33px'}}>place</i>
+ 								<i class="material-icons locate_icon">place</i>
 							</div>
  						</div>
             </Link>
@@ -151,7 +151,7 @@ class Panel3 extends Component {
  								<h6 className="hani2">30 Ads available</h6>
  							</div>
  							<div className="col-md-2 innerdiv">
- 								<i class="material-icons" style={{ fontSize : '33px'}}>place</i>
+ 								<i class="material-icons locate_icon">place</i>
  							</div>
   						</div>
             </Link>
@@ -163,7 +163,7 @@ class Panel3 extends Component {
  								<h6 className="hani2">30 Ads available</h6>
  							</div>
  							<div className="col-md-2 innerdiv">
- 								<i class="material-icons" style={{ fontSize : '33px'}}>place</i>
+ 								<i class="material-icons locate_icon">place</i>
  							</div>
   						</div>
             </Link>
@@ -175,7 +175,7 @@ class Panel3 extends Component {
  								<h6 className="hani2">30 Ads available</h6>
  							</div>
  							<div className="col-md-2 innerdiv">
- 								<i class="material-icons" style={{ fontSize : '33px'}}>place</i>
+ 								<i class="material-icons locate_icon">place</i>
  							</div>
   						</div>
             </Link>
@@ -193,7 +193,7 @@ class Panel3 extends Component {
  								<h6 className="hani2">30 Ads available</h6>
  							</div>
  							<div className="col-md-2 innerdiv">
- 								<i class="material-icons" style={{ fontSize : '33px'}}>place</i>
+ 								<i class="material-icons locate_icon">place</i>
 							</div>
  						</div>
             </Link>
@@ -205,7 +205,7 @@ class Panel3 extends Component {
  								<h6 className="hani2">30 Ads available</h6>
  							</div>
  							<div className="col-md-2 innerdiv">
- 								<i class="material-icons" style={{ fontSize : '33px'}}>place</i>
+ 								<i class="material-icons locate_icon">place</i>
  							</div>
   						</div>
               </Link>
@@ -217,7 +217,7 @@ class Panel3 extends Component {
  								<h6 className="hani2">30 Ads available</h6>
  							</div>
  							<div className="col-md-2 innerdiv">
- 								<i class="material-icons" style={{ fontSize : '33px'}}>place</i>
+ 								<i class="material-icons locate_icon">place</i>
  							</div>
   						</div>
               </Link>
@@ -229,7 +229,7 @@ class Panel3 extends Component {
  								<h6 className="hani2">30 Ads available</h6>
  							</div>
  							<div className="col-md-2 innerdiv">
- 								<i class="material-icons" style={{ fontSize : '33px'}}>place</i>
+ 								<i class="material-icons locate_icon">place</i>
  							</div>
   						</div>
               </Link>
