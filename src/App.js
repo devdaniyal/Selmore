@@ -32,19 +32,18 @@ class App extends Component {
     	<div>
       <BrowserRouter>
         <div>
-        <Route exact path="/" component={Home}></Route>
-        <Route path="/about" component={About}></Route>
-        <Route path="/advertising_agency" component={Advertising}></Route>
-        <Route path="/faq" component={Faq}></Route>
-        <Route path="/contact" component={Contactpage}></Route>
-        <Route path="/bidding" component={Bidding}></Route>
-        <Route path="/bidding_karachi" component={Billofbidding1}></Route>
-        <Route path="/signin" component={Login}></Route>
-        <Route path="/seller" component={Seller}></Route>
-        <Route path="/buyer" component={Buyer}></Route>
-        <Route path="/city_bidding" component={Billbidding}></Route>
-        <Route path="/billboard" component={Billboardmardan}></Route>
-
+          <Route exact path="/" component={Home}></Route>
+          <Route path="/about" component={About}></Route>
+          <Route path="/advertising_agency" component={Advertising}></Route>
+          <Route path="/faq" component={Faq}></Route>
+          <Route path="/contact" component={Contactpage}></Route>
+          <Route path="/bidding" component={Bidding}></Route>
+          <Route path="/bidding_karachi" component={Billofbidding1}></Route>
+          <Route path="/signin" component={Login}></Route>
+          <Route path="/seller" component={Seller}></Route>
+          <Route path="/buyer" component={Buyer}></Route>
+          <Route path="/city_bidding" component={Billbidding}></Route>
+          <Route path="/billboard" component={Billboardmardan}></Route>
         </div>
       </BrowserRouter>
 	    </div>
