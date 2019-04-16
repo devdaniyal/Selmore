@@ -9,7 +9,7 @@ let user = {
 
 
 export default (state = user, action) => {
-    console.log(action, 'reducer calll')
+    // console.log(action, 'reducer calll')
     const { email, type } = action;
     switch (type) {
         case SIGNED_IN:
