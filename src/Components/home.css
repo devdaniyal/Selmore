@@ -51,6 +51,34 @@
 	    border-radius: 10%;
     	width: 100%;
 	}
+	.locate_icon{
+		 font-size : 33px;
+		 margin-left: 0px;
+	}
+	.buyimag{
+		height: 120px;
+		margin-left: 0%;
+	}
+	.divcenterbuy{
+	    text-align: center;
+	    border-radius: 8%;
+	    background-color: white;
+	    margin-bottom: 18px;
+  		width: 58%;
+	    padding: 12px;
+	    margin-top: -2%;
+	    margin-left: 21%;
+	}
+	.divcentersell{
+		text-align: center;
+	    border-radius: 8%;
+	    background-color: white;
+	    margin-bottom: 18px;
+  		width: 58%;
+	    margin-left: 22%;
+	    padding: 12px;
+	    margin-top: -2%;
+	}
 }
 @media screen and (min-width: 768px) and (max-width: 1024px){
 	.weight	{
@@ -68,7 +96,34 @@
 	border-radius: 10%;
     	width: 45%;
 	}
-
+	.locate_icon{
+		 font-size : 33px;
+		 margin-left: -125px;
+	}
+	.buyimag{
+		height: 120px;
+		margin-left: 18%;
+	}
+	.divcenterbuy{
+	    text-align: center;
+	    border-radius: 8%;
+	    background-color: white;
+	    margin-bottom: 18px;
+  		width: 58%;
+	    padding: 12px;
+	    margin-top: -2%;
+	    margin-left: 29%;
+	}
+	.divcentersell{
+		text-align: center;
+	    border-radius: 8%;
+	    background-color: white;
+	    margin-bottom: 18px;
+  		width: 58%;
+	    margin-left: 22%;
+	    padding: 12px;
+	    margin-top: -2%;
+	}
 }
 @media screen and (min-width: 1024px) and (max-width: 1366px){
 	.weight	{
@@ -86,7 +141,34 @@
 	border-radius: 10%;
     	width: 30%;
 	}
-
+	.locate_icon{
+		 font-size : 33px;
+		 margin-left: -5px;
+	}
+	.buyimag{
+		height: 120px;
+		margin-left: 18%;
+	}
+	.divcenterbuy{
+	    text-align: center;
+	    border-radius: 8%;
+	    background-color: white;
+	    margin-bottom: 18px;
+  		width: 58%;
+	    padding: 12px;
+	    margin-top: -2%;
+	    margin-left: 29%;
+	}
+	.divcentersell{
+		text-align: center;
+	    border-radius: 8%;
+	    background-color: white;
+	    margin-bottom: 18px;
+  		width: 58%;
+	    margin-left: 22%;
+	    padding: 12px;
+	    margin-top: -2%;
+	}
 }
 @media screen and (min-width: 1366px) and (max-width: 1600px){
 	.weight	{
@@ -103,6 +185,34 @@
 	background-color: white;
 	border-radius: 10%;
     	width: 26%;
+	}
+	.locate_icon{
+		 font-size : 33px;
+   		 margin-left: 0px;
+	}
+	.buyimag{
+		height: 120px;
+		margin-left: 18%;
+	}
+	.divcenterbuy{
+	    text-align: center;
+	    border-radius: 8%;
+	    background-color: white;
+	    margin-bottom: 18px;
+  		width: 58%;
+	    padding: 12px;
+	    margin-top: -2%;
+	    margin-left: 29%;
+	}
+	.divcentersell{
+		text-align: center;
+	    border-radius: 8%;
+	    background-color: white;
+	    margin-bottom: 18px;
+  		width: 58%;
+	    margin-left: 22%;
+	    padding: 12px;
+	    margin-top: -2%;
 	}
 }
 .head2{
@@ -442,9 +552,7 @@
 .sim1{
 		text-align: center;
 }
-.sim2{
-		text-align: center;
-}
+
 .sim3{
 
 }
@@ -458,16 +566,7 @@
 .mouse2{
 		color: white;
 }
-.divcenter{
-	    text-align: center;
-	    border-radius: 8%;
-	    background-color: white;
-	    margin-bottom: 18px;
-	      width: 58%;
-	    margin-left: 22%;
-	    padding: 12px;
-	    margin-top: -2%;
-}
+
 .mouse3{
 	font-size: 13px;
     font-weight: 500;
@@ -507,6 +606,9 @@
 	    text-align: left;
 	    margin-left: 57%;
 	}
+	.sim2{
+		text-align: center;
+	}
 }
 @media screen and (min-width: 768px) and (max-width: 1024px){
 
@@ -514,6 +616,10 @@
 		margin-top: -42px;
 	    text-align: left;
 	    margin-left: 52%;
+	}
+	.sim2{
+		text-align: center;
+		margin-left: -4%;
 	}
 }
 @media screen and (min-width: 1024px) and (max-width: 1366px){
@@ -523,6 +629,10 @@
 	    text-align: left;
 	    margin-left: 57%;
 	}
+	.sim2{
+		text-align: center;
+		margin-left: -4%;
+	}
 
 }
 @media screen and (min-width: 1366px) and (max-width: 1600px){
@@ -531,6 +641,10 @@
 		margin-top: -42px;
 	    text-align: left;
 	    margin-left: 62%;
+	}
+	.sim2{
+		text-align: center;
+		margin-left: -4%;
 	}
 }
 
@@ -672,29 +786,29 @@
 				text-align: center;
 	}
 	.init7{
-				    position: relative;
-				    margin-top: 128px;
-				    margin-left: 43px;
-				    background: rgba(30, 22, 22, 0.58);
-					margin-right: 29px;
+				position: relative;
+			    margin-top: -46px;
+			    margin-left: 41px;
+			    background: rgba(30, 22, 22, 0.58);
+			    margin-right: 41px;
 	}
 	.init2{
-					position: relative;
-					margin-top: 127px;
-					margin-left: 43px;
-					background: rgba(30, 22, 22, 0.58);
-					margin-right: 28px;
+			position: relative;
+		    margin-top: -48px;
+		    margin-left: 41px;
+		    background: rgba(30, 22, 22, 0.58);
+		    margin-right: 41px;
 	}
 	.imgsizee{
 			    height: 154px;
 		   		width: 75%;
 	}
 	.init6{
-		    position: relative;
-		    margin-top: 128px;
-		    margin-left: 46px;
+		   position: relative;
+		    margin-top: -47px;
+		    margin-left: 41px;
 		    background: rgba(30, 22, 22, 0.58);
-		    margin-right: 31px;
+		    margin-right: 41px;
 	}
 	.fantaa2{
 	margin-top: -42px;
@@ -709,31 +823,32 @@
 	}
 	.seth2{
 				text-align: center;
+				margin-left: -4%;
 	}
 	.init7{
 		        position: relative;
-			    margin-top: 104px;
+			    margin-top: -47px;
 			    margin-left: 11px;
 			    background: rgba(30, 22, 22, 0.58);
-			    margin-right: -4px;
+			    margin-right: 10px;
 	}
 	.init2{
-		position: relative;
-	    margin-top: 104px;
-	    margin-left: 22px;
-	    background: rgba(30, 22, 22, 0.58);
-	    margin-right: -14px;
+			position: relative;
+		    margin-top: -47px;
+		    margin-left: 20px;
+		    background: rgba(30, 22, 22, 0.58);
+		    margin-right: -1px;
 	}
 	.imgsizee{
 			    height: 154px;
 				width: 90%;
 	}
 	.init6{
-		position: relative;
-	    margin-top: 104px;
-	    margin-left: 11px;
-	    background: rgba(30, 22, 22, 0.58);
-	    margin-right: -4px;
+			position: relative;
+		    margin-top: -47px;
+		    margin-left: 11px;
+		    background: rgba(30, 22, 22, 0.58);
+		    margin-right: 9px;
 	}	
 	.fantaa2{
 	margin-top: -42px;
@@ -748,20 +863,21 @@
 	}
 	.seth2{
 				text-align: center;
+				margin-left: -4%;
 	}
 	.init7{
 		        position: relative;
-			    margin-top: 127px;
-			    margin-left: 39px;
+			     margin-top: -47px;
+			    margin-left: 36px;
 			    background: rgba(30, 22, 22, 0.58);
-			    margin-right: 25px;
+			    margin-right: 37px;
 	}
 	.init2{
-		position: relative;
-	    margin-top: 127px;
-	    margin-left: 77px;
-	    background: rgba(30, 22, 22, 0.58);
-	    margin-right: -14px;
+			position: relative;
+		     margin-top: -47px;
+		    margin-left: 73px;
+		    background: rgba(30, 22, 22, 0.58);
+		    margin-right: 0px;
 	}
 	.imgsizee{
 			    height: 154px;
@@ -769,10 +885,10 @@
 	}
 	.init6{
 		position: relative;
-	    margin-top: 127px;
-	    margin-left: 39px;
+	     margin-top: -47px;
+	    margin-left: 36px;
 	    background: rgba(30, 22, 22, 0.58);
-	    margin-right: 24px;
+	    margin-right: 36px;
 	}
 	.fantaa2{
 	margin-top: -42px;
@@ -787,31 +903,32 @@
 	}
 	.seth2{
 				text-align: center;
+				margin-left: -4%;
 	}
 	.init7{
 		    position: relative;
-		    margin-top: 128px;
-		    margin-left: 45px;
+		     margin-top: -47px;
+		    margin-left: 44px;
 		    background: rgba(30, 22, 22, 0.58);
-		    margin-right: 31px;
+		    margin-right: 44px;
 	}
 	.init2{
 		position: relative;
-		margin-top: 127px;
-		margin-left: 92px;
-		background: rgba(30, 22, 22, 0.58);
-    	margin-right: -14px;
+	     margin-top: -47px;
+	    margin-left: 87px;
+	    background: rgba(30, 22, 22, 0.58);
+	    margin-right: 0px;
 	}
 	.imgsizee{
 			    height: 154px;
 		   		width: 75%;
 	}
 	.init6{
-		    position: relative;
-		    margin-top: 128px;
-		    margin-left: 46px;
+	        position: relative;
+		     margin-top: -47px;
+		    margin-left: 43px;
 		    background: rgba(30, 22, 22, 0.58);
-		    margin-right: 31px;
+		    margin-right: 44px;
 	}
 	.fantaa2{
 	margin-top: -42px;

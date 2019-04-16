@@ -10,9 +10,9 @@ class Panel1 extends Component {
           <div className="row">
       			<div className="container">
       				<div className="row">
-      					<div className="col-4 col-md-4 col-lg-4 col-xl-4"></div>
-      					<div className="col-4 col-md-4 col-lg-4 col-xl-4 head3"><h1 className="pakola1"><span className="head2">SEARCH BY CATEGORY</span></h1></div>
-      					<div className="col-4 col-md-4 col-lg-4 col-xl-4"></div>
+      					<div className="col-3 col-md-4 col-lg-4 col-xl-4"></div>
+      					<div className="col-6 col-md-4 col-lg-4 col-xl-4 head3"><h1 className="pakola1"><span className="head2">SEARCH BY CATEGORY</span></h1></div>
+      					<div className="col-3 col-md-4 col-lg-4 col-xl-4"></div>
       				</div>
       				<div className="row">
       					<div className="col-4 col-md-4 col-lg-4 col-xl-4"></div>

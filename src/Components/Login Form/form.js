@@ -4,8 +4,15 @@ import './loginform.css';
 class Form extends Component {
   render() {
     return (
-      <div className="container">
-	      		<div className="row school1" style={{marginRight: '0px'}}>
+      <div id="mModal" role="dialog" className="modal fade">
+        <div className="container" style={{marginTop:'8%'}}>
+              <div className="row school9" style={{margin:'0px'}}>
+                  <div className="col-10 col-md-10 col-lg-10 col-xl-10"></div>
+                  <div className="col-2 col-md-2 col-lg-2 col-xl-2" style={{textAlign:'left'}}>
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  </div>
+              </div>
+  	      		<div className="row school1" style={{margin: '0px'}}>
                   <div className="col-md-1">
                   </div>
                   <div className="col-md-5 school7">
@@ -27,8 +34,9 @@ class Form extends Component {
                   </div>
                   <div className="col-md-1">
                   </div>
-	      		</div>
-      </div>
+  	      		</div>
+        </div>
+      </div>  
     );
   }
 }

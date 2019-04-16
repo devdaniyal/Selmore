@@ -43,6 +43,13 @@
 	.proroute2{
 		
 	}
+	.ball67{
+	    margin-left: 0%;
+	    margin-bottom: 4%;
+	}
+	.checkmargin{
+		margin-left: 0%;
+	}
 }
 @media screen and (min-width: 768px) and (max-width: 1020px){
 	.grape8{
@@ -67,6 +74,13 @@
 	}
 	.proroute2{
 		
+	}
+	.ball67{
+	    margin-left: 0%;
+	    margin-bottom: 2%;
+	}
+	.checkmargin{
+		margin-left: 7%;
 	}
 }
 @media screen and (min-width: 1024px) and (max-width: 1366px){
@@ -93,6 +107,13 @@
 	.proroute2{
 		margin-left: 6%;
 	}
+	.ball67{
+	    margin-left: 0%;
+	    margin-bottom: 1%;
+	}
+	.checkmargin{
+		margin-left: 12%;
+	}
 }
 @media screen and (min-width: 1366px) and (max-width: 1600px){
 	.grape8{
@@ -117,6 +138,13 @@
 	}
 	.proroute2{
 		margin-left: 6%;
+	}
+	.ball67{
+	    margin-left: 0%;
+	    margin-bottom: 1%;
+	}
+	.checkmargin{
+		margin-left: 14%;
 	}
 }
 

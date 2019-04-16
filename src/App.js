@@ -1,36 +1,41 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 
 //Components//
-import Home from './Components/home';
-import About from './Components/About Selmore/about';
-import Header from './Components/header';
-import Footer from './Components/footer';
-import Advertising from './Components/Advertising Agency/advertising';
-import Faq from './Components/Faq/faq';
-import Seller from './Components/Seller/seller';
-import Buyer from './Components/Buyer/buyer';
-import Login from './Components/Login Form/loginform';
-import Contactpage from './Components/Contact Page/contact';
-import Sellerprofile from './Components/Seller Profile/sellerprofile';
-import Billboardmardan from './Components/Billboard Mardan/billmardan';
-import Billboardmilitary from './Components/Billboard Military/billmilitary';
-import Billboards from './Components/Billboards/billboards';
-import Singposted from './Components/Singposted Listings/singposted';
-import Bidding from './Components/Bidding/bidding';
-import Billbidding from './Components/Billbidding/billbidding';
-import Billofbidding1 from './Components/Billboard of bidding1/billofbidding';
-import Popform from './Components/Popform/popform';
-import './App.css';
-import HomePanel7 from './Components/panel7';
+// import Home from './Components/home';
+// import About from './Components/About Selmore/about';
+// import Header from './Components/header';
+// import Footer from './Components/footer';
+// import Advertising from './Components/Advertising Agency/advertising';
+// import Faq from './Components/Faq/faq';
+// import Seller from './Components/Seller/seller';
+// import Buyer from './Components/Buyer/buyer';
+// import Login from './Components/Login Form/loginform';
+// import Contactpage from './Components/Contact Page/contact';
+// import Sellerprofile from './Components/Seller Profile/sellerprofile';
+// import Billboardmardan from './Components/Billboard Mardan/billmardan';
+// import Billboardmilitary from './Components/Billboard Military/billmilitary';
+// import Billboards from './Components/Billboards/billboards';
+// import Singposted from './Components/Singposted Listings/singposted';
+// import Bidding from './Components/Bidding/bidding';
+// import Billbidding from './Components/Billbidding/billbidding';
+// import Billofbidding1 from './Components/Billboard of bidding1/billofbidding';
+// import Popform from './Components/Popform/popform';
+// import './App.css';
+// import HomePanel7 from './Components/panel7';
+import Routes from './Routes';
+// import {Provider} from 'react-redux';
+// import store from './Store'
+
+
 
 class App extends Component {
   render() {
     return (
-    	<div>
-      <BrowserRouter>
+      <div>
+        {/* <BrowserRouter>
         <div>
           <Route exact path="/" component={Home}></Route>
           <Route path="/about" component={About}></Route>
@@ -45,8 +50,11 @@ class App extends Component {
           <Route path="/city_bidding" component={Billbidding}></Route>
           <Route path="/billboard" component={Billboardmardan}></Route>
         </div>
-      </BrowserRouter>
-	    </div>
+      </BrowserRouter> */}
+          <Routes />
+        {/* <Provider store={store}>
+        </Provider> */}
+      </div>
     );
   }
 }

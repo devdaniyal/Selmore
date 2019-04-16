@@ -41,7 +41,7 @@ class Panel0 extends Component {
 			      			</div>
 	      				</div>
 		      		</div>
-		      		<div className="col-md-4 seth2" style={{marginLeft:'-4%'}}>
+		      		<div className="col-md-4 seth2">
 		      			<div className="key1">
 		      				<img src="./images/bill3.png" className="imgsizee"/>
 		      			</div>
