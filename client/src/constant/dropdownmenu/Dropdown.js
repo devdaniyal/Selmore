@@ -10,6 +10,7 @@ class Dropdown extends Component {
     this.logOut = this.logOut.bind(this)
   }
 
+  //clear local storage & redirect to Home
   logOut() {
       localStorage.removeItem('loggedIn');
       return <Redirect to='/' />

@@ -9,6 +9,8 @@ import store from '../../store';
 class Form extends Component {
   constructor() {
     super()
+
+    //initilize states
     this.state = {
       email: '',
       password: '',
@@ -17,6 +19,7 @@ class Form extends Component {
     // this.singIn = this.singIn.bind(this);
   }
 
+  //calling sign In Fuction
   singIn(e) {
     e.preventDefault();
     store.dispatch(logUser(this.state));
@@ -34,6 +37,7 @@ class Form extends Component {
 
   render() {
     // console.log('renderrr******************')
+    //redirect to home
     if(this.state.loggedIn){
       return <Redirect to = '/'/>
 
