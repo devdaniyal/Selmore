@@ -26,7 +26,7 @@ import './App.css';
 import HomePanel7 from './Components/panel7';
 import Login from './Components/Login Form/loginform';
 import LogOut from './Components/LogOut/logOut'
-
+import ProfileView from './Components/Profile/profile';
 import { Provider } from 'react-redux';
 import store from './store';
 
@@ -52,6 +52,9 @@ class Routes extends Component {
               <Route path="/buyer" component={Buyer}></Route>
               <Route path="/city_bidding" component={Billbidding}></Route>
               <Route path="/billboard" component={Billboardmardan}></Route>
+              <Route path="/profile" component={ProfileView}></Route>
+              <Route path="/" component={LogOut}></Route>
+
 
             </div>
           </BrowserRouter>
