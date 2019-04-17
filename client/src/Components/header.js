@@ -18,10 +18,10 @@ class Header extends Component {
       <div>
         <div className="container">
           <div className="row">
-            <div className="col-4 col-md-4 col-lg-4 col-xl-4">
+            <div className="col-4 col-md-4 col-lg-3 col-xl-4">
               <img src="../images/selmore-logo.png" className="selmorelogo" />
             </div>
-            <div className="col-md-8 col-lg-8 col-xl-8 d-none d-sm-block">
+            <div className="col-md-8 col-lg-9 col-xl-8 d-none d-sm-block">
               <ul className="nav navsm">
                 <li className="nav-item navmargin" >
                   <Link rel="noopener noreferrer" to={`/`}>
