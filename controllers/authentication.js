@@ -29,11 +29,30 @@ var smtpTransport = nodemailer.createTransport({
 
 });
 
+exports.signin = function(req, res, next){
+  //user has already had their email and password auth'd
+  //we just need to give them a token
+  var user = req.body.email;
+  User.findOne({email:user},function(err,user){
+    console.log(user);
+    if(user){
+      //var username = user.firstname +''+ user.lastname;
+      res.send({
+        token: tokenForUser(req.user),
+        _id:req.user.id,
+        email:req.user.email,
+        username:user.firstName +''+ user.lastName
+      });
+    }
+  })
+}
+
+
 exports.signup = function(req, res, next){
   const email = req.body.email;
   const password = req.body.password;
-  const firstName = req.body.firstname;
-  const lastName = req.body.lastname;
+  const firstName = req.body.firstName;
+  const lastName = req.body.lastName;
   const contactNo = req.body.contactNo;
   const mobileNo = req.body.mobileNo;
   const landlineNo = req.body.landlineNo;
@@ -140,7 +159,7 @@ exports.signup = function(req, res, next){
       //Respond to request indicating user was created
       res.json({
         token:tokenForUser(user),
-        username:user.firstname+''+user.lastname,
+        username:user.firstName+''+user.lastName,
         _id:user._id,
         code:200
       });
