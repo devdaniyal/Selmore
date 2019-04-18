@@ -1,40 +1,29 @@
 import React, { Component } from 'react';
 import './contact.css';
+import {
+	Form, Input, Select, Radio, AutoComplete,
+} from 'antd';
+// import HttpUtils from '../../Services/HttpUtils';
+
+const { Option } = Select;
+const AutoCompleteOption = AutoComplete.Option;
+const RadioGroup = Radio.Group;
 
 class Formpanel extends Component {
-
 	constructor() {
 		super()
 
 		//Initilize states
 		this.state = {
-			fullName: '',
-			fName: '',
-			lName: '',
-			email: '',
-			password: '',
-			mobNo: '',
-			landNo: '',
-			contact: '',
 			selectedOption: '',
+			confirmDirty: false,
+			autoCompleteResult: [],
+			value: 1,
 		}
 
 		//bind funtions
 		this.handleOptionChange = this.handleOptionChange.bind(this);
-	}
-
-	//calling funtions
-	request(e) {
-		const { fullName, fName, lName, email, password, mobNo, landNo, contact, selectedOption } = this.state;
-		e.preventDefault();
-
-		//Store states in array
-		let infoArr = [fullName, fName, lName,
-			email, password, mobNo,
-			landNo, selectedOption, contact];
-		console.log(infoArr)
-
-		this.setState({ fullName: '', fName: '', lName: '', email: '', mobNo: '', landNo: '', contact:''});
+		// this.anotherFUnc= this.anotherFUnc.bind(this)
 	}
 
 	//radio button state function
@@ -44,172 +33,300 @@ class Formpanel extends Component {
 		});
 	}
 
+	//form validation funcs
+	handleSubmit =  (e) => {
+		e.preventDefault();
+		this.props.form.validateFieldsAndScroll((err, values) => {
+			if (!err) {
+				// console.log('Received values of form: ', values);
+				//concat Frist Name & Mobile No for Password
+				this.anotherFUnc(values)
+			}
+		});
+	}
+	
+	anotherFUnc = async (values) => {
+		let password = values.firstName.concat(values.mobileNo)
+		values.password = password;
+		console.log(values);
+		
+		// let response = await HttpUtils.post('/signup', values);
+		// //fetch signUp api
+		// if (response.code === 200) {
+		// 	this.setState({ data: response.content, isData: true });
+		// } else {
+		// 	this.setState({ isData: false })
+		// }
+	}
+
+	handleConfirmBlur = (e) => {
+		const value = e.target.value;
+		this.setState({ confirmDirty: this.state.confirmDirty || !!value });
+	}
+
+	validateNumber(rule, value, callback) {
+		if (isNaN(value)) {
+			callback('Please type Numbers');
+		} else {
+			callback()
+		}
+	}
+
 	render() {
-		const { fName, mobNo, password } = this.state;
+		const { getFieldDecorator } = this.props.form;
 		return (
 			<div>
-				<div className="container proroute2">
-					<div className="row ball5">
-						<div className="col-md-8">
-							<form onSubmit={this.request.bind(this)}>
+				<Form onSubmit={this.handleSubmit}>
+					<div className="container proroute2">
+						<div className="row ball5">
+							<div className="col-md-8">
 								<div className="form-group">
 									<label for="usr"></label>
-									<input type="text" className="form-control backcolor"
-										id="usr" name="username" placeholder="Full Name:*"
-										onChange={(e) => this.setState({ fullName: e.target.value })}
-										value={this.state.fullName}
-									/>
+									<Form.Item>
+										{getFieldDecorator('fullName', {
+											rules: [{
+												required: true,
+												message: 'Please input your Full Name!',
+												whitespace: true
+											}],
+										})(
+											<Input
+												type="text"
+												className={'form-control backcolor'}
+												id={"usr"}
+												name="username"
+												placeholder="Full Name:*"
+											/>
+										)}
+									</Form.Item>
 								</div>
-							</form>
+							</div>
+							<div className="col-md-4"></div>
 						</div>
-						<div className="col-md-4"></div>
-					</div>
-					<div className="row ball4">
-						<div className="col-md-4 col-6">
-							<form onSubmit={this.request.bind(this)}>
+						<div className="row ball4">
+							<div className="col-md-4 col-6">
 								<div className="form-group">
 									<label for="usr"></label>
-									<input type="text" className="form-control backcolor" id="usr"
-										name="username" placeholder="First Name:*"
-										onChange={(e) => this.setState({
-											fName: e.target.value,
-											password: mobNo.concat(e.target.value)
-										})}
-										value={this.state.fName}
-									/>
+									<Form.Item>
+										{getFieldDecorator('firstName', {
+											rules: [{
+												required: true,
+												message: 'Please input your First Name!',
+												whitespace: true
+											}],
+										})(
+											<Input
+												type="text"
+												className={'form-control backcolor'}
+												id={"usr"}
+												name="firstName"
+												placeholder="First Name:*"
+											/>
+										)}
+									</Form.Item>
 								</div>
-							</form>
+							</div>
+							<div className="col-md-4 col-6">
+								<form>
+									<div className="form-group">
+										<label for="usr"></label>
+										<Form.Item>
+											{getFieldDecorator('lastName', {
+												rules: [{
+													required: true,
+													message: 'Please input your Last Name!',
+													whitespace: true
+												}],
+											})(
+												<Input
+													type="text"
+													className={'form-control backcolor'}
+													id={"usr"}
+													name="username"
+													placeholder="Last Name:*"
+												/>
+											)}
+										</Form.Item>
+									</div>
+								</form>
+							</div>
+							<div className="col-md-4"></div>
 						</div>
-						<div className="col-md-4 col-6">
-							<form>
-								<div className="form-group">
-									<label for="usr"></label>
-									<input type="text" className="form-control backcolor"
-										id="usr" name="username" placeholder="Last Name:*"
-										onChange={(e) => this.setState({ lName: e.target.value })}
-										value={this.state.lName}
-									/>
-								</div>
-							</form>
+						<div className="row ball4">
+							<div className="col-md-8 col-12">
+								<form>
+									<div className="form-group">
+										<label for="usr"></label>
+										<Form.Item>
+											{getFieldDecorator('email', {
+												rules: [{
+													type: 'email',
+													message: 'The input is not valid E-mail!',
+												}, {
+													required: true,
+													message: 'Please input your E-mail!',
+												}],
+											})(
+												<Input
+													type="text"
+													className="form-control backcolor"
+													id="usr"
+													name="username"
+													placeholder="Email:*"
+												/>
+											)}
+										</Form.Item>
+									</div>
+								</form>
+							</div>
+							<div className="col-md-4"></div>
 						</div>
-						<div className="col-md-4"></div>
-					</div>
-					<div className="row ball4">
-						<div className="col-md-8 col-12">
-							<form>
-								<div className="form-group">
-									<label for="usr"></label>
-									<input type="text" className="form-control backcolor"
-										id="usr" name="username" placeholder="Email:*"
-										onChange={(e) => this.setState({ email: e.target.value })}
-										value={this.state.email}
-									/>
-								</div>
-							</form>
+						<div className="row ball4">
+							<div className="col-md-4 col-6">
+								<form>
+									<div className="form-group">
+										<label for="usr"></label>
+										<Form.Item>
+											{getFieldDecorator('mobileNo', {
+												initialValue: this.state.dataBnumber,
+												rules: [{ required: true, message: 'Please input your mobile Number!', whitespace: true },
+												{ validator: this.validateNumber.bind(this) }]
+											})(
+												<Input
+													className={"form-control backcolor"}
+													id={"usr"}
+													name="username"
+													placeholder="Mobile No:*"
+												/>
+											)}
+										</Form.Item>
+									</div>
+								</form>
+							</div>
+							<div className="col-md-4 col-6">
+								<form>
+									<div className="form-group">
+										<label for="usr"></label>
+										<Form.Item>
+											{getFieldDecorator('landlineNo', {
+												initialValue: this.state.dataBnumber,
+												rules: [{ required: true, message: 'Please input your landline Number!', whitespace: true },
+												{ validator: this.validateNumber.bind(this) }]
+											})(
+												<Input
+													className={"form-control backcolor"}
+													id={"usr"}
+													name="username"
+													placeholder="Landline No.:*"
+												/>
+											)}
+										</Form.Item>
+									</div>
+								</form>
+							</div>
+							<div className="col-md-4"></div>
 						</div>
-						<div className="col-md-4"></div>
-					</div>
-					<div className="row ball4">
-						<div className="col-md-4 col-6">
-							<form>
-								<div className="form-group">
-									<label for="usr"></label>
-									<input type="text" className="form-control backcolor"
-										id="usr" name="username" placeholder="Mobile No:*"
-										onChange={(e) => this.setState({
-											mobNo: e.target.value,
-											password: fName.concat(e.target.value)
-										})}
-										value={this.state.mobNo}
-									/>
-								</div>
-							</form>
-						</div>
-						<div className="col-md-4 col-6">
-							<form>
-								<div className="form-group">
-									<label for="usr"></label>
-									<input type="text" className="form-control backcolor"
-										id="usr" name="username" placeholder="Landline No.:*"
-										onChange={(e) => this.setState({ landNo: e.target.value })}
-										value={this.state.landNo}
-									/>
-								</div>
-							</form>
-						</div>
-						<div className="col-md-4"></div>
-					</div>
-					<div className="row ball67">
-						<div className="col-12 col-md-8 col-lg-8 col-xl-8">
-							<form action="/action_page.php">
-								<div className="form-check-inline">
-									<label className="form-check-label" for="radio1">
-										<input type="radio" className="form-check-input"
-											id="radio1" name="Advertiser" value="Advertiser"
-											checked={this.state.selectedOption === 'Advertiser'}
-											onChange={this.handleOptionChange}
-										/>Advertiser
-						      </label>
-								</div>
-								<div className="form-check-inline checkmargin">
-									<label className="form-check-label" for="radio2">
-										<input type="radio" className="form-check-input"
-											id="radio2" name="Agent" value="Agent"
-											checked={this.state.selectedOption === 'Agent'}
-											onChange={this.handleOptionChange}
-										/>Agent
-						      </label>
-								</div>
-								<div className="form-check-inline checkmargin">
-									<label className="form-check-label">
-										<input type="radio" className="form-check-input"
-											id="radio3" name="Buyer" value="Buyer"
-											checked={this.state.selectedOption === 'Buyer'}
-											onChange={this.handleOptionChange}
-										/>Buyer
-						      </label>
-								</div>
-								<div className="form-check-inline checkmargin">
-									<label className="form-check-label">
-										<input type="radio" className="form-check-input"
-											id="radio3" name="Seller" value="Seller"
-											checked={this.state.selectedOption === 'Seller'}
-											onChange={this.handleOptionChange}
-										/>Seller
-						      </label>
-								</div>
-							</form>
-						</div>
-						<div className="col-0 col-md-4 col-lg-4 col-xl-4"></div>
-					</div>
-					<div className="row ball4">
-						<div className="col-md-6 col-8">
-							<form>
-								<div className="form-group">
-									<label for="usr"></label>
-									<input type="text" className="form-control backcolor"
-										id="usr" name="username" placeholder="Contact:*"
-										onChange={(e) => this.setState({ contact: e.target.value })}
-										value={this.state.contact}
-									/>
-								</div>
-							</form>
-						</div>
-						<div className="col-md-2 col-4">
-							<button type="button" className="btn btn-primary btnapple"
-								onClick={this.request.bind(this)}
-							>Request</button>
-						</div>
-						<div className="col-md-4"></div>
-					</div>
-					<div className="row" style={{ margin: '0px' }}>
-						<div className="col-md-8 ball1" style={{ marginLeft: '1%' }}></div>
-						<div className="col-md-4"></div>
-					</div><br />
-				</div>
+						<div className="row ball67">
+							<div className="col-12 col-md-8 col-lg-8 col-xl-8">
+								<form action="/action_page.php">
+									<RadioGroup name="radiogroup" defaultValue={1}>
+										<div className="form-check-inline">
+											<label className="form-check-label" for="radio1">
+												<Radio value={1}
+													className={"form-check-input"}
+													id={"radio1"}
+													name="Advertiser"
+													value={"Advertiser"}
+													checked={this.state.selectedOption === 'Advertiser'}
+													onChange={this.handleOptionChange}
+												>Advertiser
+													</Radio>
+											</label>
+										</div>
+										<div className="form-check-inline checkmargin">
+											<label className="form-check-label" for="radio2">
+												<Radio value={2}
+													className={"form-check-input"}
+													id={"radio2"}
+													name="Agent"
+													value="Agent"
+													checked={this.state.selectedOption === 'Agent'}
+													onChange={this.handleOptionChange}
+												>Agent
+													</Radio>
+											</label>
+										</div>
+										<div className="form-check-inline checkmargin">
+											<label className="form-check-label">
+												<Radio value={3}
+													className={"form-check-input"}
+													id={"radio2"}
+													name="Buyer"
+													value="Buyer"
+													checked={this.state.selectedOption === 'Buyer'}
+													onChange={this.handleOptionChange}
+												>Buyer
+													</Radio>
+											</label>
+										</div>
+										<div className="form-check-inline checkmargin">
+											<label className="form-check-label">
+												<Radio value={3}
+													className={"form-check-input"}
+													id={"radio2"}
+													name="Seller"
+													value="Seller"
+													checked={this.state.selectedOption === 'Seller'}
+													onChange={this.handleOptionChange}
+												>Seller
+													</Radio>
+											</label>
+										</div>
+									</RadioGroup>
 
+								</form>
+							</div>
+							<div className="col-0 col-md-4 col-lg-4 col-xl-4"></div>
+						</div>
+						<div className="row ball4">
+							<div className="col-md-6 col-8">
+								<form>
+									<div className="form-group">
+										<label for="usr"></label>
+										<Form.Item>
+											{getFieldDecorator('contact', {
+												initialValue: this.state.dataBnumber,
+												rules: [{ required: true, message: 'Please input your contact Number!', whitespace: true },
+												{ validator: this.validateNumber.bind(this) }]
+											})(
+												<Input
+													className={"form-control backcolor"}
+													id={"usr"}
+													name="username"
+													placeholder="Contact:*"
+												/>
+											)}
+										</Form.Item>
+									</div>
+								</form>
+							</div>
+							<div className="col-md-2 col-4">
+								<button className="btn btn-primary btnapple"
+								>Request</button>
+							</div>
+							<div className="col-md-4"></div>
+						</div>
+						<div className="row" style={{ margin: '0px' }}>
+							<div className="col-md-8 ball1" style={{ marginLeft: '1%' }}></div>
+							<div className="col-md-4"></div>
+						</div><br />
+					</div>
+				</Form>
 			</div>
 		);
 	}
 }
-export default Formpanel;
+
+const WrappedRegistrationForm = Form.create()(Formpanel);
+export default WrappedRegistrationForm;
+
