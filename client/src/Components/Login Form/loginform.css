@@ -43,10 +43,7 @@
 }
 @media screen and (min-width: 1366px) and (max-width: 1600px){
 	.school1{
-		background-color: #29abe2;
-		height: 470px;
-	}
-}
-.school9{
 	background-color: #29abe2;
+	height: 470px;
+	}
 }

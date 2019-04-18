@@ -1,42 +1,73 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import './loginform.css';
+import { logUser } from '../../action';
+import store from '../../store';
+
+
 
 class Form extends Component {
+  constructor() {
+    super()
+
+    //initilize states
+    this.state = {
+      email: '',
+      password: '',
+      loggedIn: false
+    }
+    // this.singIn = this.singIn.bind(this);
+  }
+
+  //calling sign In Fuction
+  singIn(e) {
+    e.preventDefault();
+    store.dispatch(logUser(this.state));
+    this.setState({ loggedIn: true }, () => {
+      console.log(this.state.loggedIn, "logged in")
+      localStorage.setItem('loggedIn' , JSON.stringify(this.state.loggedIn))
+    })
+
+    // const { email, password } = this.state;
+    // console.log(email, 'email');
+    // console.log(password, "password");
+    // return false;
+    
+  }
+
   render() {
+    // console.log('renderrr******************')
+    //redirect to home
+    if(this.state.loggedIn){
+      return <Redirect to = '/'/>
+
+    }
     return (
-      <div id="mModal" role="dialog" className="modal fade">
-        <div className="container" style={{marginTop:'8%'}}>
-              <div className="row school9" style={{margin:'0px'}}>
-                  <div className="col-10 col-md-10 col-lg-10 col-xl-10"></div>
-                  <div className="col-2 col-md-2 col-lg-2 col-xl-2" style={{textAlign:'left'}}>
-                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                  </div>
+      <div className="container">
+        <div className="row school1" style={{ marginRight: '0px' }}>
+          <div className="col-md-1">
+          </div>
+          <div className="col-md-5 school7">
+            <img src="../images/log-in.png" style={{ width: '100%', height: '257px' }} />
+          </div>
+          <div className="col-md-4 school6">
+            <form onSubmit={this.singIn.bind(this)}>
+              <div className="form-group">
+                <label for="exampleInputEmail1" style={{ marginBottom: '0px' }}><span className="school3">Email address:</span></label>
+                <input type="email" className="form-control" id="exampleInputEmail1" style={{ marginTop: '-2%' }} onChange={(e) => this.setState({ email: e.target.value })} />
               </div>
-  	      		<div className="row school1" style={{margin: '0px'}}>
-                  <div className="col-md-1">
-                  </div>
-                  <div className="col-md-5 school7">
-                    <img src="../images/log-in.png" style={{width:'100%',height:'257px'}}/>
-                  </div>
-                  <div className="col-md-4 school6">
-                      <form>
-                          <div className="form-group">
-                              <label for="exampleInputEmail1" style={{marginBottom:'0px'}}><span className="school3">Email address:</span></label>
-                              <input type="email" className="form-control" id="exampleInputEmail1" style={{marginTop:'-2%'}} />
-                          </div>
-                          <div class="form-group">
-                              <label for="exampleInputPassword1" style={{marginBottom:'0px'}}><span className="school3">Password:</span></label>
-                              <input type="password" className="form-control" id="exampleInputPassword1" style={{marginTop:'-2%'}} />
-                          </div>
-                            <p style={{marginTop:'-4%'}}><span className="school8">Forget Password!?</span></p>
-                              <button type="submit" className="btn school4"><span className="school5">Login</span></button>
-                      </form>
-                  </div>
-                  <div className="col-md-1">
-                  </div>
-  	      		</div>
+              <div class="form-group">
+                <label for="exampleInputPassword1" style={{ marginBottom: '0px' }}><span className="school3">Password:</span></label>
+                <input type="password" className="form-control" id="exampleInputPassword1" style={{ marginTop: '-2%' }} onChange={(e) => this.setState({ password: e.target.value })} />
+              </div>
+              <p style={{ marginTop: '-4%' }}><span className="school8">Forget Password!?</span></p>
+              <button type="submit" className="btn school4"><span className="school5" onClick={this.singIn.bind(this)}>Login</span></button>
+            </form>
+          </div>
+          <div className="col-md-1">
+          </div>
         </div>
-      </div>  
+      </div>
     );
   }
 }
