@@ -10,6 +10,7 @@
     "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "dependencies": {
+    "@callstack/async-storage": "^1.1.0",
     "add": "^2.0.6",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",

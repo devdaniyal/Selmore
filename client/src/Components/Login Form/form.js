@@ -3,10 +3,13 @@ import { Redirect } from 'react-router-dom';
 import './loginform.css';
 import { logUser } from '../../action';
 import store from '../../store';
+import {
+  Form, Icon, Input, Button, Checkbox,
+} from 'antd';
+import { HttpUtils } from '../../Services/HttpUtils';
 
 
-
-class Form extends Component {
+class FormLogin extends Component {
   constructor() {
     super()
 
@@ -16,32 +19,40 @@ class Form extends Component {
       password: '',
       loggedIn: false
     }
-    // this.singIn = this.singIn.bind(this);
   }
 
-  //calling sign In Fuction
-  singIn(e) {
+  handleSubmit = (e) => {
     e.preventDefault();
-    store.dispatch(logUser(this.state));
-    this.setState({ loggedIn: true }, () => {
-      console.log(this.state.loggedIn, "logged in")
-      localStorage.setItem('loggedIn' , JSON.stringify(this.state.loggedIn))
-    })
+    this.props.form.validateFields((err, values) => {
+      if (!err) {
+        store.dispatch(logUser(this.state));
+        this.setState({ loggedIn: true }, () => {
+          console.log(this.state.loggedIn, "logged in")
+          localStorage.setItem('loggedIn', JSON.stringify(this.state.loggedIn))
+        })
+        console.log('Received values of form: ', values);
+        this.fectSignInApiFunc(values)
+      }
+    });
+  }
 
-    // const { email, password } = this.state;
-    // console.log(email, 'email');
-    // console.log(password, "password");
-    // return false;
-    
+  fectSignInApiFunc = async (values) => {
+    let response = await HttpUtils.post('signin', values);
+    console.log(response);
+    //fetch signUp api
+    // if (response.code === 200) {
+    //   this.setState({ data: response.content, isData: true });
+    //   if (this.state.loggedIn) {
+    //     return <Redirect to='/' />
+    //   }
+    // } else {
+    //   this.setState({ isData: false })
+    // }
   }
 
   render() {
-    // console.log('renderrr******************')
-    //redirect to home
-    if(this.state.loggedIn){
-      return <Redirect to = '/'/>
+    const { getFieldDecorator } = this.props.form;
 
-    }
     return (
       <div className="container">
         <div className="row school1" style={{ marginRight: '0px' }}>
@@ -51,18 +62,53 @@ class Form extends Component {
             <img src="../images/log-in.png" style={{ width: '100%', height: '257px' }} />
           </div>
           <div className="col-md-4 school6">
-            <form onSubmit={this.singIn.bind(this)}>
+            <Form onSubmit={this.handleSubmit} className="login-form">
               <div className="form-group">
-                <label for="exampleInputEmail1" style={{ marginBottom: '0px' }}><span className="school3">Email address:</span></label>
-                <input type="email" className="form-control" id="exampleInputEmail1" style={{ marginTop: '-2%' }} onChange={(e) => this.setState({ email: e.target.value })} />
+                <label for="exampleInputEmail1" style={{ marginBottom: '0px' }}>
+                  <span className="school3">
+                    Email address:
+                </span>
+                </label>
+                <Form.Item>
+                  {getFieldDecorator('email', {
+                    rules: [{
+                      type: 'email',
+                      message: 'The input is not valid E-mail!',
+                    }, {
+                      required: true,
+                      message: 'Please input your E-mail!',
+                    }],
+                  })(
+                    <Input
+                      type="text"
+                      className={"form-control"}
+                      id={"exampleInputEmail1"}
+                      name="username"
+                      placeholder="Email:*"
+                    />
+                  )}
+                </Form.Item>
               </div>
               <div class="form-group">
-                <label for="exampleInputPassword1" style={{ marginBottom: '0px' }}><span className="school3">Password:</span></label>
-                <input type="password" className="form-control" id="exampleInputPassword1" style={{ marginTop: '-2%' }} onChange={(e) => this.setState({ password: e.target.value })} />
+                <label for="exampleInputPassword1" style={{ marginBottom: '0px' }}>
+                  <span className="school3"
+                  >Password:
+                </span>
+                </label>
+                <Form.Item>
+                  {getFieldDecorator('password', {
+                    rules: [{ required: true, message: 'Please input your Password!' }],
+                  })(
+                    <Input type="password"
+                      className={"form-control"}
+                      id={"exampleInputPassword1"}
+                      placeholder="Password" />
+                  )}
+                </Form.Item>
               </div>
               <p style={{ marginTop: '-4%' }}><span className="school8">Forget Password!?</span></p>
-              <button type="submit" className="btn school4"><span className="school5" onClick={this.singIn.bind(this)}>Login</span></button>
-            </form>
+              <button type="submit" className="btn school4"><span className="school5">Login</span></button>
+            </Form>
           </div>
           <div className="col-md-1">
           </div>
@@ -72,4 +118,5 @@ class Form extends Component {
   }
 }
 
-export default Form;
+const WrappedNormalLoginForm = Form.create()(FormLogin);
+export default WrappedNormalLoginForm;

@@ -3,7 +3,7 @@ import './contact.css';
 import {
 	Form, Input, Select, Radio, AutoComplete,
 } from 'antd';
-// import HttpUtils from '../../Services/HttpUtils';
+import { HttpUtils } from '../../Services/HttpUtils';
 
 const { Option } = Select;
 const AutoCompleteOption = AutoComplete.Option;
@@ -23,7 +23,6 @@ class Formpanel extends Component {
 
 		//bind funtions
 		this.handleOptionChange = this.handleOptionChange.bind(this);
-		// this.anotherFUnc= this.anotherFUnc.bind(this)
 	}
 
 	//radio button state function
@@ -34,29 +33,30 @@ class Formpanel extends Component {
 	}
 
 	//form validation funcs
-	handleSubmit =  (e) => {
+	handleSubmit = (e) => {
 		e.preventDefault();
 		this.props.form.validateFieldsAndScroll((err, values) => {
 			if (!err) {
 				// console.log('Received values of form: ', values);
-				//concat Frist Name & Mobile No for Password
-				this.anotherFUnc(values)
+				this.fectSignUpApiFunc(values)
 			}
 		});
 	}
-	
-	anotherFUnc = async (values) => {
+
+	fectSignUpApiFunc = async (values) => {
+		//concat Frist Name & Mobile No for Password
 		let password = values.firstName.concat(values.mobileNo)
 		values.password = password;
 		console.log(values);
-		
-		// let response = await HttpUtils.post('/signup', values);
-		// //fetch signUp api
-		// if (response.code === 200) {
-		// 	this.setState({ data: response.content, isData: true });
-		// } else {
-		// 	this.setState({ isData: false })
-		// }
+
+		let response = await HttpUtils.post('signup', values);
+		console.log(response);
+		//fetch signUp api
+		if (response.code === 200) {
+			this.setState({ data: response.content, isData: true });
+		} else {
+			this.setState({ isData: false })
+		}
 	}
 
 	handleConfirmBlur = (e) => {
@@ -169,8 +169,8 @@ class Formpanel extends Component {
 											})(
 												<Input
 													type="text"
-													className="form-control backcolor"
-													id="usr"
+													className={"form-control backcolor"}
+													id={"usr"}
 													name="username"
 													placeholder="Email:*"
 												/>
