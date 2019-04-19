@@ -29,6 +29,7 @@ import LogOut from './Components/LogOut/logOut'
 import ProfileView from './Components/Profile/profile';
 import { Provider } from 'react-redux';
 import store from './store';
+import AddBillboards from './Components/BillboardForm/addBillboards';
 
 
 
@@ -54,7 +55,7 @@ class Routes extends Component {
               <Route path="/billboard" component={Billboardmardan}></Route>
               <Route path="/profile" component={ProfileView}></Route>
               <Route path="/" component={LogOut}></Route>
-
+              <Route path="/list_add" component={AddBillboards}></Route>
 
             </div>
           </BrowserRouter>

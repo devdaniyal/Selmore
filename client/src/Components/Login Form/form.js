@@ -56,12 +56,14 @@ class FormLogin extends Component {
     }
     catch (error) {
       console.log(error)
+
+      //error handling if user enter wrong email or password
       if (response === undefined) {
         this.setState({
           isAlert: true,
           isLoader: false
         })
-        console.log("please check you email or password")
+        // console.log("please check your email or password")
       }
     }
 
