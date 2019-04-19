@@ -41,6 +41,7 @@ exports.signin = function(req, res, next){
         token: tokenForUser(req.user),
         _id:req.user.id,
         email:req.user.email,
+        code:200,
         username:user.firstName +''+ user.lastName
       });
     }

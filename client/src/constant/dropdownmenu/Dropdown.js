@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
 import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
-import { Link, withRouter , Redirect} from 'react-router-dom';
+import { Link, withRouter, Redirect } from 'react-router-dom';
 
 
 class Dropdown extends Component {
@@ -12,15 +12,18 @@ class Dropdown extends Component {
 
   //clear local storage & redirect to Home
   logOut() {
-      localStorage.removeItem('loggedIn');
-      return <Redirect to='/' />
+    localStorage.removeItem('loggedIn');
+    localStorage.removeItem('userToken')
+    return <Redirect to='/' />
   }
 
   render() {
+    let userName = JSON.parse(localStorage.getItem('userName'));   
+
     return (
       <MDBDropdown>
         <MDBDropdownToggle caret color="primary" className='toogle'>
-          <div className='userName'>User Name</div>
+          <div className='userName'>{userName}</div>
         </MDBDropdownToggle>
         <MDBDropdownMenu basic>
           <MDBDropdownItem> <Link rel="noopener noreferrer" to={`/profile`}>Profile</Link></MDBDropdownItem>

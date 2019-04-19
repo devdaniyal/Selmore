@@ -17,7 +17,10 @@ class FormLogin extends Component {
     this.state = {
       email: '',
       password: '',
-      loggedIn: false
+      loggedIn: false,
+      isData: true,
+      data: {},
+      isLoader: false,
     }
   }
 
@@ -26,33 +29,41 @@ class FormLogin extends Component {
     this.props.form.validateFields((err, values) => {
       if (!err) {
         store.dispatch(logUser(this.state));
-        this.setState({ loggedIn: true }, () => {
-          console.log(this.state.loggedIn, "logged in")
+        this.setState({ isLoader: true }, () => {
+          // console.log(this.state.loggedIn, "logged in")
           localStorage.setItem('loggedIn', JSON.stringify(this.state.loggedIn))
         })
-        console.log('Received values of form: ', values);
+        // console.log('Received values of form: ', values);
         this.fectSignInApiFunc(values)
       }
     });
   }
 
   fectSignInApiFunc = async (values) => {
+    // fetch signIn api
     let response = await HttpUtils.post('signin', values);
-    console.log(response);
-    //fetch signUp api
-    // if (response.code === 200) {
-    //   this.setState({ data: response.content, isData: true });
-    //   if (this.state.loggedIn) {
-    //     return <Redirect to='/' />
-    //   }
-    // } else {
-    //   this.setState({ isData: false })
-    // }
+    console.log(response.username);
+    if (response.code === 200) {
+      this.setState({ data: response.content, isData: true, isLoader: false, loggedIn: true });
+      console.log(response.token, 'token')
+      localStorage.setItem('userToken', JSON.stringify(response.token))
+      localStorage.setItem('userName', JSON.stringify(response.username))
+    } else {
+      this.setState({ isData: false, isLoader: true })
+    }
+    if(response === undefined ){
+      console.log("please check you email or password")
+
+    }
   }
 
   render() {
     const { getFieldDecorator } = this.props.form;
-
+    const { isData, isLoader, loggedIn } = this.state
+    //redirect to home page
+    if (loggedIn) {
+      return <Redirect to='/' />
+    }
     return (
       <div className="container">
         <div className="row school1" style={{ marginRight: '0px' }}>
@@ -110,6 +121,9 @@ class FormLogin extends Component {
               <button type="submit" className="btn school4"><span className="school5">Login</span></button>
             </Form>
           </div>
+          {isLoader ? <div class="loading"> 	</div>
+            : null
+          }
           <div className="col-md-1">
           </div>
         </div>
