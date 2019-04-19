@@ -13,12 +13,13 @@ class Dropdown extends Component {
   //clear local storage & redirect to Home
   logOut() {
     localStorage.removeItem('loggedIn');
-    localStorage.removeItem('userToken')
+    localStorage.removeItem('userToken');
+    localStorage.removeItem('userName');
     return <Redirect to='/' />
   }
 
   render() {
-    let userName = JSON.parse(localStorage.getItem('userName'));   
+    let userName = JSON.parse(localStorage.getItem('userName'));
 
     return (
       <MDBDropdown>

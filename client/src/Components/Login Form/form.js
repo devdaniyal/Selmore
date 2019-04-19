@@ -21,6 +21,7 @@ class FormLogin extends Component {
       isData: true,
       data: {},
       isLoader: false,
+      isAlert: false
     }
   }
 
@@ -42,24 +43,33 @@ class FormLogin extends Component {
   fectSignInApiFunc = async (values) => {
     // fetch signIn api
     let response = await HttpUtils.post('signin', values);
-    console.log(response.username);
-    if (response.code === 200) {
-      this.setState({ data: response.content, isData: true, isLoader: false, loggedIn: true });
-      console.log(response.token, 'token')
-      localStorage.setItem('userToken', JSON.stringify(response.token))
-      localStorage.setItem('userName', JSON.stringify(response.username))
-    } else {
-      this.setState({ isData: false, isLoader: true })
+    // console.log(response.username);
+    try {
+      if (response.code === 200) {
+        this.setState({ data: response.content, isData: true, isLoader: false, loggedIn: true });
+        console.log(response.token, 'token')
+        localStorage.setItem('userToken', JSON.stringify(response.token))
+        localStorage.setItem('userName', JSON.stringify(response.username))
+      } else {
+        this.setState({ isData: false, isLoader: true })
+      }
     }
-    if(response === undefined ){
-      console.log("please check you email or password")
+    catch (error) {
+      console.log(error)
+      if (response === undefined) {
+        this.setState({
+          isAlert: true,
+          isLoader: false
+        })
+        console.log("please check you email or password")
+      }
+    }
 
-    }
   }
 
   render() {
     const { getFieldDecorator } = this.props.form;
-    const { isData, isLoader, loggedIn } = this.state
+    const { isData, isLoader, loggedIn, isAlert } = this.state
     //redirect to home page
     if (loggedIn) {
       return <Redirect to='/' />
@@ -119,6 +129,13 @@ class FormLogin extends Component {
               </div>
               <p style={{ marginTop: '-4%' }}><span className="school8">Forget Password!?</span></p>
               <button type="submit" className="btn school4"><span className="school5">Login</span></button>
+              <br />
+              {isAlert ?
+                <div class="alert alert-danger" role="alert">
+                  Please cheak your email or password
+          </div>
+                : null
+              }
             </Form>
           </div>
           {isLoader ? <div class="loading"> 	</div>
