@@ -32,6 +32,7 @@ class MapContainer extends Component {
 
     render() {
         return (
+          // integrated google map
             <div style={{ margin: '100px' }}>
                 <Map
                     google={this.props.google}

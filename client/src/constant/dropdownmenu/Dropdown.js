@@ -15,6 +15,7 @@ class Dropdown extends Component {
     localStorage.removeItem('loggedIn');
     localStorage.removeItem('userToken');
     localStorage.removeItem('userName');
+    localStorage.removeItem('coords');
     return <Redirect to='/' />
   }
 

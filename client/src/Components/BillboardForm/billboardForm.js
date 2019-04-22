@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-
+import './billboardDetail.css';
 import {
     Form, Input, Icon, Button,
 } from 'antd';
+// import { Scrollbars } from 'react-custom-scrollbars';
+import { Spring } from 'react-spring';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import BillboardFields from './billboardFields';
-// import GoogleMap from 'react-google-maps'
-import MapContainer from './googleMap/googleMapLocation'
 
 let id = 0;
+
 
 class BillboradForm extends Component {
     constructor() {
@@ -38,6 +40,7 @@ class BillboradForm extends Component {
         form.setFieldsValue({
             keys: nextKeys,
         });
+        // this.props.toggle()
     }
     handleSubmit = (e) => {
         e.preventDefault();
@@ -56,42 +59,65 @@ class BillboradForm extends Component {
         getFieldDecorator('keys', { initialValue: [] });
         const keys = getFieldValue('keys');
         const formItems = keys.map((k, index) => (
-            <Form.Item
-                label={index === 0 ? 'BillBoard Detail' : ''}
-                required={false}
-                key={k}
-            >
-                {getFieldDecorator(`names[${k}]`, {
+            <div className='formDiv'>
+                <ReactCSSTransitionGroup
+                    transitionName="example"
+                    transitionEnterTimeout={500}
+                    transitionLeaveTimeout={300}>
+
+
+                    <Form.Item className='container text-center'
+                        label={index === 0 ? 'BillBoard Detail' : ''}
+                        required={false}
+                        key={k}
+                    >
+
+
+                        {/* {getFieldDecorator(`names[${k}]`, {
                     validateTrigger: ['onChange', 'onBlur'],
                     rules: [{
                         required: true,
                         whitespace: true,
                         message: "Please enter billboard detail",
                     }],
-                })(
-                    <BillboardFields />
-                )}
-                {keys.length > 1 ? (
-                    <Icon
-                        className="dynamic-delete-button"
-                        type="minus-circle-o"
-                        onClick={() => this.remove(k)}
-                    />
-                ) : null}
-            </Form.Item>
+                })( */}
+                        <BillboardFields />
+                        {/* )} */}
+                        {keys.length > 1 ? (
+                            <Icon
+                                className="dynamic-delete-button"
+                                type="minus-circle-o"
+                                onClick={() => this.remove(k)}
+                            />
+                        ) : null}
+                    </Form.Item>
+
+                </ReactCSSTransitionGroup>
+            </div>
         ));
         return (
-            <div className='mainDive'>
-                <Form onSubmit={this.handleSubmit}>
-                    {formItems}
-                    <Form.Item>
-                        <Button type="dashed" onClick={this.add}>
-                            <Icon type="plus" />
-                        </Button>
-                    </Form.Item>
-                </Form>
-
+            // <Spring
+            //     from={{ opacity: 0 }}
+            //     to={{ opacity: 1 }}
+            //     config={{ delay: 1000, duration: 1000 }}
+            // >
+            //     {props => (
+            // <Scrollbars style={{ width: 1200, height: 300 }} className='mainDive container text-center'>
+            <div className='row'>
+                <div className='mainDive container text-center'>
+                    <Form onSubmit={this.handleSubmit}>
+                        {formItems}
+                        <Form.Item>
+                            <Button type="dashed" onClick={this.add}>
+                                <Icon type="plus-circle-o" />
+                            </Button>
+                        </Form.Item>
+                    </Form>
+                </div>
             </div>
+            // </Scrollbars>
+            //     )}
+            // </Spring>
         );
 
     }
@@ -100,15 +126,3 @@ class BillboradForm extends Component {
 
 const WrappedDynamicFieldSet = Form.create()(BillboradForm);
 export default WrappedDynamicFieldSet;
-
-
-// import MapContainer from './googleMapLocation'
-
-// class BillboradForm extends Component {
-//     render() {
-//         return (
-//                 <MapContainer />
-//             )
-//         }
-// }
-// export default BillboradForm;

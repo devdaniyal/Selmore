@@ -1,3 +1,25 @@
 .mainDive{
-    justify-content: center
+    justify-content: center;
+    align-items: center;
+    align-content: center
+}
+.formDiv{
+   
+}
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity all ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity all ease-in;
 }
