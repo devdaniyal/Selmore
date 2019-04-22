@@ -4,7 +4,7 @@ import {
 } from 'antd';
 import './billboardDetail.css';
 
-import MapContainer from './googleMapLocation';
+import MapContainer from './googleMap/googleMapLocation';
 
 
 class BillboardFields extends Component {
@@ -139,14 +139,14 @@ class BillboardFields extends Component {
                                         whitespace: true
                                     }],
                                 })(
-                                    <Input
-                                        type="text"
-                                        className={'form-control backcolor'}
-                                        id={"location"}
-                                        name="location"
-                                        placeholder="Enter billboard location"
-                                    />
-                                    // <MapContainer />
+                                    // <Input
+                                    //     type="text"
+                                    //     className={'form-control backcolor'}
+                                    //     id={"location"}
+                                    //     name="location"
+                                    //     placeholder="Enter billboard location"
+                                    // />
+                                    <MapContainer />
                                 )}
                             </Form.Item>
                         </div>

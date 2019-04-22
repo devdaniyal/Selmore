@@ -5,7 +5,7 @@ import {
 } from 'antd';
 import BillboardFields from './billboardFields';
 // import GoogleMap from 'react-google-maps'
-import MapContainer from './googleMapLocation'
+import MapContainer from './googleMap/googleMapLocation'
 
 let id = 0;
 
