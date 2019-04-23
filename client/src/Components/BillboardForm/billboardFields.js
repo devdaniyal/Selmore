@@ -67,8 +67,8 @@ class BillboardFields extends Component {
         return (
             <div className='mainDive'>
 
-                <Form onSubmit={this.handleSubmit} className='text-center mainDive'>
-                    <div className='text-center mainDive'>
+                <Form onSubmit={this.handleSubmit} >
+                    <div >
                         <div className="col-md-8">
                             <div className="form-group">
                                 <label for="company"></label>
