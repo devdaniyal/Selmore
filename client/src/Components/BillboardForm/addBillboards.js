@@ -14,8 +14,6 @@ class AddBillboards extends Component {
             <div>
                 <Header />
                 <BillboradForm/>
-                <Panel1 />
-                <Panel2 />
                 <Footer />
             </div>
         )

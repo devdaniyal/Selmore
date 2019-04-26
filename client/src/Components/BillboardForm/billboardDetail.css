@@ -1,9 +1,10 @@
-.mainDive{
-    /* justify-content: center;
-    align-items: center;
-    align-content: center */
+.formDiv{
+   margin: 5px;
+   font-weight: bold;
 }
-
+.location{
+  display: inline;
+}
 .fade-enter {
   opacity: 0.01;
 }
