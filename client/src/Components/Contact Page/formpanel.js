@@ -20,7 +20,8 @@ class Formpanel extends Component {
 			autoCompleteResult: [],
 			value: 1,
 			isLoader: false,
-			isAlert: false
+			isAlert: false,
+			radioVal: false
 		}
 
 		//bind funtions
@@ -30,8 +31,10 @@ class Formpanel extends Component {
 	//radio button state function
 	handleOptionChange(changeEvent) {
 		this.setState({
-			selectedOption: changeEvent.target.value
+			selectedOption: changeEvent.target.value,
+			radioVal: true
 		});
+		// console.log(this.state.radioVal)
 	}
 
 	//form validation funcs
@@ -39,7 +42,7 @@ class Formpanel extends Component {
 		e.preventDefault();
 		this.props.form.validateFieldsAndScroll((err, values) => {
 			if (!err) {
-				// console.log('Received values of form: ', values);
+				console.log('Received values of form: ', values);
 				this.setState({ isLoader: true })
 				this.fectSignUpApiFunc(values)
 			}
@@ -131,57 +134,53 @@ class Formpanel extends Component {
 								</div>
 							</div>
 							<div className="col-md-4 col-6">
-								<form>
-									<div className="form-group">
-										<label for="usr"></label>
-										<Form.Item>
-											{getFieldDecorator('lastName', {
-												rules: [{
-													required: true,
-													message: 'Please input your Last Name!',
-													whitespace: true
-												}],
-											})(
-												<Input
-													type="text"
-													className={'form-control backcolor'}
-													id={"usr"}
-													name="username"
-													placeholder="Last Name:*"
-												/>
-											)}
-										</Form.Item>
-									</div>
-								</form>
+								<div className="form-group">
+									<label for="usr"></label>
+									<Form.Item>
+										{getFieldDecorator('lastName', {
+											rules: [{
+												required: true,
+												message: 'Please input your Last Name!',
+												whitespace: true
+											}],
+										})(
+											<Input
+												type="text"
+												className={'form-control backcolor'}
+												id={"usr"}
+												name="username"
+												placeholder="Last Name:*"
+											/>
+										)}
+									</Form.Item>
+								</div>
 							</div>
 							<div className="col-md-4"></div>
 						</div>
 						<div className="row ball4">
 							<div className="col-md-8 col-12">
-								<form>
-									<div className="form-group">
-										<label for="usr"></label>
-										<Form.Item>
-											{getFieldDecorator('email', {
-												rules: [{
-													type: 'email',
-													message: 'The input is not valid E-mail!',
-												}, {
-													required: true,
-													message: 'Please input your E-mail!',
-												}],
-											})(
-												<Input
-													type="text"
-													className={"form-control backcolor"}
-													id={"usr"}
-													name="username"
-													placeholder="Email:*"
-												/>
-											)}
-										</Form.Item>
-									</div>
-								</form>
+								<div className="form-group">
+									<label for="usr"></label>
+									<Form.Item>
+										{getFieldDecorator('email', {
+											rules: [{
+												type: 'email',
+												message: 'The input is not valid E-mail!',
+											}, {
+												required: true,
+												message: 'Please input your E-mail!',
+											}],
+										})(
+											<Input
+												type="text"
+												className={"form-control backcolor"}
+												id={"usr"}
+												name="username"
+												placeholder="Email:*"
+											/>
+										)}
+									</Form.Item>
+								</div>
 							</div>
 							<div className="col-md-4"></div>
 						</div>
@@ -291,38 +290,60 @@ class Formpanel extends Component {
 											</label>
 										</div>
 									</RadioGroup>
-
 								</form>
 							</div>
-							<div className="col-0 col-md-4 col-lg-4 col-xl-4"></div>
-						</div>
-						<div className="row ball4">
-							<div className="col-md-6 col-8">
-								<form>
+							{this.state.radioVal ?
+								<div className="col-md-8">
 									<div className="form-group">
-										<label for="usr"></label>
+										<label for="company"></label>
 										<Form.Item>
-											{getFieldDecorator('contact', {
-												initialValue: this.state.dataBnumber,
+											{getFieldDecorator('Company name', {
 												rules: [{
 													required: true,
-													message: 'Please input your contact Number!',
+													message: 'Please enter your company name',
 													whitespace: true
-												},
-												{ validator: this.validateNumber.bind(this) }]
+												}],
 											})(
 												<Input
-													className={"form-control backcolor"}
-													id={"usr"}
-													name="username"
-													placeholder="Contact:*"
+													type="text"
+													className={'form-control backcolor'}
+													id={"company"}
+													name="company name"
+													placeholder="Company name"
 												/>
 											)}
 										</Form.Item>
 									</div>
-								</form>
+								</div> :
+								null
+							}
+
+							<div className="col-0 col-md-4 col-lg-4 col-xl-4"></div>
+						</div>
+						<div className="row ball4">
+							<div className="col-md-6 col-8">
+								<div className="form-group">
+									<label for="usr"></label>
+									<Form.Item>
+										{getFieldDecorator('contact', {
+											initialValue: this.state.dataBnumber,
+											rules: [{
+												required: true,
+												message: 'Please enter your contact Number!',
+												whitespace: true
+											},
+											{ validator: this.validateNumber.bind(this) }]
+										})(
+											<Input
+												className={"form-control backcolor"}
+												id={"usr"}
+												name="username"
+												placeholder="Contact:*"
+											/>
+										)}
+									</Form.Item>
+								</div>
 							</div>
-							{/* Loading&#8230; */}
 							<div className="col-md-2 col-4">
 								<button className="btn btn-primary btnapple"
 								>Request</button>
@@ -332,15 +353,14 @@ class Formpanel extends Component {
 								null
 							}
 							{this.state.isAlert ? <div class="alert alert-success" role="alert">
-								<strong>Request Submiting</strong>
+								<strong>Request Submiting </strong>
+								
 								your request has been submited and
 								one of our support member will call & email you shortly.
 								</div>
 								:
 								null
 							}
-
-
 							<div className="col-md-4"></div>
 						</div>
 						<div className="row" style={{ margin: '0px' }}>
@@ -349,7 +369,6 @@ class Formpanel extends Component {
 						</div><br />
 					</div>
 				</Form>
-				{/* </div> */}
 			</div>
 		);
 	}
