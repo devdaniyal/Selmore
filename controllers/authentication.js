@@ -164,8 +164,28 @@ exports.signup = function(req, res, next){
         _id:user._id,
         code:200
       });
-
-
-
     });
+}
+exports.getemails = function(req,res,next){
+  User.find(function(err,data){
+    if(err){
+      res.send({
+        code:404,
+        content:err,
+        msg:'user will not get from server some internal issue.'
+      })
+    }
+    else if(data){
+      const userEmails = [];
+      console.log(data);
+       for(var i=0;i<data.length;i++){
+        userEmails.push(data[i].email)
+      }
+      res.send({
+        code:200,
+        content:userEmails,
+        msg:'All user emails'
+      })
+    }
+  })
 }

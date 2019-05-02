@@ -10,5 +10,9 @@ module.exports = function(app){
 //app.post('/signin',requireSignin,  Authentication.signin);
 app.post('/signup',Authentication.signup);
 app.post('/signin',requireSignin, Authentication.signin);
+
+//get routes
+
+app.get('/getemails',Authentication.getemails);
   //app.get('/getprofile',requireAuth, getprofile.getProfile)
 }
