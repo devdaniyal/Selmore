@@ -59,7 +59,7 @@ exports.signup = function(req, res, next){
   const landlineNo = req.body.landlineNo;
   const fullName  = req.body.fullName;
   const type = req.body.type;
-  const companyName = req.body.companyName;
+  const companyName = req.body.CompanyName;
 
 
   if(!email || !password){
