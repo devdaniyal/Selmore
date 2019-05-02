@@ -5,7 +5,7 @@ import {
 } from 'antd';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import BillboardFields from './billboardFields';
-import Center from 'react-center';
+//import Center from 'react-center';
 
 let id = 0;
 

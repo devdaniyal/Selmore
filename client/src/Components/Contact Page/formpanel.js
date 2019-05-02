@@ -297,7 +297,7 @@ class Formpanel extends Component {
 									<div className="form-group">
 										<label for="company"></label>
 										<Form.Item>
-											{getFieldDecorator('Company name', {
+											{getFieldDecorator('CompanyName', {
 												rules: [{
 													required: true,
 													message: 'Please enter your company name',
@@ -354,7 +354,7 @@ class Formpanel extends Component {
 							}
 							{this.state.isAlert ? <div class="alert alert-success" role="alert">
 								<strong>Request Submiting </strong>
-								
+
 								your request has been submited and
 								one of our support member will call & email you shortly.
 								</div>
@@ -376,4 +376,3 @@ class Formpanel extends Component {
 
 const WrappedRegistrationForm = Form.create()(Formpanel);
 export default WrappedRegistrationForm;
-
