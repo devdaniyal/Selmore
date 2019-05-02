@@ -88,7 +88,7 @@ exports.signup = function(req, res, next){
         randomno:rand,
         companyName:companyName
       });
-
+      console.log(user,'checkingggggggg');
       user.save(function(err){
         if(err){ return next(err); }
       });
