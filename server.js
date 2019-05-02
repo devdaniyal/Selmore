@@ -41,7 +41,7 @@ app.post('/api/world', (req, res) => {
 });
 
 //Server setup
-const port = process.env.PORT || 6000;
+const port = process.env.PORT || 5000;
 const server = http.createServer(app);
 //server.listen(port);
 if (process.env.NODE_ENV === 'production') {
