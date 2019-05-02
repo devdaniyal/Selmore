@@ -21,11 +21,38 @@ class Formpanel extends Component {
 			value: 1,
 			isLoader: false,
 			isAlert: false,
-			radioVal: false
+			radioVal: false,
+			emailsArr: []
 		}
 
 		//bind funtions
 		this.handleOptionChange = this.handleOptionChange.bind(this);
+	}
+
+	componentDidMount() {
+		this.checkEmails();
+	}
+
+	checkEmails = async () => {
+
+		let response = await HttpUtils.get('getemails');
+		let getEmail = response.content;
+		console.log(response)
+		console.log(response.content);
+		this.setState({
+			emailsArr: response.content
+		})
+	}
+
+	onChangeEmail(rule, value, callback) {
+		console.log(rule)
+		if (this.state.emailsArr.includes(value)) {
+			callback('Email is already exists');
+		} else {
+			callback()
+		}
+
+
 	}
 
 	//radio button state function
@@ -45,6 +72,7 @@ class Formpanel extends Component {
 				console.log('Received values of form: ', values);
 				this.setState({ isLoader: true })
 				this.fectSignUpApiFunc(values)
+
 			}
 		});
 	}
@@ -169,7 +197,8 @@ class Formpanel extends Component {
 											}, {
 												required: true,
 												message: 'Please input your E-mail!',
-											}],
+											},
+											{ validator: this.onChangeEmail.bind(this) }],
 										})(
 											<Input
 												type="text"
@@ -177,6 +206,7 @@ class Formpanel extends Component {
 												id={"usr"}
 												name="username"
 												placeholder="Email:*"
+											// onChange={this.onChangeEmail.bind(this)}
 											/>
 										)}
 									</Form.Item>

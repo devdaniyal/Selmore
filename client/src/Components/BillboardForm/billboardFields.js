@@ -5,6 +5,8 @@ import {
 import Select from 'react-select';
 import Addbtn from './googleMap/addbtn'
 import './billboardDetail.css';
+import { HttpUtils } from '../../Services/HttpUtils';
+
 
 import MapContainer from './googleMap/googleMapLocation';
 
@@ -40,34 +42,27 @@ class BillboardFields extends Component {
             readOnly: '',
             toDoNotes: [],
             latitude: '',
-            longitude: ''
+            longitude: '',
+            companyName: []
         }
     }
 
-    // uses for set the lat & long
-    // componentDidMount() {
-    //     //render a funtion for position
-    //     this.setPosition();
-    // }
 
-    // setPosition() {
-    //     //get latitude & longitude
-    //     let lat = this.props.latitude
-    //     let long = this.props.longitude
-    //     navigator.geolocation.getCurrentPosition(position => {
-    //         this.setState({
-    //             // coords:
-    //             // {
-    //                 latitude: position.coords.latitude,
-    //                 longitude: position.coords.longitude
-    //                 // latitude: lat,
-    //                 // longitude: long
-    //             // }
-    //         });
-    //         //   this.props.getCoords(this.state.coords)
-    //         // console.log('initialset', this.state.coords);
-    //     })
-    // }
+    componentDidMount() {
+        this.companyNames();
+    }
+
+    companyNames = async () => {
+
+        let response = await HttpUtils.get('getcompanyname');
+        let companies = response.content;
+        console.log(response)
+        // console.log(response.content);
+        this.setState({
+            companyName: response.content
+        })
+        console.log(this.state.companyName, 'companyName')
+    }
 
     handleSubmit = (e) => {
         e.preventDefault();
@@ -84,17 +79,11 @@ class BillboardFields extends Component {
             }
         });
     }
-    // addNote = (values) => {
-    //     let coords = JSON.parse(localStorage.getItem('coords'));
-    //     this.setState({ toDoNotes: [...values, coords] })
-    //     console.log(this.state.toDoNotes);
-    // }
-
 
     getLatAndLong = (lat, lang) => {
-        console.log("props fun run")
-        console.log(lat, 'lat')
-        console.log(lang, 'lat')
+        // console.log("props fun run")
+        // console.log(lat, 'lat')
+        // console.log(lang, 'lat')
         this.setState({
             latitude: lat,
             longitude: lang
@@ -145,8 +134,6 @@ class BillboardFields extends Component {
                             </div>
                         </div>
 
-                        {/* <div className="col-md-8">
-                        </div> */}
                         <div className="col-md-8">
                             <div className="form-group">
                                 <label for="type"></label>
