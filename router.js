@@ -14,5 +14,6 @@ app.post('/signin',requireSignin, Authentication.signin);
 //get routes
 
 app.get('/getemails',Authentication.getemails);
+app.get('/getcompanyname',Authentication.getcompanyname);
   //app.get('/getprofile',requireAuth, getprofile.getProfile)
 }

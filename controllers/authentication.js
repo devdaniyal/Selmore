@@ -59,6 +59,7 @@ exports.signup = function(req, res, next){
   const landlineNo = req.body.landlineNo;
   const fullName  = req.body.fullName;
   const type = req.body.type;
+  const companyName = req.body.companyName;
 
 
   if(!email || !password){
@@ -84,7 +85,8 @@ exports.signup = function(req, res, next){
         landlineNo:landlineNo,
         fullName:fullName,
         type:type,
-        randomno:rand
+        randomno:rand,
+        companyName:companyName
       });
 
       user.save(function(err){
@@ -184,6 +186,29 @@ exports.getemails = function(req,res,next){
       res.send({
         code:200,
         content:userEmails,
+        msg:'All user emails'
+      })
+    }
+  })
+}
+exports.getcompanyname = function(req,res,next){
+  User.find(function(err,companyname){
+    if(err){
+      res.send({
+        code:404,
+        content:err,
+        msg:'user will not get from server some internal issue.'
+      })
+    }
+    else if(companyname){
+      const comnpanynames = [];
+      console.log(comnpanynames);
+       for(var i=0;i<companyname.length;i++){
+        comnpanynames.push(companyname[i].companyName)
+      }
+      res.send({
+        code:200,
+        content:comnpanynames,
         msg:'All user emails'
       })
     }
