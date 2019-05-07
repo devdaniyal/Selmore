@@ -21,7 +21,8 @@ class BillBoard extends Component {
             fileList: [],
             previewImage: '',
             previewVisible: false,
-            keyFor: []
+            keyFor: [],
+            noChooseFile: false
         }
     }
 
@@ -61,9 +62,9 @@ class BillBoard extends Component {
     }
 
     handleChanges(index, { fileList }) {
-        let khuchB = `fileList${index}`
-        console.log(khuchB, 'handle change fileList')
-        this.setState({ [khuchB]: fileList })
+        let fileListRef = `fileList${index}`
+        // console.log(fileListRef, 'handle change fileList')
+        this.setState({ [fileListRef]: fileList, noChooseFile: true })
     }
 
     removeForm = (k) => {
@@ -89,12 +90,11 @@ class BillBoard extends Component {
         // can use data-binding to set
         // important! notify form to detect changes
         // console.log(nextKeys, 'llllllllllllllllllllllllll')
-        this.setState({ keyFor: nextKeys })
+        this.setState({ keyFor: keys })
         form.setFieldsValue({
             keys: nextKeys,
         });
     }
-
 
     handleSubmit = (e) => {
         e.preventDefault();
@@ -112,30 +112,28 @@ class BillBoard extends Component {
         const { fileList, keyFor } = this.state;
         let arr = [];
         for (var i = 0; i <= keyFor.length; i++) {
-            let khuchB = `fileList${i}`;
-            // console.log(khuchB)
-            arr.push(this.state[khuchB])
-            // console.log(arr, '00000000000000000')
-            // var data = [42, 21, undefined, 50, 40, undefined, 9];
-
+            let fileListRef = `fileList${i}`;
+            // console.log(fileListRef)
+            arr.push(this.state[fileListRef])
+            // console.log(arr)
             arr = arr.filter(function (element) {
                 return element !== undefined;
             });
-            console.log(arr);
-            // Promise.all(arr[i].map((val, i) => {
-            //     return this.uploadFile(val).then((result) => {
-            //         return result.body.url
-            //     })
-            // })).then((results) => {
-            //     this.postData(values, results)
-            // })
+            // console.log(arr);
+            Promise.all(arr[i].map((val) => {
+                return this.uploadFile(val).then((result) => {
+                    return result.body.url
+                })
+            })).then((results) => {
+                this.postData(values, results)
+            })
         }
     }
     //--------------function for cloudnary url ---------------
-    uploadFile = (files, i) => {
+    uploadFile = (files) => {
         const image = files.originFileObj
         // const image = files
-        console.log(image)
+        // console.log(image)
         const cloudName = 'krlcreative'
         const url = 'https://api.cloudinary.com/v1_1/' + cloudName + '/image/upload'
         const timestamp = Date.now() / 1000
@@ -171,19 +169,18 @@ class BillBoard extends Component {
     render() {
         const { getFieldDecorator, getFieldValue } = this.props.form;
         const { fileList } = this.state;
-        // console.log(this.state.keyFor.length, 'ttttttttttttttttttt')
 
         const uploadButton = (
-            <div>
+            <div className='text-center'>
                 <Icon type="plus" />
-                <div className="ant-upload-text">Upload</div>
+                <div className="ant-upload-text ">Upload</div>
             </div>
         );
 
         { getFieldDecorator('keys', { initialValue: [keys] }) };
         const keys = getFieldValue('keys');
         const formItems = keys.map((k, index) => {
-            let khuchB = `fileList${index}`
+            let fileListRef = `fileList${index}`
             return (
                 <div className='formDiv'>
                     {/* animation of page */}
@@ -312,7 +309,7 @@ class BillBoard extends Component {
                                     </div>
                                     <div className="vitalbox">
                                         <div className="row" style={{ padding: "0px", marginTop: "20px" }}>
-                                            <div className="col-md-4">
+                                            <div className="col-md-4 text-center">
                                                 <FormItem
                                                     label="Images"
                                                 >
@@ -327,7 +324,7 @@ class BillBoard extends Component {
                                                             <Upload
                                                                 action="//jsonplaceholder.typicode.com/posts/"
                                                                 listType="picture-card"
-                                                                fileList={this.state[khuchB]}
+                                                                fileList={this.state[fileListRef]}
                                                                 onPreview={this.handlePreview}
                                                                 onChange={this.handleChanges.bind(this, index)}
                                                             >
@@ -383,13 +380,15 @@ class BillBoard extends Component {
 
         return (
             <div className='row'>
-                <div className='mainDive container text-center'>
+                <div className='mainDive container'>
                     <Form onSubmit={this.handleSubmit}>
                         <div className="col-md-8">
                             <div className="form-group">
                                 <label for="company"></label>
                                 <Form.Item>
+                                    <p>Company Name:</p>
                                     {getFieldDecorator('company', {
+                                        // defaultValue: { option.initialValue },
                                         rules: [{
                                             required: true,
                                             message: 'Please enter your company name!',
