@@ -49,7 +49,9 @@ class Addbtn extends Component {
                     required={false}
                     key={k}
                 >
-                    <BillBoardLocandImg getLatAndLong = {this.props.getLatAndLong}/>
+                    <BillBoardLocandImg getLatAndLong = {this.props.getLatAndLong}
+                    // handleSubmit={this.props.handleSubmit}
+                    />
                     {keys.length > 1 ? (
                         <Icon
                             className="dynamic-delete-button btn btn-danger iconBtn fa fa-minus"

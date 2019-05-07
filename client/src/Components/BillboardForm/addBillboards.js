@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import BillboradForm from './billboardForm';
 import Header from '../header';
-import Panel1 from '../panel1';
-import Panel2 from '../panel2';
 import Footer from '../footer';
+// import BillboradForm from './billboardForm';
+import BillBoard from './billBoard';
+import BillBoardDetail from './billBoardDetail';
 
 class AddBillboards extends Component {
     constructor() {
@@ -13,7 +13,9 @@ class AddBillboards extends Component {
         return (
             <div>
                 <Header />
-                <BillboradForm/>
+                <BillBoard/>
+                {/* <BillboradForm/> */}
+                {/* <BillBoardDetail /> */}
                 <Footer />
             </div>
         )

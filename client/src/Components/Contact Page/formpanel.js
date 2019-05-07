@@ -22,7 +22,8 @@ class Formpanel extends Component {
 			isLoader: false,
 			isAlert: false,
 			radioVal: false,
-			emailsArr: []
+			emailsArr: [],
+			registerBtn: false
 		}
 
 		//bind funtions
@@ -48,6 +49,9 @@ class Formpanel extends Component {
 		console.log(rule)
 		if (this.state.emailsArr.includes(value)) {
 			callback('Email is already exists');
+			this.setState({
+				registerBtn: true
+			})
 		} else {
 			callback()
 		}
@@ -106,9 +110,21 @@ class Formpanel extends Component {
 			callback()
 		}
 	}
+	hasErrors = (fieldsError) => {
+		return Object.keys(fieldsError).some(field => fieldsError[field]);
+	  }
+	  
 
 	render() {
 		const { getFieldDecorator } = this.props.form;
+
+		const formItemLayout = {
+			wrapperCol: {
+				xs: { span: 24 },
+				sm: { span: 10 }
+			}
+		};
+
 		return (
 			<div>
 				<Form onSubmit={this.handleSubmit}>
@@ -189,7 +205,7 @@ class Formpanel extends Component {
 							<div className="col-md-8 col-12">
 								<div className="form-group">
 									<label for="usr"></label>
-									<Form.Item>
+									<Form.Item  {...formItemLayout}>
 										{getFieldDecorator('email', {
 											rules: [{
 												type: 'email',
@@ -375,7 +391,7 @@ class Formpanel extends Component {
 								</div>
 							</div>
 							<div className="col-md-2 col-4">
-								<button className="btn btn-primary btnapple"
+								<button className="btn btn-primary btnapple" disabled={this.state.registerBtn}
 								>Request</button>
 							</div>
 							{this.state.isLoader ? <div class="loading"> 	</div>

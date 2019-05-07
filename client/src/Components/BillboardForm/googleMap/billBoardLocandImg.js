@@ -37,6 +37,7 @@ class BillBoardLocandImg extends Component {
     handleChange = ({ fileList }) => {
         this.setState({ fileList, noChooseFile: true })
     }
+
     validateNumber(rule, value, callback) {
         if (isNaN(value)) {
             callback('Please type Numbers');
@@ -49,7 +50,8 @@ class BillBoardLocandImg extends Component {
         this.props.form.validateFieldsAndScroll((err, values) => {
             if (!err) {
                 console.log('Received values of form: ', values);
-                this.funcForUpload(values)
+                // this.funcForUpload(values)
+                // this.props.handleSubmit(values)
             }
         });
     }
@@ -93,7 +95,7 @@ class BillBoardLocandImg extends Component {
         })
     }
 
-    //-----------------cloudnary function end ------------------
+    //-----------------cloudnary function end ------------------//
 
     async postData(values, response) {
         let lat = values.latitude;
@@ -102,7 +104,6 @@ class BillBoardLocandImg extends Component {
         console.log(values, "values");
         this.props.getLatAndLong(lat , long)
         console.log(response, "response");
-
     }
 
     render() {
