@@ -98,11 +98,11 @@ class BillBoard extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state)
+        // console.log(this.state)
         const { fileList } = this.state;
         this.props.form.validateFieldsAndScroll((err, values) => {
             if (!err) {
-                console.log('Received values of form: ', values);
+                // console.log('Received values of form: ', values);
                 this.funcForUpload(values)
             }
         });
