@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './billboardDetail.css';
 import {
-    Form, Input, Icon, Button, message, Upload, Modal,
+    Form, Input, Icon, Button, message, Upload, Modal, notification
 } from 'antd';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Select from 'react-select';
@@ -23,7 +23,9 @@ class BillBoard extends Component {
             previewVisible: false,
             keyFor: [],
             noChooseFile: false,
-            index: ''
+            index: '',
+            imgArr: [],
+            checkConnection: false
         }
     }
 
@@ -34,6 +36,7 @@ class BillBoard extends Component {
     companyNames = async () => {
         let { companyName } = this.state;
         let response = await HttpUtils.get('getcompanyname');
+        // console.log(response , 'response')
         this.setState({
             companyName: response.content
         })
@@ -90,12 +93,19 @@ class BillBoard extends Component {
         const nextKeys = keys.concat(id++);
         // can use data-binding to set
         // important! notify form to detect changes
-        // console.log(nextKeys, 'llllllllllllllllllllllllll')
         this.setState({ keyFor: keys })
         form.setFieldsValue({
             keys: nextKeys,
         });
     }
+
+    openNotification = () => {
+        notification.open({
+            message: 'Form Submit',
+            description:
+                'Your Form has been submit If you want more than refresh the page'
+        });
+    };
 
     handleSubmit(e) {
         const { index } = this.state;
@@ -103,50 +113,58 @@ class BillBoard extends Component {
         this.props.form.validateFieldsAndScroll((err, values) => {
             if (!err) {
                 // console.log('Received values of form: ', values);
-
-                let facing = [];
-                let traffic = [];
-                let longitude = [];
-                let latitude = [];
-                let size = [];
-                let type = [];
-                for (var i = 0; i <= index; i++) {
-                    for (var property in values) {
-                        if (property.indexOf(`facing${i}`) !== -1) {
-                            facing.push(values[property])
-                        }
-                        if (property.indexOf(`traffic${i}`) !== -1) {
-                            traffic.push(values[property])
-                        }
-                        if (property.indexOf(`longitude${i}`) !== -1) {
-                            longitude.push(values[property])
-                        }
-                        if (property.indexOf(`latitude${i}`) !== -1) {
-                            latitude.push(values[property])
-                        }
-                        if (property.indexOf(`size${i}`) !== -1) {
-                            size.push(values[property])
-                        }
-                        if (property.indexOf(`type${i}`) !== -1) {
-                            type.push(values[property])
-                        }
-                    }
-                }
-                console.log(facing, 'facing')
-                console.log(type, 'type')
-                console.log(size, 'size')
-                console.log(latitude, 'latitude')
-                console.log(longitude, 'longitude')
-                console.log(traffic, 'traffic')
-
-
+                // this.openNotification();
                 this.funcForUpload(values)
+                this.props.form.resetFields()
+                this.setState({
+                    checkConnection: true
+                })
             }
         });
     }
 
     async funcForUpload(values) {
-        const { fileList, keyFor } = this.state;
+        const { fileList, keyFor, index } = this.state;
+
+        //merge multiple value of the field in one array
+        let facing = [];
+        let traffic = [];
+        let longitude = [];
+        let latitude = [];
+        let size = [];
+        let type = [];
+        for (var i = 0; i <= index; i++) {
+            for (var property in values) {
+                if (property.indexOf(`facing${i}`) !== -1) {
+                    facing.push(values[property])
+                }
+                if (property.indexOf(`traffic${i}`) !== -1) {
+                    traffic.push(values[property])
+                }
+                if (property.indexOf(`longitude${i}`) !== -1) {
+                    longitude.push(values[property])
+                }
+                if (property.indexOf(`latitude${i}`) !== -1) {
+                    latitude.push(values[property])
+                }
+                if (property.indexOf(`size${i}`) !== -1) {
+                    size.push(values[property])
+                }
+                if (property.indexOf(`type${i}`) !== -1) {
+                    type.push(values[property])
+                }
+            }
+        }
+
+        //store properties in object
+        let obj = {};
+        obj.facing = facing;
+        obj.type = type;
+        obj.size = size;
+        obj.latitude = latitude;
+        obj.longitude = longitude;
+        obj.traffic = traffic;
+
         let arr = [];
         for (var i = 0; i <= keyFor.length; i++) {
             let fileListRef = `fileList${i}`;
@@ -162,15 +180,13 @@ class BillBoard extends Component {
                     return result.body.url
                 })
             })).then((results) => {
-                this.postData(values, results)
+                this.postData(values, results, obj)
             })
         }
     }
     //--------------function for cloudnary url ---------------
     uploadFile = (files) => {
         const image = files.originFileObj
-        // const image = files
-        // console.log(image)
         const cloudName = 'krlcreative'
         const url = 'https://api.cloudinary.com/v1_1/' + cloudName + '/image/upload'
         const timestamp = Date.now() / 1000
@@ -198,38 +214,35 @@ class BillBoard extends Component {
 
     //-----------------cloudnary function end ------------------//
 
-    async postData(values, response) {
-        // console.log(response, "response");
-        // const { index } = this.state
-        let image = [...response];
-        // console.log(image, 'image')
-        // console.log(image.length, 'image.length')
+    async postData(values, response, obj) {
 
-        // if (image.length >= 0) {
-        //     console.log('iffff')
-        //     // var images = response;
-        //     image.push(response);
-        // }
-        let img = [];
+        //store imgs in array 
+        const { imgArr } = this.state
+        this.setState({
+            imgArr: [...imgArr, response]
+        })
 
-        // let img = [...image , ...response];
-        // var newArray = img.concat(image);
-        // let img = [];
-        img.push(image)
-
-        console.log(img, 'cloud nairy images')
+        //add img array in the obj
+        obj.billBoardImgs = this.state.imgArr;
+        console.log(obj, 'obj')
     }
 
     render() {
         const { getFieldDecorator, getFieldValue } = this.props.form;
-        const { fileList } = this.state;
+        const { fileList, imgArr, checkConnection } = this.state;
 
+        // console.log(this.state)
         const uploadButton = (
             <div className='text-center'>
                 <Icon type="plus" />
                 <div className="ant-upload-text ">Upload</div>
             </div>
         );
+        const divStyle = {
+            margin: '10px',
+            // border: '2px solid black',
+            fontSize: '16px'
+        };
 
         { getFieldDecorator('keys', { initialValue: [keys] }) };
         const keys = getFieldValue('keys');
@@ -456,17 +469,21 @@ class BillBoard extends Component {
                             </div>
                         </div>
                         {formItems}
-                        <Form.Item>
+
+                        <FormItem >
                             <Button type="dashed" onClick={this.addForm} className='btn btn-primary iconBtn'>
                                 <Icon className='fa fa-plus' />
                             </Button>
-                        </Form.Item>
+                        </FormItem>
                         <div className="col-md-2 col-4">
                             <Form.Item>
                                 <Button className="btn btn-primary btnapple"
                                     type="primary" htmlType="submit"
                                 >Submit</Button>
                             </Form.Item>
+                            {checkConnection ? <div style={divStyle}>
+                                You have Submit the BillBoard Form
+                            </div> : null}
                         </div>
                     </Form>
                 </div>
