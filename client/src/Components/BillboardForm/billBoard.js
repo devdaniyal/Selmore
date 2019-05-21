@@ -22,7 +22,8 @@ class BillBoard extends Component {
             previewImage: '',
             previewVisible: false,
             keyFor: [],
-            noChooseFile: false
+            noChooseFile: false,
+            index: ''
         }
     }
 
@@ -64,7 +65,7 @@ class BillBoard extends Component {
     handleChanges(index, { fileList }) {
         let fileListRef = `fileList${index}`
         // console.log(fileListRef, 'handle change fileList')
-        this.setState({ [fileListRef]: fileList, noChooseFile: true })
+        this.setState({ [fileListRef]: fileList, noChooseFile: true, index: index })
     }
 
     removeForm = (k) => {
@@ -96,13 +97,49 @@ class BillBoard extends Component {
         });
     }
 
-    handleSubmit = (e) => {
+    handleSubmit(e) {
+        const { index } = this.state;
         e.preventDefault();
-        // console.log(this.state)
-        const { fileList } = this.state;
         this.props.form.validateFieldsAndScroll((err, values) => {
             if (!err) {
                 // console.log('Received values of form: ', values);
+
+                let facing = [];
+                let traffic = [];
+                let longitude = [];
+                let latitude = [];
+                let size = [];
+                let type = [];
+                for (var i = 0; i <= index; i++) {
+                    for (var property in values) {
+                        if (property.indexOf(`facing${i}`) !== -1) {
+                            facing.push(values[property])
+                        }
+                        if (property.indexOf(`traffic${i}`) !== -1) {
+                            traffic.push(values[property])
+                        }
+                        if (property.indexOf(`longitude${i}`) !== -1) {
+                            longitude.push(values[property])
+                        }
+                        if (property.indexOf(`latitude${i}`) !== -1) {
+                            latitude.push(values[property])
+                        }
+                        if (property.indexOf(`size${i}`) !== -1) {
+                            size.push(values[property])
+                        }
+                        if (property.indexOf(`type${i}`) !== -1) {
+                            type.push(values[property])
+                        }
+                    }
+                }
+                console.log(facing, 'facing')
+                console.log(type, 'type')
+                console.log(size, 'size')
+                console.log(latitude, 'latitude')
+                console.log(longitude, 'longitude')
+                console.log(traffic, 'traffic')
+
+
                 this.funcForUpload(values)
             }
         });
@@ -162,8 +199,25 @@ class BillBoard extends Component {
     //-----------------cloudnary function end ------------------//
 
     async postData(values, response) {
-        console.log(values, "values");
-        console.log(response, "response");
+        // console.log(response, "response");
+        // const { index } = this.state
+        let image = [...response];
+        // console.log(image, 'image')
+        // console.log(image.length, 'image.length')
+
+        // if (image.length >= 0) {
+        //     console.log('iffff')
+        //     // var images = response;
+        //     image.push(response);
+        // }
+        let img = [];
+
+        // let img = [...image , ...response];
+        // var newArray = img.concat(image);
+        // let img = [];
+        img.push(image)
+
+        console.log(img, 'cloud nairy images')
     }
 
     render() {
@@ -381,20 +435,22 @@ class BillBoard extends Component {
         return (
             <div className='row'>
                 <div className='mainDive container'>
-                    <Form onSubmit={this.handleSubmit}>
+                    <Form onSubmit={this.handleSubmit.bind(this)}>
                         <div className="col-md-8">
                             <div className="form-group">
                                 <label for="company"></label>
                                 <Form.Item>
                                     <p>Company Name:</p>
                                     {getFieldDecorator('company', {
-                                        // defaultValue: { option.initialValue },
                                         rules: [{
+                                            // defaultValue: option.initialValue,
+                                            // initialValue: "company",
                                             required: true,
                                             message: 'Please enter your company name!',
                                         }],
                                     })(
-                                        <Select options={this.state.companyName} />
+                                        <Select
+                                            options={this.state.companyName} />
                                     )}
                                 </Form.Item>
                             </div>
