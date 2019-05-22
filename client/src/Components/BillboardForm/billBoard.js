@@ -12,6 +12,8 @@ import sha1 from "sha1";
 
 let id = 0;
 const FormItem = Form.Item;
+const Option = Select.Option;
+
 
 class BillBoard extends Component {
     constructor() {
@@ -25,7 +27,8 @@ class BillBoard extends Component {
             noChooseFile: false,
             index: '',
             imgArr: [],
-            checkConnection: false
+            checkConnection: false,
+            company: ''
         }
     }
 
@@ -36,7 +39,7 @@ class BillBoard extends Component {
     companyNames = async () => {
         let { companyName } = this.state;
         let response = await HttpUtils.get('getcompanyname');
-        // console.log(response , 'response')
+        console.log(response , 'response')
         this.setState({
             companyName: response.content
         })
@@ -69,6 +72,11 @@ class BillBoard extends Component {
         let fileListRef = `fileList${index}`
         // console.log(fileListRef, 'handle change fileList')
         this.setState({ [fileListRef]: fileList, noChooseFile: true, index: index })
+    }
+
+    handleChange = (data) => {
+        // console.log(data.value)
+        this.setState({ company: data.value });
     }
 
     removeForm = (k) => {
@@ -158,6 +166,7 @@ class BillBoard extends Component {
 
         //store properties in object
         let obj = {};
+        obj.companyName = this.state.company;
         obj.facing = facing;
         obj.type = type;
         obj.size = size;
@@ -175,7 +184,7 @@ class BillBoard extends Component {
                 return element !== undefined;
             });
             // console.log(arr);
-            Promise.all(arr[i].map((val) => {
+            Promise.all(arr[i].map((val , i ) => {
                 return this.uploadFile(val).then((result) => {
                     return result.body.url
                 })
@@ -249,7 +258,7 @@ class BillBoard extends Component {
         const formItems = keys.map((k, index) => {
             let fileListRef = `fileList${index}`
             return (
-                <div className='formDiv'>
+                <div className='formDiv' key={index}>
                     {/* animation of page */}
                     <ReactCSSTransitionGroup transitionName="fade"
                         transitionAppear={true} transitionAppearTimeout={500}
@@ -263,7 +272,7 @@ class BillBoard extends Component {
                                 <div >
                                     <div className="col-md-8">
                                         <div className="form-group">
-                                            <label for="type"></label>
+                                            {/* <label for="type"></label> */}
                                             <Form.Item>
                                                 {getFieldDecorator(`type${index}`, {
                                                     rules: [{
@@ -276,7 +285,7 @@ class BillBoard extends Component {
                                                         type="text"
                                                         className={'form-control backcolor'}
                                                         id={"type"}
-                                                        name="type"
+                                                        // name="type"
                                                         placeholder="Enter Billboard Type"
                                                     />
                                                 )}
@@ -285,9 +294,10 @@ class BillBoard extends Component {
                                     </div>
                                     <div className="col-md-8">
                                         <div className="form-group">
-                                            <label for="facing"></label>
+                                            {/* <label for="facing"></label> */}
                                             <Form.Item>
                                                 {getFieldDecorator(`facing${index}`, {
+                                                    
                                                     rules: [{
                                                         required: true,
                                                         message: 'Please enter a facing',
@@ -298,7 +308,7 @@ class BillBoard extends Component {
                                                         type="text"
                                                         className={'form-control backcolor'}
                                                         id={"facing"}
-                                                        name="facing"
+                                                        // name="facing"
                                                         placeholder="Enter billboard facing"
                                                     />
                                                 )}
@@ -307,7 +317,7 @@ class BillBoard extends Component {
                                     </div>
                                     <div className="col-md-8">
                                         <div className="form-group">
-                                            <label for="size"></label>
+                                            {/* <label for="size"></label> */}
                                             <Form.Item>
                                                 {getFieldDecorator(`size${index}`, {
                                                     rules: [{
@@ -320,7 +330,7 @@ class BillBoard extends Component {
                                                         type="text"
                                                         className={'form-control backcolor'}
                                                         id={"size"}
-                                                        name="size"
+                                                        // name="size"
                                                         placeholder="Enter billboard size"
                                                     />
                                                 )}
@@ -329,7 +339,7 @@ class BillBoard extends Component {
                                     </div>
                                     <div className="col-md-4">
                                         <div className="form-group location">
-                                            <label for="latitude"></label>
+                                            {/* <label for="latitude"></label> */}
                                             <Form.Item>
                                                 <br />
                                                 {getFieldDecorator(`latitude${index}`, {
@@ -344,7 +354,7 @@ class BillBoard extends Component {
                                                         type="text"
                                                         className={'form-control '}
                                                         id="latitude"
-                                                        name="latitude"
+                                                        // name="latitude"
                                                         placeholder="Enter latitude"
                                                     />
                                                 )}
@@ -353,7 +363,7 @@ class BillBoard extends Component {
                                     </div>
                                     <div className="col-md-4">
                                         <div className="form-group location">
-                                            <label for="longitude"></label>
+                                            {/* <label for="longitude"></label> */}
                                             <Form.Item>
                                                 {getFieldDecorator(`longitude${index}`, {
                                                     rules: [{
@@ -367,7 +377,7 @@ class BillBoard extends Component {
                                                         type="text"
                                                         className={'form-control '}
                                                         id="longitude"
-                                                        name="longitude"
+                                                        // name="longitude"
                                                         placeholder="Enter longitude"
                                                     />
                                                 )}
@@ -411,7 +421,7 @@ class BillBoard extends Component {
                                     </div>
                                     <div className="col-md-8">
                                         <div className="form-group">
-                                            <label for="traffic"></label>
+                                            {/* <label for="traffic"></label> */}
                                             <Form.Item>
                                                 {getFieldDecorator(`traffic${index}`, {
                                                     rules: [{
@@ -424,7 +434,7 @@ class BillBoard extends Component {
                                                         type="text"
                                                         className={'form-control backcolor'}
                                                         id={"traffic"}
-                                                        name="traffic"
+                                                        // name="traffic"
                                                         placeholder="Enter traffic count"
                                                     />
                                                 )}
@@ -451,18 +461,19 @@ class BillBoard extends Component {
                     <Form onSubmit={this.handleSubmit.bind(this)}>
                         <div className="col-md-8">
                             <div className="form-group">
-                                <label for="company"></label>
+                                {/* <label for="company"></label> */}
                                 <Form.Item>
                                     <p>Company Name:</p>
                                     {getFieldDecorator('company', {
+                                        // initialValue: "",
+                                        // defaultValue: Option.initialValue,
+                                        // defaultValue="",
                                         rules: [{
-                                            // defaultValue: option.initialValue,
-                                            // initialValue: "company",
                                             required: true,
                                             message: 'Please enter your company name!',
                                         }],
                                     })(
-                                        <Select
+                                        <Select onChange={this.handleChange}
                                             options={this.state.companyName} />
                                     )}
                                 </Form.Item>

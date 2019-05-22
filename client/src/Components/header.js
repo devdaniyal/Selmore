@@ -49,7 +49,7 @@ class Header extends Component {
                   </a>
                 </li>
                 <li className="nav-item navmargin12">
-                  <Link rel="noopener noreferrer" to={`/list_add`}><button type="button" class="btn btn-primary btn-sm">
+                  <Link rel="noopener noreferrer" to={`/list_add`}><button type="button" className="btn btn-primary btn-sm">
                     <span> LIST AD </span>
                   </button>
                   </Link>
