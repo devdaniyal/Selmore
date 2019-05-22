@@ -1,7 +1,7 @@
 
 .rowcolor{
 		background-color: #29abe2;
-		
+
 		position: relative;
 }
 
@@ -15,7 +15,7 @@
 .weight{
 		    font-weight: 500;
 		       font-size: 45px;
-		    font-family: Helvetica;   
+		    font-family: Helvetica;
 }
 .right{
 	 font-size: 18px;
@@ -33,13 +33,13 @@
 	color:  #29abe2;
 	font-weight: 600;
 	font-size: 20px;
-	font-family: Helvetica; 
+	font-family: Helvetica;
 }
 @media screen and (min-width: 360px) and (max-width: 660px){
 	.weight	{
 			font-weight: 500;
 		       font-size: 40px;
-		    font-family: Helvetica;  
+		    font-family: Helvetica;
 
 	}
 	.tikimage{
@@ -84,7 +84,7 @@
 	.weight	{
 			font-weight: 500;
 		       font-size: 27px;
-		    font-family: Helvetica;  
+		    font-family: Helvetica;
 
 	}
 	.tikimage{
@@ -129,7 +129,7 @@
 	.weight	{
 			font-weight: 500;
 		       font-size: 40px;
-		    font-family: Helvetica;  
+		    font-family: Helvetica;
 
 	}
 	.tikimage{
@@ -174,7 +174,7 @@
 	.weight	{
 			font-weight: 500;
 		       font-size: 45px;
-		    font-family: Helvetica;  
+		    font-family: Helvetica;
 
 	}
 	.tikimage{
@@ -216,7 +216,7 @@
 	}
 }
 .head2{
-	
+
 	font-size: 24px;
 }
 .head3{
@@ -231,7 +231,7 @@
 	border-bottom: 3px solid #29abe2;
 }
 .divborder{
-		
+
 		float: right;
 		text-align: center;
 		background-color: #29abe2;
@@ -258,7 +258,7 @@
 	}
 }
 .line2{
-	
+
 	text-align: center;
 	font-family: Helvetica;
 }
@@ -288,7 +288,7 @@
 		    margin-top: 5%;
 		    width: 70%;
 		    margin-left: 49%;
-	}	
+	}
 	.drn4{
 		    height: 125px;
 		    width: 113%;
@@ -301,7 +301,7 @@
 		     	 margin-top: 9px;
 		    	height: 120px;
 	}
-	
+
 	.drn5{
 		height: 125px;
     width: 70%;
@@ -315,7 +315,7 @@
 			    margin-top: 5%;
 			    width: 60%;
 		        margin-left: 59%;
-	}	
+	}
 	.drn4{
 			height: 125px;
 		    width: 115%;
@@ -328,12 +328,12 @@
 		    margin-left: 68px;
 		    height: 125px;
 	}
-	
+
 	.drn5{
 			height: 125px;
 	    width: 60%;
 	    margin-top: 14px;
-	    margin-left: -6px;	
+	    margin-left: -6px;
 	}
 }
 @media screen and (min-width: 1366px) and (max-width: 1600px){
@@ -359,8 +359,8 @@
 			height: 150px;
 	    width: 60%;
 	    margin-top: 14px;
-	    margin-left: 3px;	
-	}		
+	    margin-left: 3px;
+	}
 }
 
 .clock {
@@ -511,7 +511,7 @@
 }
 .exi3{
 		color: white;
-	  font-family: Helvetica; 
+	  font-family: Helvetica;
 	  font-weight: 500;
 	  margin-top: 18px;
 }
@@ -701,7 +701,7 @@
 	.lane2{
 	       margin-top: 16%;
 		    margin-left: 2%;
-		    font-size: 17px;	
+		    font-size: 17px;
 	}
 	.lane3{
 	    margin-top: 21%;
@@ -717,7 +717,7 @@
 @media screen and (min-width: 1024px) and (max-width: 1366px){
 	.lane1{
 	       height: 86px;
-	       margin-left: -135%;
+	       margin-left: -80%;
 		    margin-bottom: -8px;
 		    margin-top: -5px;
 	}
@@ -725,7 +725,7 @@
 			    margin-top: 15%;
 			    margin-left: 9%;
 			    font-size: 19px;
-	
+
 	}
 	.lane3{
 		      margin-top: 21%;
@@ -817,7 +817,7 @@
 	}
 }
 @media screen and (min-width: 768px) and (max-width: 1024px){
-	
+
 	.seth1{
 				text-align: right;
 	}
@@ -849,7 +849,7 @@
 		    margin-left: 11px;
 		    background: rgba(30, 22, 22, 0.58);
 		    margin-right: 9px;
-	}	
+	}
 	.fantaa2{
 	margin-top: -42px;
     text-align: left;
@@ -857,7 +857,7 @@
 	}
 }
 @media screen and (min-width: 1024px) and (max-width: 1366px){
-	
+
 	.seth1{
 				text-align: right;
 	}
@@ -868,14 +868,14 @@
 	.init7{
 		        position: relative;
 			     margin-top: -47px;
-			    margin-left: 36px;
+			    margin-left: 44px;
 			    background: rgba(30, 22, 22, 0.58);
-			    margin-right: 37px;
+			    margin-right: 44px;
 	}
 	.init2{
 			position: relative;
 		     margin-top: -47px;
-		    margin-left: 73px;
+		    margin-left: 87px;
 		    background: rgba(30, 22, 22, 0.58);
 		    margin-right: 0px;
 	}
@@ -886,9 +886,9 @@
 	.init6{
 		position: relative;
 	     margin-top: -47px;
-	    margin-left: 36px;
+	    margin-left: 43px;
 	    background: rgba(30, 22, 22, 0.58);
-	    margin-right: 36px;
+	    margin-right: 44px;
 	}
 	.fantaa2{
 	margin-top: -42px;
@@ -1028,7 +1028,7 @@
 	    margin-left: 2%;
 	}
 	.luxpure8{
-		
+
 	}
 	.luxpure9{
 		padding: 3px;
@@ -1041,12 +1041,12 @@
 	    background: rgba(30, 22, 22, 0.58);
 	    position: relative;
 	    color: white;
-	    margin-top: 43%;
-	    width: 271px;
+	    margin-top: 35%;
+	    width: 323px;
 	}
 	.luxpure5{
 		font-size: 35px;
-    	margin-left: -100%;
+    	margin-left: 8%;
 	}
 	.luxpure6{
 		background-color: rgb(240, 232, 232);
@@ -1061,7 +1061,7 @@
 	.luxpure3{
  		font-size: 10px;
 	    margin-top: -19px;
-	    margin-bottom: 2px;
+	    margin-bottom: 4px;
 	    font-family: Helvetica;
 	    margin-left: 2%;
 	}
@@ -1072,11 +1072,12 @@
 	    margin-left: 2%;
 	}
 	.luxpure8{
-		
+
 	}
 	.luxpure9{
 		padding: 2px;
     	margin-top: 1%;
+			margin-left: 9%;
 	}
 }
 @media screen and (min-width: 1366px) and (max-width: 1600px){
@@ -1086,7 +1087,7 @@
 	    color: white;
 	    margin-top: 34%;
 	    width: 92%;
-	}	
+	}
 	.luxpure5{
 		font-size: 37px;
 	    margin-left: 31%;
@@ -1115,13 +1116,10 @@
 	    margin-left: 2%;
 	}
 	.luxpure8{
-		
+
 	}
 	.luxpure9{
 		    padding: 7px;
     		margin-bottom: -4%;
 	}
 }
-
-
-
