@@ -241,8 +241,23 @@ class BillBoard extends Component {
 
         //add img array in the obj
         obj.billBoardImgs = this.state.imgArr;
+        this.fectSignUpApiFunc(obj)
+
         console.log(obj, 'obj')
     }
+
+    fectSignUpApiFunc = async (values) => {
+		console.log(values);
+		let response = await HttpUtils.post('signup', values);
+		console.log(response);
+		//fetch signUp api
+		if (response.code === 200) {
+			this.setState({ data: response.content, isData: true, isLoader: false, isAlert: true });
+
+		} else {
+			this.setState({ isData: false })
+		}
+	}
 
     render() {
         const { getFieldDecorator, getFieldValue } = this.props.form;
