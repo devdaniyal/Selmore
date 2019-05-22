@@ -204,7 +204,10 @@ exports.getcompanyname = function(req,res,next){
       const comnpanynames = [];
       console.log(comnpanynames);
        for(var i=0;i<companyname.length;i++){
-        comnpanynames.push(companyname[i].companyName)
+        comnpanynames.push({
+          companyName:companyname[i].companyName,
+          _id:companyname[i]._id
+        })
       }
       res.send({
         code:200,
