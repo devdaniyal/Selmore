@@ -28,7 +28,8 @@ class BillBoard extends Component {
             index: '',
             imgArr: [],
             checkConnection: false,
-            company: ''
+            company: '',
+            id: ''
         }
     }
 
@@ -39,13 +40,19 @@ class BillBoard extends Component {
     companyNames = async () => {
         let { companyName } = this.state;
         let response = await HttpUtils.get('getcompanyname');
-        console.log(response , 'response')
-        this.setState({
-            companyName: response.content
+        // console.log(response.content, 'response')
+        companyName = response.content.map((elem, i) => {
+            // console.log(elem, 'elem')
+            // console.log(i , 'index')
+            return { label: elem.companyName, value: elem.companyName, id: elem._id }
+
         })
-        companyName = this.state.companyName.map((elem, i) => {
-            return { label: elem, value: elem };
-        })
+        // this.setState({
+        //     companyName: response.content
+        // })
+        // companyName = this.state.companyName.map((elem, i) => {
+        //     return { label: elem, value: elem };
+        // })
         this.setState({ companyName });
     }
 
@@ -75,8 +82,8 @@ class BillBoard extends Component {
     }
 
     handleChange = (data) => {
-        // console.log(data.value)
-        this.setState({ company: data.value });
+        // console.log(data.id)
+        this.setState({ company: data.value, id: data.id });
     }
 
     removeForm = (k) => {
@@ -167,6 +174,7 @@ class BillBoard extends Component {
         //store properties in object
         let obj = {};
         obj.companyName = this.state.company;
+        obj.companyId = this.state.id;
         obj.facing = facing;
         obj.type = type;
         obj.size = size;
@@ -184,7 +192,7 @@ class BillBoard extends Component {
                 return element !== undefined;
             });
             // console.log(arr);
-            Promise.all(arr[i].map((val , i ) => {
+            Promise.all(arr[i].map((val, i) => {
                 return this.uploadFile(val).then((result) => {
                     return result.body.url
                 })
@@ -238,9 +246,13 @@ class BillBoard extends Component {
 
     render() {
         const { getFieldDecorator, getFieldValue } = this.props.form;
-        const { fileList, imgArr, checkConnection } = this.state;
+        const { fileList, imgArr, checkConnection, companyName } = this.state;
 
-        // console.log(this.state)
+        // let optionItems = companyName.map((companyName) =>
+        //     <Option key={companyName.name}>{companyName.name}</Option>
+        // );
+
+        // console.log(optionItems)
         const uploadButton = (
             <div className='text-center'>
                 <Icon type="plus" />
@@ -297,7 +309,7 @@ class BillBoard extends Component {
                                             {/* <label for="facing"></label> */}
                                             <Form.Item>
                                                 {getFieldDecorator(`facing${index}`, {
-                                                    
+
                                                     rules: [{
                                                         required: true,
                                                         message: 'Please enter a facing',
@@ -467,15 +479,33 @@ class BillBoard extends Component {
                                     {getFieldDecorator('company', {
                                         // initialValue: "",
                                         // defaultValue: Option.initialValue,
-                                        // defaultValue="",
                                         rules: [{
                                             required: true,
                                             message: 'Please enter your company name!',
                                         }],
                                     })(
-                                        <Select onChange={this.handleChange}
-                                            options={this.state.companyName} />
+                                        <Select
+                                            defaultValue="companyNames"
+                                            onChange={this.handleChange}
+                                            options={this.state.companyName}
+                                        // value={this.state.companyName}
+                                        ></Select>
+                                        // <Select>
+                                        //     {optionItems}
+                                        // </Select>
                                     )}
+                                    {/* {getFieldDecorator('company', {
+                                        rules: [{ required: true, message: 'Please enter your company name!' }],
+                                    })(
+                                        <Select
+                                            placeholder="Please select company name!"
+                                            onChange={this.handleChange}
+                                            options={this.state.companyName}
+                                        >
+                                            <Option >{this.state.companyName}</Option>
+                                           
+                                        </Select>
+                                    )} */}
                                 </Form.Item>
                             </div>
                         </div>

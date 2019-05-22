@@ -13,7 +13,7 @@ class Header extends Component {
 
   render() {
     const value = localStorage.getItem("loggedIn");
-    console.log(value)
+    // console.log(value)
     return (
       <div>
         <div className="container">
