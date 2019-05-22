@@ -243,20 +243,20 @@ class BillBoard extends Component {
         obj.billBoardImgs = this.state.imgArr;
         this.fectSignUpApiFunc(obj)
 
-        console.log(obj, 'obj')
+        // console.log(obj, 'obj')
     }
 
     fectSignUpApiFunc = async (values) => {
 		console.log(values);
-		let response = await HttpUtils.post('signup', values);
+		let response = await HttpUtils.post('listadd', values);
 		console.log(response);
 		//fetch signUp api
-		if (response.code === 200) {
-			this.setState({ data: response.content, isData: true, isLoader: false, isAlert: true });
+		// if (response.code === 200) {
+        //     this.setState({ data: response.content, isData: true});
 
-		} else {
-			this.setState({ isData: false })
-		}
+		// } else {
+		// 	this.setState({ isData: false })
+		// }
 	}
 
     render() {
