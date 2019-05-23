@@ -247,29 +247,24 @@ class BillBoard extends Component {
     }
 
     fectSignUpApiFunc = async (values) => {
-		console.log(values);
-		let response = await HttpUtils.post('listadd', values);
-		console.log(response);
-		//fetch signUp api
-		// if (response.code === 200) {
+        console.log(values);
+        let response = await HttpUtils.post('listadd', values);
+        console.log(response);
+        //fetch signUp api
+        // if (response.code === 200) {
         //     this.setState({ data: response.content, isData: true});
 
-		// } else {
-		// 	this.setState({ isData: false })
-		// }
-	}
+        // } else {
+        // 	this.setState({ isData: false })
+        // }
+    }
 
     render() {
         const { getFieldDecorator, getFieldValue } = this.props.form;
         const { fileList, imgArr, checkConnection, companyName } = this.state;
 
-        // let optionItems = companyName.map((companyName) =>
-        //     <Option key={companyName.name}>{companyName.name}</Option>
-        // );
-
-        // console.log(optionItems)
         const uploadButton = (
-            <div className='text-center'>
+            <div>
                 <Icon type="plus" />
                 <div className="ant-upload-text ">Upload</div>
             </div>
@@ -285,199 +280,204 @@ class BillBoard extends Component {
         const formItems = keys.map((k, index) => {
             let fileListRef = `fileList${index}`
             return (
-                <div className='formDiv' key={index}>
-                    {/* animation of page */}
-                    <ReactCSSTransitionGroup transitionName="fade"
-                        transitionAppear={true} transitionAppearTimeout={500}
-                        transitionEnterTimeout={500} transitionLeaveTimeout={300}>
-                        <Form.Item
-                            label={index === 0 ? 'BillBoard Detail' : ''}
-                            required={false}
-                            key={k}
-                        >
-                            <div className='mainDive'>
-                                <div >
-                                    <div className="col-md-8">
-                                        <div className="form-group">
-                                            {/* <label for="type"></label> */}
-                                            <Form.Item>
-                                                {getFieldDecorator(`type${index}`, {
-                                                    rules: [{
-                                                        required: true,
-                                                        message: 'Please enter a type',
-                                                        whitespace: true
-                                                    }],
-                                                })(
-                                                    <Input
-                                                        type="text"
-                                                        className={'form-control backcolor'}
-                                                        id={"type"}
-                                                        // name="type"
-                                                        placeholder="Enter Billboard Type"
-                                                    />
-                                                )}
-                                            </Form.Item>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-8">
-                                        <div className="form-group">
-                                            {/* <label for="facing"></label> */}
-                                            <Form.Item>
-                                                {getFieldDecorator(`facing${index}`, {
-
-                                                    rules: [{
-                                                        required: true,
-                                                        message: 'Please enter a facing',
-                                                        whitespace: true
-                                                    }],
-                                                })(
-                                                    <Input
-                                                        type="text"
-                                                        className={'form-control backcolor'}
-                                                        id={"facing"}
-                                                        // name="facing"
-                                                        placeholder="Enter billboard facing"
-                                                    />
-                                                )}
-                                            </Form.Item>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-8">
-                                        <div className="form-group">
-                                            {/* <label for="size"></label> */}
-                                            <Form.Item>
-                                                {getFieldDecorator(`size${index}`, {
-                                                    rules: [{
-                                                        required: true,
-                                                        message: 'Please enter a size',
-                                                        whitespace: true
-                                                    }],
-                                                })(
-                                                    <Input
-                                                        type="text"
-                                                        className={'form-control backcolor'}
-                                                        id={"size"}
-                                                        // name="size"
-                                                        placeholder="Enter billboard size"
-                                                    />
-                                                )}
-                                            </Form.Item>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-4">
-                                        <div className="form-group location">
-                                            {/* <label for="latitude"></label> */}
-                                            <Form.Item>
-                                                <br />
-                                                {getFieldDecorator(`latitude${index}`, {
-                                                    rules: [{
-                                                        required: true,
-                                                        message: 'Please enter latitude',
-                                                        whitespace: true
-                                                    },
-                                                    { validator: this.validateNumber.bind(this) }]
-                                                })(
-                                                    <Input
-                                                        type="text"
-                                                        className={'form-control '}
-                                                        id="latitude"
-                                                        // name="latitude"
-                                                        placeholder="Enter latitude"
-                                                    />
-                                                )}
-                                            </Form.Item>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-4">
-                                        <div className="form-group location">
-                                            {/* <label for="longitude"></label> */}
-                                            <Form.Item>
-                                                {getFieldDecorator(`longitude${index}`, {
-                                                    rules: [{
-                                                        required: true,
-                                                        message: 'Please enter longitude',
-                                                        whitespace: true
-                                                    },
-                                                    { validator: this.validateNumber.bind(this) }]
-                                                })(
-                                                    <Input
-                                                        type="text"
-                                                        className={'form-control '}
-                                                        id="longitude"
-                                                        // name="longitude"
-                                                        placeholder="Enter longitude"
-                                                    />
-                                                )}
-                                            </Form.Item>
-                                        </div>
-                                    </div>
-                                    <div className="vitalbox">
-                                        <div className="row" style={{ padding: "0px", marginTop: "20px" }}>
-                                            <div className="col-md-4 text-center">
-                                                <FormItem
-                                                    label="Images"
-                                                >
-                                                    {getFieldDecorator(`images${index}`, {
-                                                        rules: [{
-                                                            required: true,
-                                                            message: 'Please upload your Images!',
-                                                            whitespace: true
-                                                        }],
-                                                    })(
-                                                        <div className="clearfix">
-                                                            <Upload
-                                                                action="//jsonplaceholder.typicode.com/posts/"
-                                                                listType="picture-card"
-                                                                fileList={this.state[fileListRef]}
-                                                                onPreview={this.handlePreview}
-                                                                onChange={this.handleChanges.bind(this, index)}
-                                                            >
-                                                                {fileList.length >= 3 ? null : uploadButton}
-                                                            </Upload>
-                                                        </div>
-                                                    )}
-                                                </FormItem>
-                                            </div>
-                                            {this.state.noChooseFile ?
-                                                null
-                                                : <div className="col-md-6">
-                                                    <h6 style={{ marginTop: "10px", marginLeft: "4px" }}> No File Chosen</h6>
+                <div className='row'>
+                    <div className='mainDive container'>
+                        <div className='formDiv' key={index}>
+                            {/* animation of page */}
+                            <ReactCSSTransitionGroup transitionName="fade"
+                                transitionAppear={true} transitionAppearTimeout={500}
+                                transitionEnterTimeout={500} transitionLeaveTimeout={300}>
+                                <Form.Item
+                                    label={index === 0 ? 'BillBoard Detail' : ''}
+                                    required={false}
+                                    key={k}
+                                >
+                                    {/* <div className='mainDive'> */}
+                                        <div >
+                                            <div className="col-md-8">
+                                                <div className="form-group">
+                                                    {/* <label for="type"></label> */}
+                                                    <Form.Item>
+                                                        {getFieldDecorator(`type${index}`, {
+                                                            rules: [{
+                                                                required: true,
+                                                                message: 'Please enter a type',
+                                                                whitespace: true
+                                                            }],
+                                                        })(
+                                                            <Input
+                                                                type="text"
+                                                                className={'form-control backcolor'}
+                                                                id={"type"}
+                                                                // name="type"
+                                                                placeholder="Enter Billboard Type"
+                                                            />
+                                                        )}
+                                                    </Form.Item>
                                                 </div>
-                                            }
+                                            </div>
+                                            <div className="col-md-8">
+                                                <div className="form-group">
+                                                    {/* <label for="facing"></label> */}
+                                                    <Form.Item>
+                                                        {getFieldDecorator(`facing${index}`, {
+
+                                                            rules: [{
+                                                                required: true,
+                                                                message: 'Please enter a facing',
+                                                                whitespace: true
+                                                            }],
+                                                        })(
+                                                            <Input
+                                                                type="text"
+                                                                className={'form-control backcolor'}
+                                                                id={"facing"}
+                                                                // name="facing"
+                                                                placeholder="Enter billboard facing"
+                                                            />
+                                                        )}
+                                                    </Form.Item>
+                                                </div>
+                                            </div>
+                                            <div className="col-md-8">
+                                                <div className="form-group">
+                                                    {/* <label for="size"></label> */}
+                                                    <Form.Item>
+                                                        {getFieldDecorator(`size${index}`, {
+                                                            rules: [{
+                                                                required: true,
+                                                                message: 'Please enter a size',
+                                                                whitespace: true
+                                                            }],
+                                                        })(
+                                                            <Input
+                                                                type="text"
+                                                                className={'form-control backcolor'}
+                                                                id={"size"}
+                                                                // name="size"
+                                                                placeholder="Enter billboard size"
+                                                            />
+                                                        )}
+                                                    </Form.Item>
+                                                </div>
+                                            </div>
+                                            <div className="col-md-4">
+                                                <div className="form-group">
+                                                    {/* <label for="latitude"></label> */}
+                                                    <Form.Item>
+                                                        <br />
+                                                        {getFieldDecorator(`latitude${index}`, {
+                                                            rules: [{
+                                                                required: true,
+                                                                message: 'Please enter latitude',
+                                                                whitespace: true
+                                                            },
+                                                            { validator: this.validateNumber.bind(this) }]
+                                                        })(
+                                                            <Input
+                                                                type="text"
+                                                                className={'form-control '}
+                                                                id="latitude"
+                                                                // name="latitude"
+                                                                placeholder="Enter latitude"
+                                                            />
+                                                        )}
+                                                    </Form.Item>
+                                                </div>
+                                            </div>
+                                            <div className="col-md-4">
+                                                <div className="form-group">
+                                                    {/* <label for="longitude"></label> */}
+                                                    <Form.Item>
+                                                        {getFieldDecorator(`longitude${index}`, {
+                                                            rules: [{
+                                                                required: true,
+                                                                message: 'Please enter longitude',
+                                                                whitespace: true
+                                                            },
+                                                            { validator: this.validateNumber.bind(this) }]
+                                                        })(
+                                                            <Input
+                                                                type="text"
+                                                                className={'form-control '}
+                                                                id="longitude"
+                                                                // name="longitude"
+                                                                placeholder="Enter longitude"
+                                                            />
+                                                        )}
+                                                    </Form.Item>
+                                                </div>
+                                            </div>
+                                            <div className="vitalbox">
+                                                <div className="row" style={{ marginTop: "10px", marginLeft: "4px" }}>
+                                                    <div className="col-md-4">
+                                                        <FormItem
+                                                            label="Images"
+                                                        >
+                                                            {getFieldDecorator(`images${index}`, {
+                                                                rules: [{
+                                                                    required: true,
+                                                                    message: 'Please upload your Images!',
+                                                                    whitespace: true
+                                                                }],
+                                                            })(
+                                                                <div className="clearfix">
+                                                                    <Upload
+                                                                        action="//jsonplaceholder.typicode.com/posts/"
+                                                                        listType="picture-card"
+                                                                        fileList={this.state[fileListRef]}
+                                                                        onPreview={this.handlePreview}
+                                                                        onChange={this.handleChanges.bind(this, index)}
+                                                                    >
+                                                                        {fileList.length >= 3 ? null : uploadButton}
+                                                                    </Upload>
+                                                                </div>
+                                                            )}
+                                                        </FormItem>
+                                                    </div>
+                                                    {this.state.noChooseFile ?
+                                                        null
+                                                        : <div >
+                                                            <h6 style={{ marginTop: "10px", marginLeft: "4px" }}> No File Chosen</h6>
+                                                        </div>
+                                                    }
+                                                </div>
+                                            </div>
+                                            <br/>
+                                            <div className="col-md-8">
+                                                <div className="form-group">
+                                                    {/* <label for="traffic"></label> */}
+                                                    <Form.Item>
+                                                        {getFieldDecorator(`traffic${index}`, {
+                                                            rules: [{
+                                                                required: true,
+                                                                message: 'Please enter a type',
+                                                                whitespace: true
+                                                            }],
+                                                        })(
+                                                            <Input
+                                                                type="text"
+                                                                className={'form-control backcolor'}
+                                                                id={"traffic"}
+                                                                // name="traffic"
+                                                                placeholder="Enter traffic count"
+                                                            />
+                                                        )}
+                                                    </Form.Item>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="col-md-8">
-                                        <div className="form-group">
-                                            {/* <label for="traffic"></label> */}
-                                            <Form.Item>
-                                                {getFieldDecorator(`traffic${index}`, {
-                                                    rules: [{
-                                                        required: true,
-                                                        message: 'Please enter a type',
-                                                        whitespace: true
-                                                    }],
-                                                })(
-                                                    <Input
-                                                        type="text"
-                                                        className={'form-control backcolor'}
-                                                        id={"traffic"}
-                                                        // name="traffic"
-                                                        placeholder="Enter traffic count"
-                                                    />
-                                                )}
-                                            </Form.Item>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {keys.length > 1 ? (
-                                <Icon
-                                    className="dynamic-delete-button btn btn-danger iconBtn fa fa-minus"
-                                    onClick={() => this.removeForm(k)}
-                                />
-                            ) : null}
-                        </Form.Item>
-                    </ReactCSSTransitionGroup>
+                                    {/* </div> */}
+                                    {keys.length > 1 ? (
+                                        <Icon
+                                            className="dynamic-delete-button btn btn-danger iconBtn fa fa-minus"
+                                            onClick={() => this.removeForm(k)}
+                                        />
+                                    ) : null}
+                                </Form.Item>
+                            </ReactCSSTransitionGroup>
+                        </div>
+                    </div>
                 </div>
             )
         });
