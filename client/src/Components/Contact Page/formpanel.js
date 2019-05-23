@@ -112,8 +112,8 @@ class Formpanel extends Component {
 	}
 	hasErrors = (fieldsError) => {
 		return Object.keys(fieldsError).some(field => fieldsError[field]);
-	  }
-	  
+	}
+
 
 	render() {
 		const { getFieldDecorator } = this.props.form;
@@ -360,10 +360,10 @@ class Formpanel extends Component {
 											)}
 										</Form.Item>
 									</div>
-								</div> :
+								</div>
+								:
 								null
 							}
-
 							<div className="col-0 col-md-4 col-lg-4 col-xl-4"></div>
 						</div>
 						<div className="row ball4">

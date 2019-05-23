@@ -11,8 +11,7 @@ class AddBillboards extends Component {
         return (
             <div>
                 <Header />
-                <BillBoard/>
-               
+                <BillBoard />
                 <Footer />
             </div>
         )
