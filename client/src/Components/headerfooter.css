@@ -144,10 +144,7 @@
 		    margin-top: 33px;
 }
 
-.navmargin12{
-	margin-top: 33px;
-	margin-left: 2%;
-}
+
 .true3{
 	margin-top: 50px;
 }
@@ -207,6 +204,10 @@
 		 font-weight: 600;
 		     font-size: 13px;
 	}
+	.navmargin12{
+		margin-top: 33px;
+		margin-left: 2%;
+	}
 }
 @media screen and (min-width: 768px) and (max-width: 1020px){
 	.footertext2{
@@ -224,6 +225,10 @@
 		 font-family: Helvetica;
 		 font-weight: 600;
 		     font-size: 23px;
+	}
+	.navmargin12{
+		margin-top: 33px;
+		margin-left: 2%;
 	}
 }
 @media screen and (min-width: 1024px) and (max-width: 1366px){
@@ -243,6 +248,10 @@
 		 font-weight: 600;
 		     font-size: 23px;
 	}
+	.navmargin12{
+		margin-top: 33px;
+		margin-left: 2%;
+	}
 }
 @media screen and (min-width: 1366px) and (max-width: 1600px){
 	.footertext2{
@@ -260,5 +269,8 @@
 		 font-family: Helvetica;
 		 font-weight: 600;
 		     font-size: 23px;
+	}
+	.navmargin12{
+		margin-top: 33px;
 	}
 }
