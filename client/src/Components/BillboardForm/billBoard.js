@@ -41,7 +41,7 @@ class BillBoard extends Component {
     companyNames = async () => {
         let { companyName } = this.state;
         let response = await HttpUtils.get('getcompanyname');
-        // console.log(response.content, 'response')
+        console.log(response.content, 'response')
         companyName = response.content.map((elem, i) => {
             // console.log(elem, 'elem')
             // console.log(i , 'index')
