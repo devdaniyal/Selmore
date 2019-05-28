@@ -32,6 +32,13 @@ class Formpanel extends Component {
 
 	componentDidMount() {
 		this.checkEmails();
+		// setTimeout(
+		// 	function() {
+		// 		isAlert;
+		// 	}
+		// 	.bind(this),
+		// 	3000
+		// );
 	}
 
 	checkEmails = async () => {
@@ -76,7 +83,12 @@ class Formpanel extends Component {
 				console.log('Received values of form: ', values);
 				this.setState({ isLoader: true })
 				this.fectSignUpApiFunc(values)
-
+				// setTimeout(this.state.isAlert, 3000);
+				setTimeout(() => {
+					this.setState({
+						isAlert:false,
+					});
+				}, 3000);
 			}
 		});
 	}
@@ -398,11 +410,15 @@ class Formpanel extends Component {
 								:
 								null
 							}
-							{this.state.isAlert ? <div class="alert alert-success" role="alert">
+							
+							{this.state.isAlert ? 
+							<div class="alert alert-success" role="alert">
+							{/* {setTimeout(() =>  */}
 								<strong>Request Submiting </strong>
-
-								your request has been submited and
+							
+								Your request has been submited and
 								one of our support member will call & email you shortly.
+								{/* // , 3000)} */}
 								</div>
 								:
 								null

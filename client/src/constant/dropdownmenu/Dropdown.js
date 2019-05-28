@@ -24,8 +24,10 @@ class Dropdown extends Component {
 
     return (
       <MDBDropdown>
-        <MDBDropdownToggle caret color="primary" className='toogle'>
-          <div className='userName'>{userName}</div>
+        <MDBDropdownToggle caret color="primary" className='toogle dropdown-toggle'>
+          <div className='userName dropdown-toggle'
+          // style={{marginRight:'400px'}}
+          >{userName}</div>
         </MDBDropdownToggle>
         <MDBDropdownMenu basic>
           <MDBDropdownItem> <Link rel="noopener noreferrer" to={`/profile`}>Profile</Link></MDBDropdownItem>

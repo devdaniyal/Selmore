@@ -51,7 +51,7 @@ class App extends Component {
           <Route path="/billboard" component={Billboardmardan}></Route>
         </div>
       </BrowserRouter> */}
-          <Routes />
+        <Routes />
         {/* <Provider store={store}>
         </Provider> */}
       </div>

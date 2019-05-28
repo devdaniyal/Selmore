@@ -47,15 +47,20 @@ class FormLogin extends Component {
     try {
       if (response.code === 200) {
         this.setState({ data: response.content, isData: true, isLoader: false, loggedIn: true });
-        console.log(response.token, 'token')
+        // console.log(response.token, 'token')
         localStorage.setItem('userToken', JSON.stringify(response.token))
         localStorage.setItem('userName', JSON.stringify(response.username))
       } else {
         this.setState({ isData: false, isLoader: true })
       }
+      // this.props.modalDis();
+      // document.getElementById(this.props.id).modal("hide");
+      // if (response.code === 200) {
+      //   return <Redirect to='/' />
+      // }
     }
     catch (error) {
-      console.log(error)
+      console.log(error , 'catch')
 
       //error handling if user enter wrong email or password
       if (response === undefined) {
@@ -72,6 +77,7 @@ class FormLogin extends Component {
   render() {
     const { getFieldDecorator } = this.props.form;
     const { isData, isLoader, loggedIn, isAlert } = this.state
+    // console.log(loggedIn ,'loggedIn')
     //redirect to home page
     if (loggedIn) {
       return <Redirect to='/' />
@@ -81,7 +87,7 @@ class FormLogin extends Component {
         <div className="row school1" style={{ marginRight: '0px' }}>
           <div className="col-md-1">
           </div>
-          <div className="col-md-5 school7">
+          <div className="col-md-4 school7">
             <img src="../images/log-in.png" style={{ width: '100%', height: '257px' }} />
           </div>
           <div className="col-md-4 school6">
@@ -130,7 +136,7 @@ class FormLogin extends Component {
                 </Form.Item>
               </div>
               <p style={{ marginTop: '-4%' }}><span className="school8">Forget Password!?</span></p>
-              <button type="submit" className="btn school4"><span className="school5">Login</span></button>
+              <button type="submit" className="btn btn-primary"><span className="school5">Login</span></button>
               <br />
               {isAlert ?
                 <div class="alert alert-danger" role="alert">

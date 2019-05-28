@@ -2,13 +2,23 @@ import React, { Component } from 'react';
 import './headerfooter.css';
 import { Link, withRouter } from 'react-router-dom';
 import Dropdown from '../constant/dropdownmenu/Dropdown';
-
+import FormLogin from './Login Form/form';
+import { Modal,Button } from 'react-bootstrap';
 
 
 
 class Header extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      modal: 'modal'
+    }
+  }
+  modalDis = () => {
+    console.log('calllll')
+    this.setState({
+      modal: 'modal'
+    })
   }
 
   render() {
@@ -64,15 +74,65 @@ class Header extends Component {
                 {value
                   ?
                   <li className="nav-item navbtnmargin">
-                <Dropdown />
+                    <Dropdown />
                   </li>
                   :
-                  <li className="nav-item navbtnmargin">
-                    <button type="button" className="btn btn-primary btn-sm">
-                      <Link rel="noopener noreferrer" to={`/signin`} style={{ color: "white" }}>
-                        Login/Signup
-                        </Link>
-                    </button>
+                  // <li className="nav-item navbtnmargin">
+                  //   <button type="button" className="btn btn-primary btn-sm">
+                  //     <Link rel="noopener noreferrer" to={`/signin`} style={{ color: "white" }}>
+                  //       Login/Signup
+                  //       </Link>
+                  //   </button>
+                  // </li>
+                  <li className="nav-item navbtnmargin" >
+                    {/* <Modal.Dialog>
+                      <Modal.Header closeButton>
+                        <Modal.Title>Modal title</Modal.Title>
+                      </Modal.Header>
+
+                      <Modal.Body>
+                        <p>Modal body text goes here.</p>
+                      </Modal.Body>
+
+                      <Modal.Footer>
+                        <Button variant="secondary">Close</Button>
+                        <Button variant="primary">Save changes</Button>
+                      </Modal.Footer>
+                    </Modal.Dialog> */}
+                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" >
+                      Login
+                  </button>
+
+                    <div class="modal fade" id="myModal" 
+                    
+                    >
+                      <div class="modal-dialog"
+                      style={{marginRight:'650px'}}
+                      >
+                        <div class="modal-content"
+                        style={{ width: '200%', height: '600px'}}
+                        >
+
+                          <div class="modal-header">
+                            <h4 class="modal-title">Login</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            {/* <button type="button" class="close" id='diss' data-dismiss={this.state.modal} >&times;</button> */}
+
+                          </div>
+
+                          <FormLogin id={'myModal'}/>
+
+
+                          <div class="modal-footer">
+                            {/* <button type="button" class="btn btn-danger" data-dismiss={this.state.modal} >Cancel</button> */}
+                            <button type="button" class="btn btn-danger" data-dismiss='modal' >Cancel</button>
+
+                            {/* <button type="button" class="btn btn-primary" data="modal">Login</button> */}
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
                   </li>
                 }
               </ul>
