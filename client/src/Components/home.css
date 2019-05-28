@@ -868,14 +868,14 @@
 	.init7{
 		        position: relative;
 			     margin-top: -47px;
-			    margin-left: 44px;
+			    margin-left: 36px;
 			    background: rgba(30, 22, 22, 0.58);
-			    margin-right: 44px;
+			    margin-right: 37px;
 	}
 	.init2{
 			position: relative;
 		     margin-top: -47px;
-		    margin-left: 87px;
+		    margin-left: 73px;
 		    background: rgba(30, 22, 22, 0.58);
 		    margin-right: 0px;
 	}
@@ -886,9 +886,9 @@
 	.init6{
 		position: relative;
 	     margin-top: -47px;
-	    margin-left: 43px;
+	    margin-left: 36px;
 	    background: rgba(30, 22, 22, 0.58);
-	    margin-right: 44px;
+	    margin-right: 36px;
 	}
 	.fantaa2{
 	margin-top: -42px;
@@ -1038,15 +1038,15 @@
 }
 @media screen and (min-width: 1024px) and (max-width: 1366px){
 	.luxpure2{
-	    background: rgba(30, 22, 22, 0.58);
-	    position: relative;
-	    color: white;
-	    margin-top: 35%;
-	    width: 323px;
+	        background: rgba(30, 22, 22, 0.58);
+		    position: relative;
+		    color: white;
+		    margin-top: 42%;
+		    width: 271px;
 	}
 	.luxpure5{
 		font-size: 35px;
-    	margin-left: 8%;
+    	margin-left: -80%;
 	}
 	.luxpure6{
 		background-color: rgb(240, 232, 232);
@@ -1077,7 +1077,6 @@
 	.luxpure9{
 		padding: 2px;
     	margin-top: 1%;
-			margin-left: 9%;
 	}
 }
 @media screen and (min-width: 1366px) and (max-width: 1600px){
@@ -1119,7 +1118,9 @@
 
 	}
 	.luxpure9{
-		    padding: 7px;
-    		margin-bottom: -4%;
+		    padding: 0px;
+		    margin-bottom: 1%;
+		    margin-top: 5%;
+		    margin-left: 5%;
 	}
 }
